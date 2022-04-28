@@ -13,10 +13,11 @@ can-we-use-l1-regularization-for-feature-selection
 when-do-we-need-to-perform-feature-normalization-for-linear-models-when-its-okay-not-to-do-it
 logistic-regression
 what-is-logistic-regression-or-state-an-example-when-you-have-used-logistic-regression-recently.
-literature
-methods
+metrics
+clustering
 math-example
-applications
+data-preprocessing
 example-one
 example-two
-final-words
+neural-networks
+sql

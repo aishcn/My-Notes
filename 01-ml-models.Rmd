@@ -1,4 +1,4 @@
-# Introduction {#intro}
+# ML Models {#intro}
 
 ## Linear Regression
 
