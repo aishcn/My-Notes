@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 5 Data Preprocessing | Machine Learning Prep Guide</title>
 <meta name="author" content="Anjali Chauhan">
-<meta name="description" content="Some significant applications are demonstrated in this chapter.  5.1 Example one   5.2 Example two">
+<meta name="description" content="5.1 What do you mean by Feature Splitting? A feature splitting is an approach to generate some new features from the existing one to improve the performance of our model. For Example, splitting...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 5 Data Preprocessing | Machine Learning Prep Guide">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Some significant applications are demonstrated in this chapter.  5.1 Example one   5.2 Example two">
+<meta property="og:description" content="5.1 What do you mean by Feature Splitting? A feature splitting is an approach to generate some new features from the existing one to improve the performance of our model. For Example, splitting...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 5 Data Preprocessing | Machine Learning Prep Guide">
-<meta name="twitter:description" content="Some significant applications are demonstrated in this chapter.  5.1 Example one   5.2 Example two">
+<meta name="twitter:description" content="5.1 What do you mean by Feature Splitting? A feature splitting is an approach to generate some new features from the existing one to improve the performance of our model. For Example, splitting...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -61,17 +61,292 @@
 <h1>
 <span class="header-section-number">5</span> Data Preprocessing<a class="anchor" aria-label="anchor" href="#data-preprocessing"><i class="fas fa-link"></i></a>
 </h1>
-<p>Some <em>significant</em> applications are demonstrated in this chapter.</p>
-<div id="example-one" class="section level2" number="5.1">
+<div id="what-do-you-mean-by-feature-splitting" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">5.1</span> Example one<a class="anchor" aria-label="anchor" href="#example-one"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> What do you mean by Feature Splitting?<a class="anchor" aria-label="anchor" href="#what-do-you-mean-by-feature-splitting"><i class="fas fa-link"></i></a>
 </h2>
+<p>A feature splitting is an approach to generate some new features from the existing one to improve the performance of our model.</p>
+<p>For Example, splitting names of objects into two parts- first and last names.</p>
 </div>
-<div id="example-two" class="section level2" number="5.2">
+<div id="what-are-the-feature-selection-methods-used-to-select-the-right-variables" class="section level2" number="5.2">
 <h2>
-<span class="header-section-number">5.2</span> Example two<a class="anchor" aria-label="anchor" href="#example-two"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> What are the feature selection methods used to select the right variables?<a class="anchor" aria-label="anchor" href="#what-are-the-feature-selection-methods-used-to-select-the-right-variables"><i class="fas fa-link"></i></a>
 </h2>
+<p>There are two types of methods for feature selection: filter methods and wrapper methods.</p>
+<p>Filter methods include the following:</p>
+<ul>
+<li><p>Linear discrimination analysis</p></li>
+<li><p>ANOVA</p></li>
+<li><p>Chi-Square</p></li>
+</ul>
+<p>Wrapper methods include the following:</p>
+<ul>
+<li><p>Forward Selection: We test one feature at a time and keep adding them until we get a good fit</p></li>
+<li><p>Backward Selection: We test all the features and start removing them to see what works better</p></li>
+</ul>
+</div>
+<div id="how-do-you-select-the-important-features-while-working-on-a-dataset" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> How do you select the important features while working on a dataset?<a class="anchor" aria-label="anchor" href="#how-do-you-select-the-important-features-while-working-on-a-dataset"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are various methods to select important features from a data set that include the following:</p>
+<ul>
+<li><p><strong>Multicollinearity</strong>: Identify and discard correlated variables before finalizing important variables.</p></li>
+<li><p><strong>Using the Linear Regression model</strong>: More explanatory variables could be selected based on the p-values obtained from the Linear Regression.</p></li>
+<li><p><strong>Wrapper Methods</strong>: Forward, Backward, and Stepwise selection</p></li>
+<li><p><strong>Regularization</strong>: Lasso Regression</p></li>
+<li><p><strong>Ensemble Technique</strong>: Apply Random Forest and then plot the variable chart</p></li>
+<li><p><strong>Information Gain</strong>: Top features can be selected based on information gain for the available set of features.</p></li>
+</ul>
+</div>
+<div id="what-are-some-of-the-steps-for-data-wrangling-and-data-cleaning-before-applying-machine-learning-algorithms" class="section level2" number="5.4">
+<h2>
+<span class="header-section-number">5.4</span> What are some of the steps for data wrangling and data cleaning before applying machine learning algorithms?<a class="anchor" aria-label="anchor" href="#what-are-some-of-the-steps-for-data-wrangling-and-data-cleaning-before-applying-machine-learning-algorithms"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are many steps that can be taken when data wrangling and data cleaning. Some of the most common steps are listed below:</p>
+<ul>
+<li><p><strong>Data profiling</strong>: Almost everyone starts off by getting an understanding of their dataset. More specifically, you can look at the shape of the dataset with .shape and a description of your numerical variables with .describe().</p></li>
+<li><p><strong>Data visualizations</strong>: Sometimes, it’s useful to visualize your data with histograms, boxplots, and scatterplots to better understand the relationships between variables and also to identify potential outliers.</p></li>
+<li><p><strong>Syntax error</strong>: This includes making sure there’s no white space, making sure letter casing is consistent, and checking for typos. You can check for typos by using .unique() or by using bar graphs.</p></li>
+<li><p><strong>Standardization or normalization</strong>: Depending on the dataset your working with and the machine learning method you decide to use, it may be useful to standardize or normalize your data so that different scales of different variables don’t negatively impact the performance of your model.</p></li>
+<li><p><strong>Handling null values</strong>: There are a number of ways to handle null values including deleting rows with null values altogether, replacing null values with the mean/median/mode, replacing null values with a new category (eg. unknown), predicting the values, or using machine learning models that can deal with null values. Read more here.</p></li>
+<li><p><strong>Other things include</strong>: removing irrelevant data, removing duplicates, and type conversion.</p></li>
+</ul>
+</div>
+<div id="what-are-the-missing-values-how-do-you-handle-missing-values" class="section level2" number="5.5">
+<h2>
+<span class="header-section-number">5.5</span> What are the missing values? How do you handle missing values?<a class="anchor" aria-label="anchor" href="#what-are-the-missing-values-how-do-you-handle-missing-values"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the data cleaning process, we can see there are lots of missing values that are not filled or collected during the survey for data collection. So, we have to handle such missing values using the following methods:</p>
+<ul>
+<li><p><strong>Delete the missing records</strong>: Ignoring such rows or dropping such records.</p></li>
+<li><p><strong>Central Tendency</strong>: Fill values with mean, mode, and median.</p></li>
+<li><p><strong>Different mean for different classes</strong>: Fill values using mean but for different classes, different means can be used.</p></li>
+<li><p><strong>Model Building</strong>: You can also fill the most probable value using regression, Bayesian formula, or decision tree, KNN, and Prebuilt imputing libraries.</p></li>
+<li><p><strong>Use constant Value</strong>: Fill with a constant value.</p></li>
+<li><p>To fill the values manually.</p></li>
+</ul>
+</div>
+<div id="name-two-useful-methods-of-pandas-that-are-useful-to-handle-the-missing-values." class="section level2" number="5.6">
+<h2>
+<span class="header-section-number">5.6</span> Name two useful methods of pandas that are useful to handle the missing values.<a class="anchor" aria-label="anchor" href="#name-two-useful-methods-of-pandas-that-are-useful-to-handle-the-missing-values."><i class="fas fa-link"></i></a>
+</h2>
+<p>The two useful methods of Pandas Library are –</p>
+<ul>
+<li><p>isnull( )</p></li>
+<li><p>dropna( )</p></li>
+</ul>
+<p>These help to find the columns of data with missing or corrupted data and drop those values. In cases where we want to fill the invalid values with a placeholder value such as 0, we can use the fillna() method.</p>
+</div>
+<div id="give-several-ways-to-deal-with-missing-values" class="section level2" number="5.7">
+<h2>
+<span class="header-section-number">5.7</span> Give several ways to deal with missing values<a class="anchor" aria-label="anchor" href="#give-several-ways-to-deal-with-missing-values"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are a number of ways to handle null values including the following:</p>
+<ul>
+<li><p>You can omit rows with null values altogether</p></li>
+<li><p>You can replace null values with measures of central tendency (mean, median, mode) or replace it with a new category (eg. ‘None’)</p></li>
+<li><p>You can predict the null values based on other variables. For example, if a row has a null value for weight, but it has a value for height, you can replace the null value with the average weight for that given height.</p></li>
+<li><p>Lastly, you can leave the null values if you are using a machine learning model that automatically deals with null values.</p></li>
+</ul>
+</div>
+<div id="explain-one-hot-encoding-and-label-encoding.-does-the-dimensionality-of-the-dataset-increase-or-decrease-after-applying-these-techniques" class="section level2" number="5.8">
+<h2>
+<span class="header-section-number">5.8</span> Explain One-hot encoding and Label Encoding. Does the dimensionality of the dataset increase or decrease after applying these techniques?<a class="anchor" aria-label="anchor" href="#explain-one-hot-encoding-and-label-encoding.-does-the-dimensionality-of-the-dataset-increase-or-decrease-after-applying-these-techniques"><i class="fas fa-link"></i></a>
+</h2>
+<p>Both One-hot encoding and Label Encoding are used to encode the categorical variables to numerical variables so that we can feed that encoded data to our ML algorithms and be able to find insights about the data.</p>
+<p>One-hot encoding is the representation of categorical variables as binary vectors while Label Encoding converts labels or words into numeric form.</p>
+<p>One-hot encoding increases the dimensionality of the data set while Label encoding doesn’t affect the dimensionality of the data set since One-hot encoding creates a new variable for each level in the variable whereas, in Label encoding, the levels of a variable get encoded as 1 and 0 in replacement of the same column.</p>
+</div>
+<div id="why-do-we-need-one-hot-encoding" class="section level2" number="5.9">
+<h2>
+<span class="header-section-number">5.9</span> Why do we need one-hot encoding?<a class="anchor" aria-label="anchor" href="#why-do-we-need-one-hot-encoding"><i class="fas fa-link"></i></a>
+</h2>
+<p>If we simply encode categorical variables with a Label encoder, they become ordinal which can lead to undesirable consequences. In this case, linear models will treat category with id 4 as twice better than a category with id 2. One-hot encoding allows us to represent a categorical variable in a numerical vector space which ensures that vectors of each category have equal distances between each other. This approach is not suited for all situations, because by using it with categorical variables of high cardinality (e.g. customer id) we will encounter problems that come into play because of the curse of dimensionality.</p>
+</div>
+<div id="how-can-you-determine-which-features-are-the-most-important-in-your-model" class="section level2" number="5.10">
+<h2>
+<span class="header-section-number">5.10</span> How can you determine which features are the most important in your model?<a class="anchor" aria-label="anchor" href="#how-can-you-determine-which-features-are-the-most-important-in-your-model"><i class="fas fa-link"></i></a>
+</h2>
+<p>In applied machine learning, success depends significantly on the quality of data representation (features). Highly correlated features can make learning/sorting steps in the classification module easy. Conversely if label classes are a very complex function of the features, it can be impossible to build a good model [Dom 2012]. Thus a so-called feature engineering, a process of transforming data into features that are most relevant to the problem, is often needed.</p>
+<p>A feature selection scheme often involves techniques to automatically select salient features from a large exploratory feature pool. Redundant and irrelevant features are well known to cause poor accuracy so discarding these features should be the first task. The relevance is often scored using mutual information calculation. Furthermore, input features should thus offer a high level of discrimination between classes. The separability of features can be measured by distance or variance ratio between classes. One recent work [Pham 2016] proposed a systematic voting based feature selection that is a data-driven approach incorporating above criteria. This can be used as a common framework for a wide class of problems.</p>
+<p>Another approach is penalizing on the features that are not very important (e.g., yield a high error metric) when using regularization methods like Lasso or Ridge.</p>
+</div>
+<div id="how-can-you-choose-a-classifier-based-on-training-set-size" class="section level2" number="5.11">
+<h2>
+<span class="header-section-number">5.11</span> How can you choose a classifier based on training set size?<a class="anchor" aria-label="anchor" href="#how-can-you-choose-a-classifier-based-on-training-set-size"><i class="fas fa-link"></i></a>
+</h2>
+<p>If training set is small, high bias/low variance models (e.g. Naïve Bayes) tend to perform better because they are less likely to be overfit.</p>
+<p>If training set is large, low bias/high variance models (e.g. Logistic Regression) tend to perform better because they can reflect more complex relationships.</p>
+</div>
+<div id="is-it-good-to-perform-scaling-before-the-split-or-after-the-split-by-keeping-train-and-test-split-criteria-in-mind" class="section level2" number="5.12">
+<h2>
+<span class="header-section-number">5.12</span> Is it good to perform scaling before the split or after the split by keeping train and test split criteria in mind?<a class="anchor" aria-label="anchor" href="#is-it-good-to-perform-scaling-before-the-split-or-after-the-split-by-keeping-train-and-test-split-criteria-in-mind"><i class="fas fa-link"></i></a>
+</h2>
+<p>Ideally, we need to do a scaling post-train and test split. Scaling post or pre-split should not make much difference when our data is closely packed.</p>
+</div>
+<div id="when-can-a-categorical-value-be-treated-as-a-continuous-variable-and-what-effect-does-it-have-when-done-so" class="section level2" number="5.13">
+<h2>
+<span class="header-section-number">5.13</span> When can a categorical value be treated as a continuous variable and what effect does it have when done so?<a class="anchor" aria-label="anchor" href="#when-can-a-categorical-value-be-treated-as-a-continuous-variable-and-what-effect-does-it-have-when-done-so"><i class="fas fa-link"></i></a>
+</h2>
+<p>A categorical independent variable can be treated as a continuous one when the nature of data points the categorical data represents is ordinal in nature.</p>
+<p>So, if the independent variable is having ordinal data then it can be treated as continuous and its inclusion in the model increases the performance of the model.</p>
+</div>
+<div id="if-we-have-a-date-column-in-our-dataset-then-how-will-you-perform-feature-engineering" class="section level2" number="5.14">
+<h2>
+<span class="header-section-number">5.14</span> If we have a date column in our dataset, then how will you perform Feature Engineering?<a class="anchor" aria-label="anchor" href="#if-we-have-a-date-column-in-our-dataset-then-how-will-you-perform-feature-engineering"><i class="fas fa-link"></i></a>
+</h2>
+<p>From a date column, we can get lots of important features such as day of the week, day of the month, day of the quarter, and day of the year.</p>
+<p>Moreover, we can extract the date, month, and year from that column also. All these features can impact your prediction and make our model robust.</p>
+<p>For Example, Sales of the business can be impacted by month or day of the week.</p>
+</div>
+<div id="how-would-you-handle-an-imbalanced-dataset" class="section level2" number="5.15">
+<h2>
+<span class="header-section-number">5.15</span> How would you handle an imbalanced dataset?<a class="anchor" aria-label="anchor" href="#how-would-you-handle-an-imbalanced-dataset"><i class="fas fa-link"></i></a>
+</h2>
+<p>An imbalanced dataset is when you have, For Example, a classification problem statement and let’s 90% of the data is in one class. As a result, an accuracy of 90% can be skewed if you have no predictive power on the other category of data!</p>
+<p>Here are a few suggestions to get rid of these problems:</p>
+<ul>
+<li><p>To collect more dataset that helps to even the imbalances in the dataset.</p></li>
+<li><p>Resample the dataset to correct for imbalances.</p></li>
+<li><p>Try a different algorithm altogether on your dataset.</p></li>
+</ul>
+<p>So, it’s important that you have a keen sense of what damage an unbalanced dataset can cause, and how to balance that.</p>
+</div>
+<div id="how-should-you-deal-with-unbalanced-binary-classification" class="section level2" number="5.16">
+<h2>
+<span class="header-section-number">5.16</span> How should you deal with unbalanced binary classification?<a class="anchor" aria-label="anchor" href="#how-should-you-deal-with-unbalanced-binary-classification"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are a number of ways to handle unbalanced binary classification (assuming that you want to identify the minority class):</p>
+<ul>
+<li><p>First, you want to reconsider the metrics that you’d use to evaluate your model. The accuracy of your model might not be the best metric to look at because and I’ll use an example to explain why. Let’s say 99 bank withdrawals were not fraudulent and 1 withdrawal was. If your model simply classified every instance as “not fraudulent”, it would have an accuracy of 99%! Therefore, you may want to consider using metrics like precision and recall.</p></li>
+<li><p>Another method to improve unbalanced binary classification is by increasing the cost of misclassifying the minority class. By increasing the penalty of such, the model should classify the minority class more accurately.</p></li>
+<li><p>Lastly, you can improve the balance of classes by oversampling the minority class or by undersampling the majority class.</p></li>
+</ul>
+</div>
+<div id="which-technique-would-you-use-in-cases-where-the-number-of-variables-is-greater-than-the-number-of-observations-in-the-dataset.-explain" class="section level2" number="5.17">
+<h2>
+<span class="header-section-number">5.17</span> Which technique would you use in cases where the number of variables is greater than the number of observations in the dataset. Explain?<a class="anchor" aria-label="anchor" href="#which-technique-would-you-use-in-cases-where-the-number-of-variables-is-greater-than-the-number-of-observations-in-the-dataset.-explain"><i class="fas fa-link"></i></a>
+</h2>
+<p>In cases where the number of variables is greater than the number of observations, it represents a high-dimensional dataset.</p>
+<p>So, it is not possible to calculate a unique least-square coefficient estimate, and therefore we used the penalized regression methods like Least Angle regression(LARS), LASSO, or Ridge which seems to work well under these circumstances as they tend to shrink the coefficients in order to reduce the variance.</p>
+<p>Moreover, in situations of higher variance of least square estimates Ridge Regression works better.</p>
+<p>When the number of variables is greater than the number of observations, it represents a high dimensional dataset. In such cases, it is not possible to calculate a unique least square coefficient estimate. Penalized regression methods like LARS, Lasso or Ridge seem work well under these circumstances as they tend to shrink the coefficients to reduce variance. Whenever the least square estimates have higher variance, Ridge regression technique seems to work best.</p>
+</div>
+<div id="what-are-3-data-preprocessing-techniques-to-handle-outliers" class="section level2" number="5.18">
+<h2>
+<span class="header-section-number">5.18</span> What are 3 data preprocessing techniques to handle outliers?<a class="anchor" aria-label="anchor" href="#what-are-3-data-preprocessing-techniques-to-handle-outliers"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Winsorize (cap at threshold)</p></li>
+<li><p>Transform to reduce skew (using Box-Cox or similar)</p></li>
+<li><p>Remove outliers if you’re certain they are anomalies or measurement errors.</p></li>
+</ul>
+<p>##If a weight for one variable is higher than for another, can we say that this variable is more important?</p>
+<p>Yes - if your predictor variables are normalized.
+Without normalization, the weight represents the change in the output per unit change in the predictor. If you have a predictor with a huge range and scale that is used to predict an output with a very small range - for example, using each nation’s GDP to predict maternal mortality rates - your coefficient should be very small. That does not necessarily mean that this predictor variable is not important compared to the others.</p>
+</div>
+<div id="how-do-we-handle-categorical-variables-in-decision-trees" class="section level2" number="5.19">
+<h2>
+<span class="header-section-number">5.19</span> How do we handle categorical variables in decision trees?<a class="anchor" aria-label="anchor" href="#how-do-we-handle-categorical-variables-in-decision-trees"><i class="fas fa-link"></i></a>
+</h2>
+<p>Some decision tree algorithms can handle categorical variables out of the box, others cannot. However, we can transform categorical variables, e.g. with a binary or a one-hot encoder.</p>
+<p>##What happens when we have correlated features in our data?</p>
+<p>In random forest, since random forest samples some features to build each tree, the information contained in correlated features is twice as much likely to be picked than any other information contained in other features.</p>
+<p>In general, when you are adding correlated features, it means that they linearly contains the same information and thus it will reduce the robustness of your model. Each time you train your model, your model might pick one feature or the other to “do the same job” i.e. explain some variance, reduce entropy, etc.</p>
+</div>
+<div id="for-a-classification-problem-how-will-you-know-which-machine-learning-algorithm-to-choose" class="section level2" number="5.20">
+<h2>
+<span class="header-section-number">5.20</span> For a classification problem, how will you know which Machine Learning Algorithm to Choose?<a class="anchor" aria-label="anchor" href="#for-a-classification-problem-how-will-you-know-which-machine-learning-algorithm-to-choose"><i class="fas fa-link"></i></a>
+</h2>
+<p>There is no fixed rule of thumb to choose an algorithm for a classification problem, but the following points can be kept in mind while selecting an algorithm:</p>
+<ul>
+<li><p>If accuracy is our major focus: Test different algorithms and cross-validate them.</p></li>
+<li><p>What If we have a small training dataset: Use models that have low variance and high bias.</p></li>
+<li><p>If we have a large training dataset: Use models that have high variance and little bias.</p></li>
+</ul>
+</div>
+<div id="how-much-data-will-you-allocate-for-your-training-validation-and-test-sets" class="section level2" number="5.21">
+<h2>
+<span class="header-section-number">5.21</span> How much data will you allocate for your training, validation and test sets?<a class="anchor" aria-label="anchor" href="#how-much-data-will-you-allocate-for-your-training-validation-and-test-sets"><i class="fas fa-link"></i></a>
+</h2>
+<p>There is no to the point answer to this question but there needs to be a balance/equilibrium when allocating data for training, validation and test sets.</p>
+<p>If you make the training set too small, then the actual model parameters might have high variance. Also, if the test set is too small, there are chances of unreliable estimation of model performance. A general thumb rule to follow is to use 80: 20 train/test spilt. After this the training set can be further split into validation sets.</p>
+</div>
+<div id="in-unsupervised-learning-if-a-ground-truth-about-a-dataset-is-unknown-how-can-we-determine-the-most-useful-number-of-clusters-to-be" class="section level2" number="5.22">
+<h2>
+<span class="header-section-number">5.22</span> In unsupervised learning, if a ground truth about a dataset is unknown, how can we determine the most useful number of clusters to be?<a class="anchor" aria-label="anchor" href="#in-unsupervised-learning-if-a-ground-truth-about-a-dataset-is-unknown-how-can-we-determine-the-most-useful-number-of-clusters-to-be"><i class="fas fa-link"></i></a>
+</h2>
+<p>With supervised learning, the number of classes in a particular set of data is known outright, since each data instance in labeled as a member of a particular existent class. In the worst case, we can scan the class attribute and count up the number of unique entries which exist.</p>
+<p>With unsupervised learning, the idea of class attributes and explicit class membership does not exist; in fact, one of the dominant forms of unsupervised learning – data clustering – aims to approximate class membership by minimizing interclass instance similarity and maximizing intraclass similarity. A major drawback with clustering can be the requirement to provide the number of classes which exist in the unlabeled dataset at the onset, in some form or another. If we are lucky, we may know the data’s ground truth – the actual number of classes – beforehand. However, this is not always the case, for numerous reasons, one of which being that there may actually be no defined number of classes (and hence, clusters) in the data, with the whole point of the unsupervised learning task being to survey the data and attempt to impose some meaningful structure of optimal cluster and class numbers upon it.</p>
+</div>
+<div id="without-knowing-the-ground-truth-of-a-dataset-then-how-do-we-know-what-the-optimal-number-of-data-clusters-are" class="section level2" number="5.23">
+<h2>
+<span class="header-section-number">5.23</span> Without knowing the ground truth of a dataset, then, how do we know what the optimal number of data clusters are?<a class="anchor" aria-label="anchor" href="#without-knowing-the-ground-truth-of-a-dataset-then-how-do-we-know-what-the-optimal-number-of-data-clusters-are"><i class="fas fa-link"></i></a>
+</h2>
+<p>As one may expect, there are actually numerous methods to go about answering this question. We will have a look at 2 particular popular methods for attempting to answer this question: the elbow method and the silhouette method.</p>
+<div id="the-elbow-method" class="section level3" number="5.23.1">
+<h3>
+<span class="header-section-number">5.23.1</span> The Elbow Method<a class="anchor" aria-label="anchor" href="#the-elbow-method"><i class="fas fa-link"></i></a>
+</h3>
+<p>The elbow method is often the best place to state, and is especially useful due to its ease of explanation and verification via visualization. The elbow method is interested in explaining variance as a function of cluster numbers (the k in k-means). By plotting the percentage of variance explained against k, the first N clusters should add significant information, explaining variance; yet, some eventual value of k will result in a much less significant gain in information, and it is at this point that the graph will provide a noticeable angle. This angle will be the optimal number of clusters, from the perspective of the elbow method.</p>
+<p>It should be self-evident that, in order to plot this variance against varying numbers of clusters, varying numbers of clusters must be tested. Successive complete iterations of the clustering method must be undertaken, after which the results can be plotted and compared.</p>
+</div>
+<div id="the-silhouette-method" class="section level3" number="5.23.2">
+<h3>
+<span class="header-section-number">5.23.2</span> The Silhouette Method<a class="anchor" aria-label="anchor" href="#the-silhouette-method"><i class="fas fa-link"></i></a>
+</h3>
+<p>The silhouette method measures the similarity of an object to its own cluster – called cohesion – when compared to other clusters – called separation. The silhouette value is the means for this comparison, which is a value of the range [-1, 1]; a value close to 1 indicates a close relationship with objects in its own cluster, while a value close to -1 indicates the opposite. A clustered set of data in a model producing mostly high silhouette values is likely an acceptable and appropriate model.</p>
+</div>
+</div>
+<div id="when-should-you-use-classification-over-regression" class="section level2" number="5.24">
+<h2>
+<span class="header-section-number">5.24</span> When should you use classification over regression?<a class="anchor" aria-label="anchor" href="#when-should-you-use-classification-over-regression"><i class="fas fa-link"></i></a>
+</h2>
+<p>Both classification and regression belong to the category of supervised machine learning algorithms. However, when the target is categorical, classification is used whereas when your target variable is continuous, regression is used.
+The classification produces discrete values and datasets to strict the categories, while regression gives continuous results that allow to better distinguish differences between individual points.</p>
+<p>In order to represent the belonging of the data points to certain categories, we use classification over regression.
+For example, If you wanted to know whether a name was male or female rather than just how correlated they were with male and female names.</p>
+</div>
+<div id="how-can-we-use-an-unlabelled-datasetwithout-having-a-target-column-in-supervised-learning-algorithms" class="section level2" number="5.25">
+<h2>
+<span class="header-section-number">5.25</span> How can we use an unlabelled dataset(without having a target column) in Supervised Learning Algorithms?<a class="anchor" aria-label="anchor" href="#how-can-we-use-an-unlabelled-datasetwithout-having-a-target-column-in-supervised-learning-algorithms"><i class="fas fa-link"></i></a>
+</h2>
+<p>To use a dataset without having an output column, we first give the input dataset into a clustering algorithm, which generates an optimal number of clusters, and then labels the cluster numbers as the new target variable.</p>
+<p>Now, the dataset has both independent and dependent variables i.e, target column present.</p>
+<p>So, this completes our objective to apply the supervised learning algorithms to the unlabeled data.</p>
+</div>
+<div id="is-it-possible-to-test-the-probability-of-improving-the-model-accuracy-without-using-cross-validation-if-yes-please-explain." class="section level2" number="5.26">
+<h2>
+<span class="header-section-number">5.26</span> Is it possible to test the probability of improving the model accuracy without using cross-validation? If yes, please explain.<a class="anchor" aria-label="anchor" href="#is-it-possible-to-test-the-probability-of-improving-the-model-accuracy-without-using-cross-validation-if-yes-please-explain."><i class="fas fa-link"></i></a>
+</h2>
+<p>Yes, we can test for the probability of improving the accuracy of the model without using cross-validation techniques.</p>
+<p>For doing this, We have to run our ML model for say K number of iterations, and then recording the accuracy. After that try to plot all the accuracies and remove the 5% of low probability values. Then, measure the left [low]and right [high] threshold, decided by the problem statement itself.
+Now, with the remaining 95% confidence, we can say that the model can go as low or as high i.e, determine the range.</p>
+</div>
+<div id="what-cross-validation-technique-would-you-use-on-a-time-series-data-set." class="section level2" number="5.27">
+<h2>
+<span class="header-section-number">5.27</span> What cross-validation technique would you use on a time series data set.<a class="anchor" aria-label="anchor" href="#what-cross-validation-technique-would-you-use-on-a-time-series-data-set."><i class="fas fa-link"></i></a>
+</h2>
+<p>Instead of using k-fold cross-validation, you should be aware to the fact that a time series is not randomly distributed data — It is inherently ordered by chronological order.</p>
+<p>In case of time series data, you should use techniques like forward chaining — Where you will be model on past data then look at forward-facing data.</p>
+<p>fold 1: training[1], test[2]</p>
+<p>fold 1: training[1 2], test[3]</p>
+<p>fold 1: training[1 2 3], test[4]</p>
+<p>fold 1: training[1 2 3 4], test[5]</p>
+</div>
+<div id="how-can-you-create-a-model-with-a-very-unbalanced-dataset-for-example-working-with-credit-card-fraud-data-and-there-are-very-few-real-fraud-cases-while-the-majority-of-the-cases-are-non-fraudulent." class="section level2" number="5.28">
+<h2>
+<span class="header-section-number">5.28</span> How can you create a model with a very unbalanced dataset? For example, working with credit card fraud data and there are very few real fraud cases while the majority of the cases are non-fraudulent.<a class="anchor" aria-label="anchor" href="#how-can-you-create-a-model-with-a-very-unbalanced-dataset-for-example-working-with-credit-card-fraud-data-and-there-are-very-few-real-fraud-cases-while-the-majority-of-the-cases-are-non-fraudulent."><i class="fas fa-link"></i></a>
+</h2>
+<p>Creating a model with an unbalanced dataset will yield bad results in terms of favoring the more training data, in our case the non-fraudulent transactions. You should never create a model with an unbalanced dataset. The answer should be around trying to gather more balanced data and if not possible then oversample your data using SMOTE (Synthetic Minority Over Sampling) or Random Over Sampling (ROS).</p>
+<div id="smote-techniques-to-balance-datasets" class="section level3" number="5.28.1">
+<h3>
+<span class="header-section-number">5.28.1</span> SMOTE Techniques to Balance Datasets<a class="anchor" aria-label="anchor" href="#smote-techniques-to-balance-datasets"><i class="fas fa-link"></i></a>
+</h3>
+<p>The SMOTE technique creates new observations of the underrepresented class, in this case, the fraudulent observations. These synthetic observations are almost identical to the original fraudulent observations. This technique is expeditious, but the types of synthetic observations it produces are not as useful as the unique observations created by other oversampling techniques.</p>
 
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -81,8 +356,41 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#data-preprocessing"><span class="header-section-number">5</span> Data Preprocessing</a></li>
-<li><a class="nav-link" href="#example-one"><span class="header-section-number">5.1</span> Example one</a></li>
-<li><a class="nav-link" href="#example-two"><span class="header-section-number">5.2</span> Example two</a></li>
+<li><a class="nav-link" href="#what-do-you-mean-by-feature-splitting"><span class="header-section-number">5.1</span> What do you mean by Feature Splitting?</a></li>
+<li><a class="nav-link" href="#what-are-the-feature-selection-methods-used-to-select-the-right-variables"><span class="header-section-number">5.2</span> What are the feature selection methods used to select the right variables?</a></li>
+<li><a class="nav-link" href="#how-do-you-select-the-important-features-while-working-on-a-dataset"><span class="header-section-number">5.3</span> How do you select the important features while working on a dataset?</a></li>
+<li><a class="nav-link" href="#what-are-some-of-the-steps-for-data-wrangling-and-data-cleaning-before-applying-machine-learning-algorithms"><span class="header-section-number">5.4</span> What are some of the steps for data wrangling and data cleaning before applying machine learning algorithms?</a></li>
+<li><a class="nav-link" href="#what-are-the-missing-values-how-do-you-handle-missing-values"><span class="header-section-number">5.5</span> What are the missing values? How do you handle missing values?</a></li>
+<li><a class="nav-link" href="#name-two-useful-methods-of-pandas-that-are-useful-to-handle-the-missing-values."><span class="header-section-number">5.6</span> Name two useful methods of pandas that are useful to handle the missing values.</a></li>
+<li><a class="nav-link" href="#give-several-ways-to-deal-with-missing-values"><span class="header-section-number">5.7</span> Give several ways to deal with missing values</a></li>
+<li><a class="nav-link" href="#explain-one-hot-encoding-and-label-encoding.-does-the-dimensionality-of-the-dataset-increase-or-decrease-after-applying-these-techniques"><span class="header-section-number">5.8</span> Explain One-hot encoding and Label Encoding. Does the dimensionality of the dataset increase or decrease after applying these techniques?</a></li>
+<li><a class="nav-link" href="#why-do-we-need-one-hot-encoding"><span class="header-section-number">5.9</span> Why do we need one-hot encoding?</a></li>
+<li><a class="nav-link" href="#how-can-you-determine-which-features-are-the-most-important-in-your-model"><span class="header-section-number">5.10</span> How can you determine which features are the most important in your model?</a></li>
+<li><a class="nav-link" href="#how-can-you-choose-a-classifier-based-on-training-set-size"><span class="header-section-number">5.11</span> How can you choose a classifier based on training set size?</a></li>
+<li><a class="nav-link" href="#is-it-good-to-perform-scaling-before-the-split-or-after-the-split-by-keeping-train-and-test-split-criteria-in-mind"><span class="header-section-number">5.12</span> Is it good to perform scaling before the split or after the split by keeping train and test split criteria in mind?</a></li>
+<li><a class="nav-link" href="#when-can-a-categorical-value-be-treated-as-a-continuous-variable-and-what-effect-does-it-have-when-done-so"><span class="header-section-number">5.13</span> When can a categorical value be treated as a continuous variable and what effect does it have when done so?</a></li>
+<li><a class="nav-link" href="#if-we-have-a-date-column-in-our-dataset-then-how-will-you-perform-feature-engineering"><span class="header-section-number">5.14</span> If we have a date column in our dataset, then how will you perform Feature Engineering?</a></li>
+<li><a class="nav-link" href="#how-would-you-handle-an-imbalanced-dataset"><span class="header-section-number">5.15</span> How would you handle an imbalanced dataset?</a></li>
+<li><a class="nav-link" href="#how-should-you-deal-with-unbalanced-binary-classification"><span class="header-section-number">5.16</span> How should you deal with unbalanced binary classification?</a></li>
+<li><a class="nav-link" href="#which-technique-would-you-use-in-cases-where-the-number-of-variables-is-greater-than-the-number-of-observations-in-the-dataset.-explain"><span class="header-section-number">5.17</span> Which technique would you use in cases where the number of variables is greater than the number of observations in the dataset. Explain?</a></li>
+<li><a class="nav-link" href="#what-are-3-data-preprocessing-techniques-to-handle-outliers"><span class="header-section-number">5.18</span> What are 3 data preprocessing techniques to handle outliers?</a></li>
+<li><a class="nav-link" href="#how-do-we-handle-categorical-variables-in-decision-trees"><span class="header-section-number">5.19</span> How do we handle categorical variables in decision trees?</a></li>
+<li><a class="nav-link" href="#for-a-classification-problem-how-will-you-know-which-machine-learning-algorithm-to-choose"><span class="header-section-number">5.20</span> For a classification problem, how will you know which Machine Learning Algorithm to Choose?</a></li>
+<li><a class="nav-link" href="#how-much-data-will-you-allocate-for-your-training-validation-and-test-sets"><span class="header-section-number">5.21</span> How much data will you allocate for your training, validation and test sets?</a></li>
+<li><a class="nav-link" href="#in-unsupervised-learning-if-a-ground-truth-about-a-dataset-is-unknown-how-can-we-determine-the-most-useful-number-of-clusters-to-be"><span class="header-section-number">5.22</span> In unsupervised learning, if a ground truth about a dataset is unknown, how can we determine the most useful number of clusters to be?</a></li>
+<li>
+<a class="nav-link" href="#without-knowing-the-ground-truth-of-a-dataset-then-how-do-we-know-what-the-optimal-number-of-data-clusters-are"><span class="header-section-number">5.23</span> Without knowing the ground truth of a dataset, then, how do we know what the optimal number of data clusters are?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#the-elbow-method"><span class="header-section-number">5.23.1</span> The Elbow Method</a></li>
+<li><a class="nav-link" href="#the-silhouette-method"><span class="header-section-number">5.23.2</span> The Silhouette Method</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#when-should-you-use-classification-over-regression"><span class="header-section-number">5.24</span> When should you use classification over regression?</a></li>
+<li><a class="nav-link" href="#how-can-we-use-an-unlabelled-datasetwithout-having-a-target-column-in-supervised-learning-algorithms"><span class="header-section-number">5.25</span> How can we use an unlabelled dataset(without having a target column) in Supervised Learning Algorithms?</a></li>
+<li><a class="nav-link" href="#is-it-possible-to-test-the-probability-of-improving-the-model-accuracy-without-using-cross-validation-if-yes-please-explain."><span class="header-section-number">5.26</span> Is it possible to test the probability of improving the model accuracy without using cross-validation? If yes, please explain.</a></li>
+<li><a class="nav-link" href="#what-cross-validation-technique-would-you-use-on-a-time-series-data-set."><span class="header-section-number">5.27</span> What cross-validation technique would you use on a time series data set.</a></li>
+<li>
+<a class="nav-link" href="#how-can-you-create-a-model-with-a-very-unbalanced-dataset-for-example-working-with-credit-card-fraud-data-and-there-are-very-few-real-fraud-cases-while-the-majority-of-the-cases-are-non-fraudulent."><span class="header-section-number">5.28</span> How can you create a model with a very unbalanced dataset? For example, working with credit card fraud data and there are very few real fraud cases while the majority of the cases are non-fraudulent.</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#smote-techniques-to-balance-datasets"><span class="header-section-number">5.28.1</span> SMOTE Techniques to Balance Datasets</a></li></ul>
+</li>
 </ul>
 
       <div class="book-extra">

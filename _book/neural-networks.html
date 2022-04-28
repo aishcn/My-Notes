@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Neural Networks | Machine Learning Prep Guide</title>
 <meta name="author" content="Anjali Chauhan">
-<meta name="description" content="We have finished a nice book.">
+<meta name="description" content="6.1 Briefly explain how a basic neural network works At its core, a Neural Network is essentially a network of mathematical equations. It takes one or more input variables, and by going through a...">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Neural Networks | Machine Learning Prep Guide">
 <meta property="og:type" content="book">
-<meta property="og:description" content="We have finished a nice book.">
+<meta property="og:description" content="6.1 Briefly explain how a basic neural network works At its core, a Neural Network is essentially a network of mathematical equations. It takes one or more input variables, and by going through a...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Neural Networks | Machine Learning Prep Guide">
-<meta name="twitter:description" content="We have finished a nice book.">
+<meta name="twitter:description" content="6.1 Briefly explain how a basic neural network works At its core, a Neural Network is essentially a network of mathematical equations. It takes one or more input variables, and by going through a...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -61,16 +61,475 @@
 <h1>
 <span class="header-section-number">6</span> Neural Networks<a class="anchor" aria-label="anchor" href="#neural-networks"><i class="fas fa-link"></i></a>
 </h1>
-<p>We have finished a nice book.</p>
+<div id="briefly-explain-how-a-basic-neural-network-works" class="section level2" number="6.1">
+<h2>
+<span class="header-section-number">6.1</span> Briefly explain how a basic neural network works<a class="anchor" aria-label="anchor" href="#briefly-explain-how-a-basic-neural-network-works"><i class="fas fa-link"></i></a>
+</h2>
+<p>At its core, a Neural Network is essentially a network of mathematical equations. It takes one or more input variables, and by going through a network of equations, results in one or more output variables.</p>
+<p>In a neural network, there’s an input layer, one or more hidden layers, and an output layer. The input layer consists of one or more feature variables (or input variables or independent variables) denoted as x1, x2, …, xn. The hidden layer consists of one or more hidden nodes or hidden units. A node is simply one of the circles in the diagram above. Similarly, the output variable consists of one or more output units.</p>
+<p>Like I said at the beginning, a neural network is nothing more than a network of equations. Each node in a neural network is composed of two functions, a linear function and an activation function. This is where things can get a little confusing, but for now, think of the linear function as some line of best fit. Also, think of the activation function like a light switch, which results in a number between 1 or 0.</p>
+</div>
+<div id="activation-functions" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Activation Functions<a class="anchor" aria-label="anchor" href="#activation-functions"><i class="fas fa-link"></i></a>
+</h2>
+<p>An activation function is like a light switch — it determines whether a neuron should be activated or not.</p>
+<p>There are several types of activation functions, but the most popular activation function is the Rectified Linear Unit function, also known as the ReLU function.</p>
+<div id="what-is-the-role-of-the-activation-function" class="section level3" number="6.2.1">
+<h3>
+<span class="header-section-number">6.2.1</span> What is the role of the activation function?<a class="anchor" aria-label="anchor" href="#what-is-the-role-of-the-activation-function"><i class="fas fa-link"></i></a>
+</h3>
+<p>The purpose of the activation function is to introduce non-linearity into the output of a neuron. The activation function decides whether a neuron should be activated or not by calculating weighted sum and further adding bias with it.</p>
+</div>
+<div id="why-tanh-activation-function-preferred-over-sigmoid" class="section level3" number="6.2.2">
+<h3>
+<span class="header-section-number">6.2.2</span> Why Tanh activation function preferred over sigmoid?<a class="anchor" aria-label="anchor" href="#why-tanh-activation-function-preferred-over-sigmoid"><i class="fas fa-link"></i></a>
+</h3>
+<p>Tanh function is called a shifted version of the sigmoid function. The output of Tanh centers around 0 and sigmoid’s around 0.5. Tanh Convergence is usually faster if the average of each input variable over the training set is close to zero.</p>
+<p>When you struggle to quickly find the local or global minimum, in such case Tanh can be helpful in faster convergence. The derivatives of Tanh are larger than Sigmoid that causes faster optimization of the cost function. Tanh and Sigmoid both suffered from vanishing gradient problems.</p>
+</div>
+<div id="why-is-the-relu-activation-function-is-better-than-the-sigmoid-activation-function" class="section level3" number="6.2.3">
+<h3>
+<span class="header-section-number">6.2.3</span> Why is the ReLU activation function is better than the sigmoid activation function?<a class="anchor" aria-label="anchor" href="#why-is-the-relu-activation-function-is-better-than-the-sigmoid-activation-function"><i class="fas fa-link"></i></a>
+</h3>
+<p>Sigmoid function bounded between 0 and 1. It is differentiable, non-linear, and produces non-binary activations. But the problem with Sigmoid is the vanishing gradients.</p>
+<p>ReLu(Rectified Linear Unit) is like a linearity switch. If you don’t need it, you “switch” it off. If you need it, you “switch” it on. ReLu avoids the problem of vanishing gradient.</p>
+<p>ReLu also provides the benefit of sparsity and sigmoids result in dense representations. Sparse representations are more useful than dense representations.</p>
+</div>
+<div id="what-is-the-use-of-the-leaky-relu-function" class="section level3" number="6.2.4">
+<h3>
+<span class="header-section-number">6.2.4</span> What is the use of the leaky ReLU function?<a class="anchor" aria-label="anchor" href="#what-is-the-use-of-the-leaky-relu-function"><i class="fas fa-link"></i></a>
+</h3>
+<p>The main problem with ReLU is, it is not differentiable at 0 and may result in exploding gradients. To resolve this problem Leaky ReLu was introduced that is differentiable at 0. It provides small negative values when input is less than 0.</p>
+</div>
+</div>
+<div id="what-is-the-dying-relu-problem-in-neural-networks" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> What is the “dying ReLU” problem in neural networks?<a class="anchor" aria-label="anchor" href="#what-is-the-dying-relu-problem-in-neural-networks"><i class="fas fa-link"></i></a>
+</h2>
+<p>When ReLu provides output zero for any input(large negative biases). This problem will occur due to a high learning rate and large negative bias. Leaky ReLU is a commonly used method to overcome a dying ReLU problem. It adds a small negative slope to prevent the dying ReLU problem.</p>
+</div>
+<div id="why-is-rectified-linear-unit-a-good-activation-function" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> Why is Rectified Linear Unit a good activation function?<a class="anchor" aria-label="anchor" href="#why-is-rectified-linear-unit-a-good-activation-function"><i class="fas fa-link"></i></a>
+</h2>
+<p>The Rectified Linear Unit, also known as the ReLU function, is known to be a better activation function than the sigmoid function and the tanh function because it performs gradient descent faster. Notice in the image to the left that when x (or z) is very large, the slope is very small, which slows gradient descent significantly. This, however, is not the case for the ReLU function.</p>
+</div>
+<div id="what-is-the-activation-function-why-do-we-need-them" class="section level2" number="6.5">
+<h2>
+<span class="header-section-number">6.5</span> What is the activation function? Why do we need them?<a class="anchor" aria-label="anchor" href="#what-is-the-activation-function-why-do-we-need-them"><i class="fas fa-link"></i></a>
+</h2>
+<p>Activation functions are mathematical functions that transform the output of a neural network on a certain scale. It means it normalizes the output between range 0 and 1 or -1 and 1. Activation functions in neural networks introduce non-linearity. It helps neural networks to handle non-linear relationships.</p>
+</div>
+<div id="what-is-backward-and-forward-propagation" class="section level2" number="6.6">
+<h2>
+<span class="header-section-number">6.6</span> What is backward and forward propagation?<a class="anchor" aria-label="anchor" href="#what-is-backward-and-forward-propagation"><i class="fas fa-link"></i></a>
+</h2>
+<p>Backpropagation traverses in the reverse direction. It computes the gradient(or delta rule) of parameters(weights and biases) in order to map the output layer to the input layer. The main objective of backpropagation is to minimize the error. This process will repeat until the error is minimized and final parameters will be used for producing the output.</p>
+<p>Forward propagation or forward pass computes the intermediate values in order to map the input and output layer.</p>
+</div>
+<div id="what-is-backpropagation-in-neural-networks-in-a-pure-mathematical-sense" class="section level2" number="6.7">
+<h2>
+<span class="header-section-number">6.7</span> What is backpropagation in neural networks in a pure mathematical sense?<a class="anchor" aria-label="anchor" href="#what-is-backpropagation-in-neural-networks-in-a-pure-mathematical-sense"><i class="fas fa-link"></i></a>
+</h2>
+<p>So backpropagation in Computer science is the algorithmic way in which we send the result of some computation back to the parent recursively.</p>
+<p>In Machine learning, backpropagation sends feedback to the neural net.</p>
+<p>The complete algorithm for this is known as Gradient Descent. The part of Gradient Descent(or similar algorithms) where you infer the error(usually with calculus) and correct it is known as Backpropagation.</p>
+<p>So any training step includes calculating the gradient(differentiation in calculus) and then doing backpropagation(integrating the gradient to get back the way the weights should change).</p>
+</div>
+<div id="cost-function" class="section level2" number="6.8">
+<h2>
+<span class="header-section-number">6.8</span> Cost Function<a class="anchor" aria-label="anchor" href="#cost-function"><i class="fas fa-link"></i></a>
+</h2>
+<p>A cost function for a neural network is similar to a cost function that you would use for any other machine learning model. It’s a measure of how ’good” a neural network is in regards to the values that it predicts compared to the actual values. The cost function is inversely proportional to the quality of a model — the better the model, the lower the cost function and vice versa.</p>
+<p>The purpose of a cost function is so that you have value to optimize. By minimizing the cost function of a neural network, you’ll achieve the optimal weights and parameters of the model, thereby maximizing the performance of it.
+There are several commonly used cost functions, including the quadratic cost, cross-entropy cost, exponential cost, Hellinger distance, Kullback-Leibler divergence, etc.</p>
+<p>The main objective of the neural network is to find the optimal set of weights and biases by minimizing the cost function. Cost function or loss function is a measure used to measure the performance of the neural network on test data set. It measures the ability to estimate the relationship between X and y. An example of cost functions is the mean square error.</p>
+</div>
+<div id="backpropagation" class="section level2" number="6.9">
+<h2>
+<span class="header-section-number">6.9</span> Backpropagation<a class="anchor" aria-label="anchor" href="#backpropagation"><i class="fas fa-link"></i></a>
+</h2>
+<p>Backpropagation is an algorithm that closely ties with the cost function. Specifically, it is an algorithm that is used to compute the gradient of the cost function. It has adopted a lot of popularity and use due to its speed &amp; efficiency compared to other approaches.</p>
+<p>Its name stems from the fact that the calculation of the gradient starts with the gradient of the final layer of weights and moves backwards to the gradient of the first layer of weights. Consequently, the error at layer k is dependent on the next layer k+1.</p>
+<p>Generally, backpropagation works as follows:</p>
+<ul>
+<li>Calculates the forward phase for each input-output pair</li>
+<li>Calculates the backward phase for each pair</li>
+<li>Combine the individual gradients</li>
+<li>Update the weights based on the learning rate and the total gradient</li>
+</ul>
+</div>
+<div id="difference-between-convex-and-non-convex-cost-function-what-does-it-mean-when-a-cost-function-is-non-convex" class="section level2" number="6.10">
+<h2>
+<span class="header-section-number">6.10</span> Difference between convex and non-convex cost function; what does it mean when a cost function is non-convex?<a class="anchor" aria-label="anchor" href="#difference-between-convex-and-non-convex-cost-function-what-does-it-mean-when-a-cost-function-is-non-convex"><i class="fas fa-link"></i></a>
+</h2>
+<p>A convex function is one where a line drawn between any two points on the graph lies on or above the graph. It has one minimum.</p>
+<p>A non-convex function is one where a line drawn between any two points on the graph may intersect other points on the graph. It characterized as “wavy”.</p>
+<p>When a cost function is non-convex, it means that there’s a likelihood that the function may find local minima instead of the global minimum, which is typically undesired in machine learning models from an optimization perspective.</p>
+</div>
+<div id="convolutional-neural-networks" class="section level2" number="6.11">
+<h2>
+<span class="header-section-number">6.11</span> Convolutional Neural Networks<a class="anchor" aria-label="anchor" href="#convolutional-neural-networks"><i class="fas fa-link"></i></a>
+</h2>
+<div id="what-is-cnn-how-does-cnn-work" class="section level3" number="6.11.1">
+<h3>
+<span class="header-section-number">6.11.1</span> What is CNN? How does CNN work?<a class="anchor" aria-label="anchor" href="#what-is-cnn-how-does-cnn-work"><i class="fas fa-link"></i></a>
+</h3>
+<p>CNN is Feedforward neural network. CNN filters the raw image detail patterns and classifies them using a traditional neural network. Convolution focuses on small patches in the image and represents a weighted sum of image pixel values. It offers applications in Image recognition and object detection. It works in the following steps:</p>
+<ul>
+<li><p>Convolution Operation</p></li>
+<li><p>ReLu layer</p></li>
+<li><p>Pooling- Max and Min Pool</p></li>
+<li><p>Flattening</p></li>
+<li><p>Full connection</p></li>
+</ul>
+<p>A Convolutional Neural Network (CNN) is a type of neural network that takes an input (usually an image), assigns importance to different features of the image, and outputs a prediction. What makes CNNs better than feedforward neural networks is that it better captures the spatial (pixel) dependencies throughout the image, meaning it can understand the composition of an image better.</p>
+<p>For those who are interested, CNNs use a mathematical operation called convolution. Wikipedia defines convolution as a mathematical operation on two functions that produces a third function expressing how the shape of one is modified by the other. Thus, CNN’s use convolution instead of general matrix multiplication in at least one of their layers.</p>
+<p><strong>TLDR</strong>: CNNs are a type of neural network that is mainly used for image classification.</p>
+</div>
+<div id="what-are-convolution-layers" class="section level3" number="6.11.2">
+<h3>
+<span class="header-section-number">6.11.2</span> What are Convolution layers?<a class="anchor" aria-label="anchor" href="#what-are-convolution-layers"><i class="fas fa-link"></i></a>
+</h3>
+<p>The convolution layer is inspired by the visual cortex. It converts the image into layers, transforms into small images, and extracts features from images. It will sum up the results into a single output pixel. It captures the relationship between pixels and detects edge, blur, and sharpen features.</p>
+</div>
+</div>
+<div id="recurrent-neural-networks" class="section level2" number="6.12">
+<h2>
+<span class="header-section-number">6.12</span> Recurrent Neural Networks<a class="anchor" aria-label="anchor" href="#recurrent-neural-networks"><i class="fas fa-link"></i></a>
+</h2>
+<p>A Recurrent Neural Network (RNNs) is another type of neural network that works exceptionally well with sequential data due to its ability to ingest inputs of varying sizes. RNNs consider both the current input as well as previous inputs it was given, which means that the same input can technically produce a different output based on the previous inputs given.</p>
+<p>Technically speaking, RNNs are a type of neural network where connections between the nodes form a digraph along a temporal sequence, allowing them to use their internal memory to process variable-length sequences of inputs.</p>
+<p><strong>TLDR</strong>: RNNs are a type of neural network that is mainly used for sequential or time-series data.</p>
+<p>Recurrent neural networks, also known as RNNs, are a class of neural networks that allow previous outputs to be used as inputs while having hidden states.</p>
+<p>They are commonly used to recognize the pattern of sequences in data, including time-series data, stock market data, etc.</p>
+</div>
+<div id="long-short-term-memory-networks" class="section level2" number="6.13">
+<h2>
+<span class="header-section-number">6.13</span> Long Short-Term Memory Networks<a class="anchor" aria-label="anchor" href="#long-short-term-memory-networks"><i class="fas fa-link"></i></a>
+</h2>
+<p>Long Short-Term Memory (LSTM) networks are a type of Recurrent Neural Networks that addresses one of the shortfalls of regular RNNs: RNNs have short-term memory.
+Specifically, if a sequence is too long, i.e. if there is a lag greater than 5–10 steps, RNNs tend to dismiss information that was provided in the earlier steps. For example, if we fed a paragraph into an RNN, it may overlook information provided at the beginning of the paragraph.</p>
+<p>Thus LSTMs were created to resolve this issue.</p>
+</div>
+<div id="weight-initialization" class="section level2" number="6.14">
+<h2>
+<span class="header-section-number">6.14</span> Weight Initialization<a class="anchor" aria-label="anchor" href="#weight-initialization"><i class="fas fa-link"></i></a>
+</h2>
+<p>The point of weight initialization is to make sure that a neural network doesn’t converge to a trivial solution.
+If the weights are all initialized to the same value(eg. equal to zero) then each unit will get exactly the same signal and every layer would behave as if it were a single cell.</p>
+<p>Therefore, you want to randomly initialize the weights near zero, but not equal to zero. This is an expectation of the stochastic optimization algorithm that’s used to train the model.</p>
+<div id="how-are-weights-initialized-in-a-network" class="section level3" number="6.14.1">
+<h3>
+<span class="header-section-number">6.14.1</span> How are weights initialized in a Network?<a class="anchor" aria-label="anchor" href="#how-are-weights-initialized-in-a-network"><i class="fas fa-link"></i></a>
+</h3>
+<p>The weights of a neural network MUST be initialized randomly because this is an expectation of stochastic gradient descent.</p>
+<p>If you initialized all weights to the same value (i.e. zero or one), then each hidden unit will get exactly the same signal. For example, if all weights are initialized to 0, all hidden units will get zero signal.</p>
+</div>
+</div>
+<div id="batch-vs.-stochastic-gradient-descent" class="section level2" number="6.15">
+<h2>
+<span class="header-section-number">6.15</span> Batch vs. Stochastic Gradient Descent<a class="anchor" aria-label="anchor" href="#batch-vs.-stochastic-gradient-descent"><i class="fas fa-link"></i></a>
+</h2>
+<p>Batch gradient descent and stochastic gradient descent are two different methods used to compute the gradient.</p>
+<p>Batch gradient descent simply computes the gradient using the whole dataset. It is much slower especially with larger datasets but is better for convex or smooth error manifolds.
+With stochastic gradient descent, the gradient is computed using a single training sample at a time. Because of this, it is computationally faster and less expensive. Consequently, however, when a global optimum is reached, it tends to bounce around — this results in a good solution but not an optimal solution.</p>
+</div>
+<div id="hyper-parameters" class="section level2" number="6.16">
+<h2>
+<span class="header-section-number">6.16</span> Hyper-parameters<a class="anchor" aria-label="anchor" href="#hyper-parameters"><i class="fas fa-link"></i></a>
+</h2>
+<p>Hyper-parameters are the variables that regulate the network structure and the variables which govern how the network is trained. Common hyper-parameters include the following:
+- Model architecture parameters such as the number of layers, number of hidden units, etc.</p>
+<ul>
+<li><p>The learning rate (alpha)</p></li>
+<li><p>Network weight initialization</p></li>
+<li><p>Number of epochs (defined as one cycle through the whole training dataset)</p></li>
+<li><p>Batch size</p></li>
+<li><p>and more.</p></li>
+</ul>
+</div>
+<div id="learning-rate" class="section level2" number="6.17">
+<h2>
+<span class="header-section-number">6.17</span> Learning Rate<a class="anchor" aria-label="anchor" href="#learning-rate"><i class="fas fa-link"></i></a>
+</h2>
+<p>The learning rate is a hyper-parameter used in neural networks that control how much to adjust the model in response to the estimated error each time the model weights are updated.</p>
+<p>If the learning rate is too low, your model will train very slowly as minimal updates are made to the weights through each iteration. Thus, it would take many updates before reaching the minimum point.</p>
+<p>If the learning rate is set too high, this causes undesirable divergent behavior to the loss function due to drastic updates in weights, and it may fail to converge.</p>
+</div>
+<div id="what-is-deep-learning" class="section level2" number="6.18">
+<h2>
+<span class="header-section-number">6.18</span> What is Deep Learning?<a class="anchor" aria-label="anchor" href="#what-is-deep-learning"><i class="fas fa-link"></i></a>
+</h2>
+<p>Deep Learning is a subdomain of Machine Learning. In deep learning, a large number of layers in the architecture. These successive layers learn more complex patterns in the data. Deep Learning offers various applications in text, voice, image, and video data.</p>
+</div>
+<div id="what-is-gradient-descent-how-does-it-work" class="section level2" number="6.19">
+<h2>
+<span class="header-section-number">6.19</span> What is Gradient Descent? How does it work?<a class="anchor" aria-label="anchor" href="#what-is-gradient-descent-how-does-it-work"><i class="fas fa-link"></i></a>
+</h2>
+<p>It is a first-order iterative optimization technique for finding the minimum of a function. It is an efficient optimization technique to find a local or global minimum.
+In gradient descent, gradient and step are taken at each point. It takes the current value of parameters and updates it with the help of gradient and step width. the gradient is recomputed again and steps decremented in each iteration. This process continues until the convergence achieved.</p>
+<p>Types of Gradient Descent</p>
+<ul>
+<li><p>Full batch gradient descent uses a full dataset.</p></li>
+<li><p>Stochastic gradient descent uses a sample of the dataset.</p></li>
+</ul>
+<div id="stochastic-gradient-descent" class="section level3" number="6.19.1">
+<h3>
+<span class="header-section-number">6.19.1</span> Stochastic Gradient Descent<a class="anchor" aria-label="anchor" href="#stochastic-gradient-descent"><i class="fas fa-link"></i></a>
+</h3>
+<p>Stochastic Gradient Descent builds on top of Gradient Descent where it can work with complicated Cost Functions.</p>
+</div>
+<div id="gradient-descent-stuck-in-local-minima-and-misses-true-minima." class="section level3" number="6.19.2">
+<h3>
+<span class="header-section-number">6.19.2</span> Gradient Descent Stuck in Local Minima and Misses True Minima.<a class="anchor" aria-label="anchor" href="#gradient-descent-stuck-in-local-minima-and-misses-true-minima."><i class="fas fa-link"></i></a>
+</h3>
+<p>The Gradient Descent works well only in case of convex cost functions with one minimum only. However, in the case of complicated Cost Functions, the Gradient Descent can easily get stuck in local minima which ruins your Neural Network learning.</p>
+</div>
+<div id="stochastic-vs.-gradient-descent" class="section level3" number="6.19.3">
+<h3>
+<span class="header-section-number">6.19.3</span> Stochastic vs. Gradient Descent<a class="anchor" aria-label="anchor" href="#stochastic-vs.-gradient-descent"><i class="fas fa-link"></i></a>
+</h3>
+<p>To understand how Stochastic is different from Gradient Descent let’s take an example. We will assume you have labeled data as rows and you’re inputting them into your Neural Network for training.</p>
+</div>
+</div>
+<div id="what-is-the-difference-between-model-parameters-and-hyperparameters" class="section level2" number="6.20">
+<h2>
+<span class="header-section-number">6.20</span> What is the difference between model parameters and hyperparameters?<a class="anchor" aria-label="anchor" href="#what-is-the-difference-between-model-parameters-and-hyperparameters"><i class="fas fa-link"></i></a>
+</h2>
+<p>Model parameters are internal and can be estimated from data. Model hyperparameters are external to the model and can not be estimated from data.</p>
+</div>
+<div id="what-do-you-mean-by-dropout-and-batch-normalization" class="section level2" number="6.21">
+<h2>
+<span class="header-section-number">6.21</span> What do you mean by Dropout and Batch Normalization?<a class="anchor" aria-label="anchor" href="#what-do-you-mean-by-dropout-and-batch-normalization"><i class="fas fa-link"></i></a>
+</h2>
+<p>Dropout is a technique for normalization. It drops out or deactivates some neurons from the neural network to remove the problem of overfitting. In other words, it introduces the noise in the neural network so that model is capable to generalize the model.</p>
+<p>Normalization is used to reduce the algorithm time that spends on the oscillation on different values. It brings all the features on the same input scale.</p>
+<p>Batch Normalization is also normalizing the values but at hidden states on small batches of data. The research has shown that removing Dropout with Batch Normalization improves the learning rate without loss in generalization.</p>
+</div>
+<div id="what-is-vanishing-gradient-descent" class="section level2" number="6.22">
+<h2>
+<span class="header-section-number">6.22</span> What is vanishing gradient descent?<a class="anchor" aria-label="anchor" href="#what-is-vanishing-gradient-descent"><i class="fas fa-link"></i></a>
+</h2>
+<p>RNN follows the chain rule in its backpropagation. When one of the gradients approaches zero then all the gradient will move towards zero. This small value is not sufficient for training the model. Here, a small gradient means that weights and biases of the neural network will not be updated effectively.</p>
+<p>Also, at hidden layers activation functions such as sigmoid function and Tanh causes small derivatives that decrease the gradient.</p>
+<p>The solution to Vanishing Gradient Descent</p>
+<ul>
+<li><p>Use a different activation function such as ReLu(Rectified Linear Unit).</p></li>
+<li><p>Batch normalization can also solve this problem by simply normalizing the input space.</p></li>
+<li><p>Weight initialization</p></li>
+<li><p>LSTM</p></li>
+</ul>
+</div>
+<div id="what-is-exploding-gradient-descent" class="section level2" number="6.23">
+<h2>
+<span class="header-section-number">6.23</span> What is exploding gradient descent?<a class="anchor" aria-label="anchor" href="#what-is-exploding-gradient-descent"><i class="fas fa-link"></i></a>
+</h2>
+<p>Exploding gradient is just an opposite situation of vanishing gradient. A too-large value of RNN causes powerful training. We can overcome this problem by using Truncated Backpropagation, penalties, Gradient Clipping.</p>
+<p>Gradient is the direction and magnitude calculated during training of a neural network that is used to update the network weights in the right direction and by the right amount.</p>
+<p>“Exploding gradients are a problem where large error gradients accumulate and result in very large updates to neural network model weights during training.” At an extreme, the values of weights can become so large as to overflow and result in NaN values.</p>
+<p>This has the effect of your model being unstable and unable to learn from your training data.</p>
+</div>
+<div id="what-is-lstm-and-bilstm" class="section level2" number="6.24">
+<h2>
+<span class="header-section-number">6.24</span> What is LSTM and BiLSTM?<a class="anchor" aria-label="anchor" href="#what-is-lstm-and-bilstm"><i class="fas fa-link"></i></a>
+</h2>
+<p>LSTM is a special type of RNN. It also uses a chain-like structure but it has the capability to learn and remember long-term sequences. LSTM handles the issue of vanishing gradient. It keeps gradient step enough and therefore the short training and the high accuracy. It uses gated cells to write, read, erase the value. It has three gates: input, forget, and output gate.</p>
+<p>BiLSTM learns sequential long terms in both directions. It captures the information from both the previous and next states. Finally, it merges the results of two states and produces output. It memorizes information about a sentence from both directions.</p>
+</div>
+<div id="explain-gates-used-in-lstm-with-their-functions." class="section level2" number="6.25">
+<h2>
+<span class="header-section-number">6.25</span> Explain gates used in LSTM with their functions.<a class="anchor" aria-label="anchor" href="#explain-gates-used-in-lstm-with-their-functions."><i class="fas fa-link"></i></a>
+</h2>
+<p>LSTM has three gates: input, forget, and output gate. The input gate is used to add the information to the network, forget used to discard the information, and the output gate decides which information pass to the hidden and output layer.</p>
+</div>
+<div id="what-is-the-difference-between-lstm-and-gru" class="section level2" number="6.26">
+<h2>
+<span class="header-section-number">6.26</span> What is the difference between LSTM and GRU?<a class="anchor" aria-label="anchor" href="#what-is-the-difference-between-lstm-and-gru"><i class="fas fa-link"></i></a>
+</h2>
+<p>GRU is also a type of RNN. It is slightly different from LSTM. The main difference between LSTM and GRU Gates is the number of gates.</p>
+<ul>
+<li><p>LSTM uses three gates(input, forget, and output gate) while GRU uses two gates(reset and update).</p></li>
+<li><p>In GRU, the update gate is similar to the input and forget gate of LSTM and the reset gate is another gate used to decide how much past information to forget.</p></li>
+<li><p>GRU is faster compared to LSTM.</p></li>
+<li><p>GRU needs fewer data to generalize.</p></li>
+</ul>
+</div>
+<div id="what-is-padding" class="section level2" number="6.27">
+<h2>
+<span class="header-section-number">6.27</span> What is padding?<a class="anchor" aria-label="anchor" href="#what-is-padding"><i class="fas fa-link"></i></a>
+</h2>
+<p>Sometimes filter unable to fit the input image perfectly. We have two strategies for padding: Zero padding and valid padding. Zero paddings add zero so that the image filter fits the image. Valid padding drops the part of the image. (Drop the part of the image)</p>
+</div>
+<div id="what-are-pooling-and-flattening" class="section level2" number="6.28">
+<h2>
+<span class="header-section-number">6.28</span> What are pooling and Flattening?<a class="anchor" aria-label="anchor" href="#what-are-pooling-and-flattening"><i class="fas fa-link"></i></a>
+</h2>
+<p>Pooling is used to reduce the spatial size and selects the important pixel values as features. It is also known as Downsampling. It also makes faster computation by reducing its dimension. Pooling summarizes the sub-region and captures rotational and positional invariant features.</p>
+<p><strong>Pooling</strong>: There are several pooling operations but the most common is max pooling. It teaches the network spatial variance, in simple words the ability to recognize the image features even if the image is upside down, tilted, the image is taken from far or close, etc. The output of this operation is a pooled feature map.</p>
+<p><strong>Flattening</strong>: The purpose of this operation is to be able to input the pooled feature map into the neural network.
+The below image shows the entire CNN operation.</p>
+</div>
+<div id="what-is-epoch-batch-and-iteration-in-deep-learning" class="section level2" number="6.29">
+<h2>
+<span class="header-section-number">6.29</span> What is Epoch, Batch, and Iteration in Deep Learning?<a class="anchor" aria-label="anchor" href="#what-is-epoch-batch-and-iteration-in-deep-learning"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Epoch is a one-pass to the entire dataset. Here, one pass = one forward pass + one backward pass</p></li>
+<li><p>Batch size is the number of training examples in one forward/backward pass. The larger batch size requires more memory space.</p></li>
+<li><p>Iteration is the number of passes. If each pass using batch size then the number of times a batch of data passed through the algorithm.</p></li>
+<li><p>For example, if you have 1000 training examples, and your batch size is 200, then it will take 5 iterations to complete 1 epoch.</p></li>
+</ul>
+</div>
+<div id="what-is-an-auto-encoder" class="section level2" number="6.30">
+<h2>
+<span class="header-section-number">6.30</span> What is an Auto-encoder?<a class="anchor" aria-label="anchor" href="#what-is-an-auto-encoder"><i class="fas fa-link"></i></a>
+</h2>
+<p>Autoencoders are unsupervised deep learning techniques that reduce the dimension of data to encode. Autoencoders encoded the data on one side and decoded it on another side. After encoding, it transforms data into a reduced representation called code or embedding(also known as latent-space representation). This embedding then transformed into the output. Autoencoders can do dimensionality reduction and improve the performance of the algorithm.</p>
+</div>
+<div id="what-do-you-understand-by-boltzmann-machine-and-restricted-boltzmann-machines" class="section level2" number="6.31">
+<h2>
+<span class="header-section-number">6.31</span> What do you understand by Boltzmann Machine and Restricted Boltzmann Machines?<a class="anchor" aria-label="anchor" href="#what-do-you-understand-by-boltzmann-machine-and-restricted-boltzmann-machines"><i class="fas fa-link"></i></a>
+</h2>
+<p>Boltzmann machines are stochastic(non-deterministic models) and generative neural networks. It has the capability to discover interesting features that represent complex patterns in the data. Boltzmann Machine uses many layers for feature detectors that make it a slower network. Restricted Boltzmann Machines (RBMs) have a single layer of feature detectors that makes them faster compared to Boltzmann Machine.</p>
+<p>RBM is a neural network model are also known as Energy-Based Models. RBM offers various applications in recommender systems, classification, regression, topic modeling, and dimensionality reduction.</p>
+</div>
+<div id="explain-generative-adversarial-network." class="section level2" number="6.32">
+<h2>
+<span class="header-section-number">6.32</span> Explain Generative Adversarial Network.<a class="anchor" aria-label="anchor" href="#explain-generative-adversarial-network."><i class="fas fa-link"></i></a>
+</h2>
+<p>GAN (Generative Adversarial Network) is unsupervised deep learning that trains two networks at the same time. It has two components: Generator and Discriminator. The generator generates the images close to the real image and the discriminator determines the difference between fake and real images. GAN is able to produce new content.</p>
+</div>
+<div id="what-is-adam-whats-the-main-difference-between-adam-and-sgd" class="section level2" number="6.33">
+<h2>
+<span class="header-section-number">6.33</span> What is Adam? What’s the main difference between Adam and SGD?<a class="anchor" aria-label="anchor" href="#what-is-adam-whats-the-main-difference-between-adam-and-sgd"><i class="fas fa-link"></i></a>
+</h2>
+<p>Adam (Adaptive Moment Estimation) is a optimization technique for training neural networks. on an average, it is the best optimizer .It works with momentums of first and second order. The intuition behind the Adam is that we don’t want to roll so fast just because we can jump over the minimum, we want to decrease the velocity a little bit for a careful search.
+Adam tends to converge faster, while SGD often converges to more optimal solutions. SGD’s high variance disadvantages gets rectified by Adam (as advantage for Adam).</p>
+</div>
+<div id="when-would-you-use-adam-and-when-sgd" class="section level2" number="6.34">
+<h2>
+<span class="header-section-number">6.34</span> When would you use Adam and when SGD?<a class="anchor" aria-label="anchor" href="#when-would-you-use-adam-and-when-sgd"><i class="fas fa-link"></i></a>
+</h2>
+<p>Adam tends to converge faster, while SGD often converges to more optimal solutions.</p>
+</div>
+<div id="neural-network-how-do-they-learn" class="section level2" number="6.35">
+<h2>
+<span class="header-section-number">6.35</span> Neural Network: How Do They Learn<a class="anchor" aria-label="anchor" href="#neural-network-how-do-they-learn"><i class="fas fa-link"></i></a>
+</h2>
+<p>The learning happens by passing labeled data all the way from the input layers to the output layers then all the way back. Since the data is labeled the Neural network knows what’s the expected output and compares it to the actual output of the Neural Network.</p>
+<p>In the first Epoch, the labeled data is entered at the input layer and propagated to the output layer where your Neural Network will calculate an output. The difference between the actual output of your Neural Network vs. the expected output is called the Cost Function. The goal of your Neural Network is to decrease this Cost Function as much as possible. So, your Neural Network will Back-Propagate from the output layer all the way to the input layer and update the weights of the Neurons accordingly in an attempt to minimize this Cost Function.</p>
+<p>The act of sending the data from the input layer to the output layer then all the way back is called an Epoch. In each epoch, the Neural Network updates the weights of the Neurons which is also known as Learning. After multiple Epochs and weight updates, the loss function (the difference between Neural Network output vs. Actual output) should reach a minimum.</p>
+</div>
+<div id="neural-network-during-learning-phase" class="section level2" number="6.36">
+<h2>
+<span class="header-section-number">6.36</span> Neural Network during Learning Phase<a class="anchor" aria-label="anchor" href="#neural-network-during-learning-phase"><i class="fas fa-link"></i></a>
+</h2>
+<p>Upon learning, the Neurons will have different weights and those weights will dictate future outputs. For example in our earlier car vs. bus classification scenario a Neuron could be looking at the number of windows to decide if the object is a car or bus, obviously, this Neuron will have higher weight than a Neuron looking at the color of the object to determine if it’s a car or a bus. This is an oversimplification of the Neurons function but I want you to get the idea of Neuron weights according to importance.</p>
+</div>
+<div id="gradient-descent" class="section level2" number="6.37">
+<h2>
+<span class="header-section-number">6.37</span> Gradient Descent<a class="anchor" aria-label="anchor" href="#gradient-descent"><i class="fas fa-link"></i></a>
+</h2>
+<p>Gradient Descent is a method to minimize the Cost Function in order to update the Neurons weights. This method tells your Neural Network how to calculate the Cost Function in a fast efficient manner to minimize the difference between the actual and expected outputs.</p>
+<p>The easiest to understand and most common example is comparing your Cost Function to a ball trying to find the lowest point by updating its slope.</p>
+<p>Gradient (Batch) Descent when your Neural Network goes through the data one row at a time and calculate the actual output for each row. Then after finishing all rows in your dataset, the Neural Network compares the cumulative total output of all rows to the expected output and backpropagates to update the weights. This means the Neural Network updates the weights once after working through the entire dataset as one big batch, That’s a big timely Epoch. The Neural Network will do this several times to train the network.</p>
+<p>Stochastic Gradient Descent when your Neural Network goes through the data one row at a time and calculate the actual output for each row. Right away the Neural Network compares the actual output of the first row to the expected output and backpropagates to update the weights, that completes an Epoch. Then the same happens for the second row, comparing outputs and backpropagating to update weights. All the way to the last row, so multiple Epochs and multiple weight updating happen to go through the entire dataset rather than treating it as one big batch like in the case of Gradient Descent. This helps to avoid local minimums and it’s faster than Gradient Descent cause it doesn’t need to load all data in memory and run through them at once rather it loads one row at a time and updates weights.</p>
+<p>There is the best of both worlds method that’s called mini-batch Gradient Descent which is basically combining both. You decide how many rows to run and update at once. So instead of running the whole dataset as one batch or instead of running one row at a time, you have the flexibility to choose any number of rows to run.</p>
+</div>
+<div id="back-propagation" class="section level2" number="6.38">
+<h2>
+<span class="header-section-number">6.38</span> Back-Propagation<a class="anchor" aria-label="anchor" href="#back-propagation"><i class="fas fa-link"></i></a>
+</h2>
+<p>By now you should know what back-propagation is if you don’t then it’s simply adjusting the weights of all the Neurons in your Neural Network after calculating the Cost Function. Back-Propagation is how your Neural Network learns and its the result of calculating the Cost Function. The important concept to know is that Back-Propagation updates all the weights of all the Neurons simultaneously.</p>
+<p>For training purposes, in the beginning, the weights of the Neurons are randomly initialized with small numbers then through learning and back-propagation the weights start to get updated with meaningful values.</p>
+</div>
+<div id="softmax-function" class="section level2" number="6.39">
+<h2>
+<span class="header-section-number">6.39</span> Softmax Function<a class="anchor" aria-label="anchor" href="#softmax-function"><i class="fas fa-link"></i></a>
+</h2>
+<p>This is mainly used in classification problems for multi-class predictions. It is typically in the output layer of the Neural Network.</p>
+<p>You could apply different activation functions for hidden layers and output layers. In this diagram, ReLU is applied for hidden layers while Sigmoid is applied for the output layer. This is common to predict the probability of something.</p>
+</div>
+<div id="what-happens-if-the-learning-rate-is-set-too-high-or-too-low" class="section level2" number="6.40">
+<h2>
+<span class="header-section-number">6.40</span> What happens if the learning rate is set too high or too low?<a class="anchor" aria-label="anchor" href="#what-happens-if-the-learning-rate-is-set-too-high-or-too-low"><i class="fas fa-link"></i></a>
+</h2>
+<p>If the learning rate is too low, your model will train very slowly as minimal updates are made to the weights through each iteration. Thus, it would take many updates before reaching the minimum point.</p>
+<p>If the learning rate is set too high, this causes undesirable divergent behavior to the loss function due to drastic updates in weights, and it may fail to converge.</p>
 
 
+</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="data-preprocessing.html"><span class="header-section-number">5</span> Data Preprocessing</a></div>
 <div class="next"><a href="sql.html"><span class="header-section-number">7</span> SQL</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#neural-networks"><span class="header-section-number">6</span> Neural Networks</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#neural-networks"><span class="header-section-number">6</span> Neural Networks</a></li>
+<li><a class="nav-link" href="#briefly-explain-how-a-basic-neural-network-works"><span class="header-section-number">6.1</span> Briefly explain how a basic neural network works</a></li>
+<li>
+<a class="nav-link" href="#activation-functions"><span class="header-section-number">6.2</span> Activation Functions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#what-is-the-role-of-the-activation-function"><span class="header-section-number">6.2.1</span> What is the role of the activation function?</a></li>
+<li><a class="nav-link" href="#why-tanh-activation-function-preferred-over-sigmoid"><span class="header-section-number">6.2.2</span> Why Tanh activation function preferred over sigmoid?</a></li>
+<li><a class="nav-link" href="#why-is-the-relu-activation-function-is-better-than-the-sigmoid-activation-function"><span class="header-section-number">6.2.3</span> Why is the ReLU activation function is better than the sigmoid activation function?</a></li>
+<li><a class="nav-link" href="#what-is-the-use-of-the-leaky-relu-function"><span class="header-section-number">6.2.4</span> What is the use of the leaky ReLU function?</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#what-is-the-dying-relu-problem-in-neural-networks"><span class="header-section-number">6.3</span> What is the “dying ReLU” problem in neural networks?</a></li>
+<li><a class="nav-link" href="#why-is-rectified-linear-unit-a-good-activation-function"><span class="header-section-number">6.4</span> Why is Rectified Linear Unit a good activation function?</a></li>
+<li><a class="nav-link" href="#what-is-the-activation-function-why-do-we-need-them"><span class="header-section-number">6.5</span> What is the activation function? Why do we need them?</a></li>
+<li><a class="nav-link" href="#what-is-backward-and-forward-propagation"><span class="header-section-number">6.6</span> What is backward and forward propagation?</a></li>
+<li><a class="nav-link" href="#what-is-backpropagation-in-neural-networks-in-a-pure-mathematical-sense"><span class="header-section-number">6.7</span> What is backpropagation in neural networks in a pure mathematical sense?</a></li>
+<li><a class="nav-link" href="#cost-function"><span class="header-section-number">6.8</span> Cost Function</a></li>
+<li><a class="nav-link" href="#backpropagation"><span class="header-section-number">6.9</span> Backpropagation</a></li>
+<li><a class="nav-link" href="#difference-between-convex-and-non-convex-cost-function-what-does-it-mean-when-a-cost-function-is-non-convex"><span class="header-section-number">6.10</span> Difference between convex and non-convex cost function; what does it mean when a cost function is non-convex?</a></li>
+<li>
+<a class="nav-link" href="#convolutional-neural-networks"><span class="header-section-number">6.11</span> Convolutional Neural Networks</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#what-is-cnn-how-does-cnn-work"><span class="header-section-number">6.11.1</span> What is CNN? How does CNN work?</a></li>
+<li><a class="nav-link" href="#what-are-convolution-layers"><span class="header-section-number">6.11.2</span> What are Convolution layers?</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#recurrent-neural-networks"><span class="header-section-number">6.12</span> Recurrent Neural Networks</a></li>
+<li><a class="nav-link" href="#long-short-term-memory-networks"><span class="header-section-number">6.13</span> Long Short-Term Memory Networks</a></li>
+<li>
+<a class="nav-link" href="#weight-initialization"><span class="header-section-number">6.14</span> Weight Initialization</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#how-are-weights-initialized-in-a-network"><span class="header-section-number">6.14.1</span> How are weights initialized in a Network?</a></li></ul>
+</li>
+<li><a class="nav-link" href="#batch-vs.-stochastic-gradient-descent"><span class="header-section-number">6.15</span> Batch vs. Stochastic Gradient Descent</a></li>
+<li><a class="nav-link" href="#hyper-parameters"><span class="header-section-number">6.16</span> Hyper-parameters</a></li>
+<li><a class="nav-link" href="#learning-rate"><span class="header-section-number">6.17</span> Learning Rate</a></li>
+<li><a class="nav-link" href="#what-is-deep-learning"><span class="header-section-number">6.18</span> What is Deep Learning?</a></li>
+<li>
+<a class="nav-link" href="#what-is-gradient-descent-how-does-it-work"><span class="header-section-number">6.19</span> What is Gradient Descent? How does it work?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#stochastic-gradient-descent"><span class="header-section-number">6.19.1</span> Stochastic Gradient Descent</a></li>
+<li><a class="nav-link" href="#gradient-descent-stuck-in-local-minima-and-misses-true-minima."><span class="header-section-number">6.19.2</span> Gradient Descent Stuck in Local Minima and Misses True Minima.</a></li>
+<li><a class="nav-link" href="#stochastic-vs.-gradient-descent"><span class="header-section-number">6.19.3</span> Stochastic vs. Gradient Descent</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#what-is-the-difference-between-model-parameters-and-hyperparameters"><span class="header-section-number">6.20</span> What is the difference between model parameters and hyperparameters?</a></li>
+<li><a class="nav-link" href="#what-do-you-mean-by-dropout-and-batch-normalization"><span class="header-section-number">6.21</span> What do you mean by Dropout and Batch Normalization?</a></li>
+<li><a class="nav-link" href="#what-is-vanishing-gradient-descent"><span class="header-section-number">6.22</span> What is vanishing gradient descent?</a></li>
+<li><a class="nav-link" href="#what-is-exploding-gradient-descent"><span class="header-section-number">6.23</span> What is exploding gradient descent?</a></li>
+<li><a class="nav-link" href="#what-is-lstm-and-bilstm"><span class="header-section-number">6.24</span> What is LSTM and BiLSTM?</a></li>
+<li><a class="nav-link" href="#explain-gates-used-in-lstm-with-their-functions."><span class="header-section-number">6.25</span> Explain gates used in LSTM with their functions.</a></li>
+<li><a class="nav-link" href="#what-is-the-difference-between-lstm-and-gru"><span class="header-section-number">6.26</span> What is the difference between LSTM and GRU?</a></li>
+<li><a class="nav-link" href="#what-is-padding"><span class="header-section-number">6.27</span> What is padding?</a></li>
+<li><a class="nav-link" href="#what-are-pooling-and-flattening"><span class="header-section-number">6.28</span> What are pooling and Flattening?</a></li>
+<li><a class="nav-link" href="#what-is-epoch-batch-and-iteration-in-deep-learning"><span class="header-section-number">6.29</span> What is Epoch, Batch, and Iteration in Deep Learning?</a></li>
+<li><a class="nav-link" href="#what-is-an-auto-encoder"><span class="header-section-number">6.30</span> What is an Auto-encoder?</a></li>
+<li><a class="nav-link" href="#what-do-you-understand-by-boltzmann-machine-and-restricted-boltzmann-machines"><span class="header-section-number">6.31</span> What do you understand by Boltzmann Machine and Restricted Boltzmann Machines?</a></li>
+<li><a class="nav-link" href="#explain-generative-adversarial-network."><span class="header-section-number">6.32</span> Explain Generative Adversarial Network.</a></li>
+<li><a class="nav-link" href="#what-is-adam-whats-the-main-difference-between-adam-and-sgd"><span class="header-section-number">6.33</span> What is Adam? What’s the main difference between Adam and SGD?</a></li>
+<li><a class="nav-link" href="#when-would-you-use-adam-and-when-sgd"><span class="header-section-number">6.34</span> When would you use Adam and when SGD?</a></li>
+<li><a class="nav-link" href="#neural-network-how-do-they-learn"><span class="header-section-number">6.35</span> Neural Network: How Do They Learn</a></li>
+<li><a class="nav-link" href="#neural-network-during-learning-phase"><span class="header-section-number">6.36</span> Neural Network during Learning Phase</a></li>
+<li><a class="nav-link" href="#gradient-descent"><span class="header-section-number">6.37</span> Gradient Descent</a></li>
+<li><a class="nav-link" href="#back-propagation"><span class="header-section-number">6.38</span> Back-Propagation</a></li>
+<li><a class="nav-link" href="#softmax-function"><span class="header-section-number">6.39</span> Softmax Function</a></li>
+<li><a class="nav-link" href="#what-happens-if-the-learning-rate-is-set-too-high-or-too-low"><span class="header-section-number">6.40</span> What happens if the learning rate is set too high or too low?</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
