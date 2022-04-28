@@ -12,19 +12,21 @@ github-repo: rstudio/bookdown-demo
 description: "Concepts covered in CPSC 330, CPSC 340 and ECON 323."
 ---
 
-# Prerequisites
+# Machine Learning Prep Guide
+
+This guide covers all concepts covered in CPSC 330, CPSC 340 and ECON 323 with addition to some advanced topics necessary for industry.
 
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+<!-- # ```{r eval=FALSE} -->
+<!-- # install.packages("bookdown") -->
+<!-- # # or the development version -->
+<!-- # # devtools::install_github("rstudio/bookdown") -->
+<!-- # ``` -->
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+<!-- # ```{r include=FALSE} -->
+<!-- # # automatically create a bib database for R packages -->
+<!-- # knitr::write_bib(c( -->
+<!-- #   .packages(), 'bookdown', 'knitr', 'rmarkdown' -->
+<!-- # ), 'packages.bib') -->
+<!-- # ``` -->

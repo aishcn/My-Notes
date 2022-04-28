@@ -1,0 +1,329 @@
+# Metrics
+
+## Accuracy: 
+
+***(TP+TN/(TP+FP+FN+TN)***
+
+- **WHAT**: Accuracy is the proportion of true results among the total number of cases examined.
+
+- **WHEN**: Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+- **AWARE**: What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99% accurate. My model can be reasonably accurate, but not at all valuable
+
+## Precision: 
+
+***(TP)/(TP+FP)***
+
+- **WHAT**: It answers the question: what proportion of predicted Positives is truly Positive? 
+
+  - Asteroid problem, we never predicted a true positive, precision = 0
+
+- **WHEN**: Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+- **AWARE**: Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+## Recall: 
+
+***(TP)/(TP+FN)***
+
+- **WHAT**: answers a different question: what proportion of actual Positives is correctly classified?
+
+  - Asteroid problem, we never predicted a true positive, recall = 0
+
+- **WHEN**: Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+- **AWARE**: Recall is 1 if we predict 1 for all examples.
+
+## F1 Score: 
+
+***2* (precision*recall)/(precision + recall)***
+
+- **WHAT**: Here we utilize the tradeoff of precision vs. recall. The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+  - The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+  
+  - We are predicting if an asteroid will hit the earth or not.
+  
+  - So if we say “No” for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99%.
+  
+  - And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99% is basically worthless for our case. And hence it solves our problem.
+
+- **WHEN**: We want to have a model with both good precision and recall.
+
+ - F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+ 
+- **EXAMPLE**: If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+- **AWARE**: The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+  - ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome. AUC is area under ROC curve. It represents degree of separability. It is used to value how much model is capable of distinguishing between classes. Higher value the better (0,1)
+
+## Which metrics to use when (classification)?
+
+Accuracy, Precision, and Recall:
+ 
+### Accuracy
+Accuracy is the quintessential classification metric. It is pretty easy to understand. And easily suited for binary as well as a multiclass classification problem.
+
+**Accuracy** = (TP+TN)/(TP+FP+FN+TN)
+
+Accuracy is the proportion of true results among the total number of cases examined.
+
+**When to use?**
+
+Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+**Caveats**
+
+Let us say that our target class is very sparse. Do we want accuracy as a metric of our model performance? What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99% accurate. My model can be reasonably accurate, but not at all valuable.
+
+### Precision
+
+Let’s start with precision, which answers the following question: what proportion of predicted Positives is truly Positive?
+
+**Precision** = (TP)/(TP+FP)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus precision=0
+
+**When to use?**
+
+Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+**Caveats**
+
+Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+### Recall
+
+Another very useful measure is recall, which answers a different question: what proportion of actual Positives is correctly classified?
+
+**Recall** = (TP)/(TP+FN)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus recall is also equal to 0.
+
+**When to use?**
+
+Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+**Caveats**
+
+Recall is 1 if we predict 1 for all examples.
+And thus comes the idea of utilizing tradeoff of precision vs. recall — F1 Score.
+
+### F1 Score
+
+This is my favorite evaluation metric and I tend to use this a lot in my classification projects.
+The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+ 
+Let us start with a binary prediction problem. We are predicting if an asteroid will hit the earth or not.
+So if we say “No” for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99%.
+And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99% is basically worthless for our case. And hence it solves our problem.
+
+**When to use?**
+
+We want to have a model with both good precision and recall.
+ 
+### Precision-Recall Tradeoff
+
+Simply stated the F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+
+If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+**How to Use?**
+
+You can calculate the F1 score for binary prediction problems using:
+
+```{r eval=FALSE}
+# from sklearn.metrics import f1_score
+
+# y_true = [0, 1, 1, 0, 1, 1]
+# y_pred = [0, 0, 1, 0, 0, 1]
+# f1_score(y_true, y_pred)  
+```
+
+This is one of my functions which I use to get the best threshold for maximizing F1 score for binary predictions. The below function iterates through possible threshold values to find the one that gives the best F1 score.
+
+```{r eval = FALSE}
+## y_pred is an array of predictions
+# def bestThresshold(y_true,y_pred):
+#    best_thresh = None
+#    best_score = 0
+#    for thresh in np.arange(0.1, 0.501, 0.01):
+#        score = f1_score(y_true, np.array(y_pred)>thresh)
+#        if score > best_score:
+#            best_thresh = thresh
+#            best_score = score
+#    return best_score , best_thresh
+``` 
+
+**Caveats**
+
+The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.
+
+To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+ 
+Here we give $\beta$ times as much importance to recall as precision.
+
+```{r eval=FALSE}
+# from sklearn.metrics import fbeta_score
+ 
+# y_true = [0, 1, 1, 0, 1, 1]
+# y_pred = [0, 0, 1, 0, 0, 1]
+# fbeta_score(y_true, y_pred,beta=0.5)
+```
+
+F1 Score can also be used for Multiclass problems. 
+
+### Log Loss/Binary Crossentropy
+
+Log loss is a pretty good evaluation metric for binary classifiers and it is sometimes the optimization objective as well in case of Logistic regression and Neural Networks.
+Binary Log loss for an example is given by the below formula where p is the probability of predicting 1.
+ 
+ As you can see the log loss decreases as we are fairly certain in our prediction of 1 and the true label is 1.
+ 
+**When to Use?**
+
+When the output of a classifier is prediction probabilities. Log Loss takes into account the uncertainty of your prediction based on how much it varies from the actual label. This gives us a more nuanced view of the performance of our model. In general, minimizing Log Loss gives greater accuracy for the classifier.
+
+**How to Use?**
+
+```{r eval=FALSE}
+# from sklearn.metrics import log_loss  
+## where y_pred are probabilities and y_true are binary class labels
+# log_loss(y_true, y_pred, eps=1e-15)
+```
+
+**Caveats**
+
+It is susceptible in case of imbalanced datasets. You might have to introduce class weights to penalize minority errors more or you may use this after balancing your dataset.
+
+### Categorical Cross Entropy
+
+The log loss also generalizes to the multiclass problem. The classifier in a multiclass setting must assign a probability to each class for all examples. If there are N samples belonging to M classes, then the Categorical Crossentropy is the summation of -ylogp values:
+ 
+- y_ij is 1 if the sample i belongs to class j else 0
+
+- p_ij is the probability our classifier predicts of sample i belonging to class j.
+
+**When to Use?**
+
+When the output of a classifier is multiclass prediction probabilities. We generally use Categorical Crossentropy in case of Neural Nets. In general, minimizing Categorical cross-entropy gives greater accuracy for the classifier.
+
+**How to Use?**
+
+```{r eval=FALSE}
+# from sklearn.metrics import log_loss  
+## Where y_pred is a matrix of probabilities with shape = (n_samples, n_classes) and y_true is an array of class labels
+# log_loss(y_true, y_pred, eps=1e-15)
+```
+
+**Caveats**:
+
+It is susceptible in case of imbalanced datasets.
+
+### AUC
+
+AUC is the area under the ROC curve.
+
+AUC ROC indicates how well the probabilities from the positive classes are separated from the negative classes
+
+### ROC curve
+ 
+We have got the probabilities from our classifier. We can use various threshold values to plot our sensitivity(TPR) and (1-specificity)(FPR) on the cure and we will have a ROC curve; where True positive rate or TPR is just the proportion of trues we are capturing using our algorithm.
+
+Sensitivity = TPR(True Positive Rate)
+
+Recall = TP/(TP+FN)
+
+and False positive rate or FPR is just the proportion of false we are capturing using our algorithm.
+
+1- Specificity = FPR(False Positive Rate)= FP/(TN+FP)
+ 
+Here we can use the ROC curves to decide on a Threshold value.
+
+The choice of threshold value will also depend on how the classifier is intended to be used.
+
+If it is a cancer classification application you don’t want your threshold to be as big as 0.5. Even if a patient has a 0.3 probability of having cancer you would classify him to be 1.
+
+Otherwise, in an application for reducing the limits on the credit card, you don’t want your threshold to be as less as 0.5. You are here a little worried about the negative effect of decreasing limits on customer satisfaction.
+
+**When to Use?**
+
+AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values. So, for example, if you as a marketer want to find a list of users who will respond to a marketing campaign. AUC is a good metric to use since the predictions ranked by probability is the order in which you will create a list of users to send the marketing campaign.
+
+Another benefit of using AUC is that it is classification-threshold-invariant like log loss. It measures the quality of the model’s predictions irrespective of what classification threshold is chosen, unlike F1 score or accuracy which depend on the choice of threshold.
+
+**How to Use?**
+
+```{r eval=FALSE}
+# import numpy as np
+# from sklearn.metrics import roc_auc_score
+# y_true = np.array([0, 0, 1, 1])
+# y_scores = np.array([0.1, 0.4, 0.35, 0.8])
+# print(roc_auc_score(y_true, y_scores))
+```
+
+**Caveats**
+
+Sometimes we will need well-calibrated probability outputs from our models and AUC doesn’t help with that.
+
+## What is the difference between precision and recall?
+
+Recall attempts to answer “What proportion of actual positives was identified correctly?”
+ 
+Precision attempts to answer “What proportion of positive identifications was actually correct?”
+ 
+## Precision-recall trade-off 
+
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
+
+## What is the ROC curve? When to use it? 
+
+ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
+
+## What is AUC (AU ROC)? When to use it? 
+
+AUC stands for Area Under the ROC Curve. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes. The value is between 0 and 1, the higher the better.
+
+## We have two models, one with 85% accuracy, one 82%. Which one do you pick?
+
+If we only care about the accuracy of the model then we would choose the one with 85%. But if an interviewer were to ask this, it would probably be a good idea to get more context, i.e. what the model is trying to predict. This will give us a better idea whether the evaluation metric should indeed be accuracy or another metric like recall or f1 score.
+
+## Is accuracy always a good metric? 
+
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95% of A class and 5% of B class, a constant prediction of A class would have an accuracy of 95%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
+
+## What is a confusion matrix?
+
+A confusion matrix, also known as an error matrix, is a summarized table used to assess the performance of a classification model. The number of correct and incorrect predictions are summarized with count values and broken down by each class.
+ 
+- **True positive(TP)** — Correct positive prediction
+
+- **False positive(FP)** — Incorrect positive prediction
+
+- **True negative(TN)** — Correct negative prediction
+
+- **False negative(FN)** — Incorrect negative prediction
+
+## How to check if the regression model fits the data well?
+
+There are a couple of metrics that you can use:
+
+- **R-squared/Adjusted R-squared**: Relative measure of fit. This was explained in a previous answer
+
+- **F1 Score**: Evaluates the null hypothesis that all regression coefficients are equal to zero vs the alternative hypothesis that at least one doesn’t equal zero
+
+- **RMSE**: Absolute measure of fit.
+
+## Model Evaluation
+
+To evaluate a regression model, you can calculate its R-squared, which tells us how much of the variability in the data that the model accounts for. For example, if a model has an R-squared of 80%, then 80% of the variation in the data can be explained by the model.
+
+The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
+

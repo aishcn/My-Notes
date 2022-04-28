@@ -133,141 +133,316 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{machine-learning-prep-guide}{%
+\chapter{Machine Learning Prep Guide}\label{machine-learning-prep-guide}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\CommentTok{\# or the development version}
-\CommentTok{\# devtools::install\_github("rstudio/bookdown")}
-\end{Highlighting}
-\end{Shaded}
+This guide covers all concepts covered in CPSC 330, CPSC 340 and ECON 323 with addition to some advanced topics necessary for industry.
 
-\hypertarget{intro}{%
-\chapter{ML Models}\label{intro}}
+\hypertarget{probability}{%
+\chapter{Probability}\label{probability}}
+
+\hypertarget{conditional-probability}{%
+\section{Conditional Probability}\label{conditional-probability}}
+
+\hypertarget{law-of-total-probability}{%
+\section{Law of Total Probability}\label{law-of-total-probability}}
+
+\hypertarget{counting}{%
+\section{Counting}\label{counting}}
+
+\hypertarget{random-variables}{%
+\section{Random Variables}\label{random-variables}}
+
+\hypertarget{joint-marginal-and-conditional-probability-distributions}{%
+\section{Joint, Marginal, and Conditional Probability Distributions}\label{joint-marginal-and-conditional-probability-distributions}}
+
+\hypertarget{probability-distributions}{%
+\section{Probability Distributions}\label{probability-distributions}}
+
+\hypertarget{discrete-probability-distributions}{%
+\section{Discrete Probability Distributions}\label{discrete-probability-distributions}}
+
+\hypertarget{continuous-probability-distributions}{%
+\section{Continuous Probability Distributions}\label{continuous-probability-distributions}}
+
+\hypertarget{markov-chains}{%
+\section{Markov Chains}\label{markov-chains}}
+
+\hypertarget{probability-interview-questions}{%
+\section{Probability Interview Questions}\label{probability-interview-questions}}
+
+\hypertarget{easy}{%
+\subsection{Easy}\label{easy}}
+
+\hypertarget{medium}{%
+\subsection{Medium}\label{medium}}
+
+\hypertarget{hard}{%
+\subsection{Hard}\label{hard}}
+
+\hypertarget{statistics}{%
+\chapter{Statistics}\label{statistics}}
+
+\hypertarget{properties-of-random-variables}{%
+\section{Properties of Random Variables}\label{properties-of-random-variables}}
+
+\hypertarget{law-of-large-numbers}{%
+\section{Law of Large Numbers}\label{law-of-large-numbers}}
+
+\hypertarget{central-limit-theorem}{%
+\section{Central Limit Theorem}\label{central-limit-theorem}}
+
+\hypertarget{hypothesis-testing}{%
+\section{Hypothesis Testing}\label{hypothesis-testing}}
+
+\hypertarget{general-setup}{%
+\subsection{General Setup}\label{general-setup}}
+
+\hypertarget{test-statistics}{%
+\section{Test Statistics}\label{test-statistics}}
+
+\hypertarget{z-test}{%
+\section{Z-Test}\label{z-test}}
+
+\hypertarget{t-test}{%
+\section{t-Test}\label{t-test}}
+
+\hypertarget{chi-squared-test}{%
+\section{Chi-Squared Test}\label{chi-squared-test}}
+
+\hypertarget{hypothesis-testing-for-population-proportions}{%
+\section{Hypothesis Testing for Population Proportions}\label{hypothesis-testing-for-population-proportions}}
+
+\hypertarget{p-values-and-confidence-intervals}{%
+\section{p-values and Confidence Intervals}\label{p-values-and-confidence-intervals}}
+
+\hypertarget{type-i-and-ii-errors}{%
+\section{Type I and II Errors}\label{type-i-and-ii-errors}}
+
+\hypertarget{statistics-interview-questions}{%
+\section{Statistics Interview Questions}\label{statistics-interview-questions}}
+
+\hypertarget{easy-1}{%
+\subsection{Easy}\label{easy-1}}
+
+\hypertarget{medium-1}{%
+\subsection{Medium}\label{medium-1}}
+
+\hypertarget{hard-1}{%
+\subsection{Hard}\label{hard-1}}
+
+\hypertarget{machine-learning}{%
+\chapter{Machine Learning}\label{machine-learning}}
+
+\hypertarget{linear-algebra}{%
+\section{Linear Algebra}\label{linear-algebra}}
+
+\hypertarget{gradient-descent}{%
+\section{Gradient Descent}\label{gradient-descent}}
+
+\hypertarget{model-evaluation-and-selection}{%
+\section{Model Evaluation and Selection}\label{model-evaluation-and-selection}}
+
+\hypertarget{bias-variance-trade-off}{%
+\subsection{Bias-Variance Trade-off}\label{bias-variance-trade-off}}
+
+\hypertarget{model-complexity-and-overfitting}{%
+\subsection{Model Complexity and Overfitting}\label{model-complexity-and-overfitting}}
+
+\hypertarget{regularization}{%
+\subsection{Regularization}\label{regularization}}
+
+\hypertarget{interpretability-explainability}{%
+\subsection{Interpretability \& Explainability}\label{interpretability-explainability}}
+
+\hypertarget{model-training}{%
+\section{Model Training}\label{model-training}}
+
+\hypertarget{cross-validation}{%
+\subsection{Cross-Validation}\label{cross-validation}}
+
+\hypertarget{boostrapping-and-bagging}{%
+\subsection{Boostrapping and Bagging}\label{boostrapping-and-bagging}}
+
+\hypertarget{hyperparameter-tuning}{%
+\subsection{Hyperparameter Tuning}\label{hyperparameter-tuning}}
+
+\hypertarget{training-times-and-learning-curves}{%
+\subsection{Training Times and Learning Curves}\label{training-times-and-learning-curves}}
 
 \hypertarget{linear-regression}{%
 \section{Linear Regression}\label{linear-regression}}
 
-Linear Regression involves finding a `line of best fit' that represents a dataset using the least squares method. The least squares method involves finding a linear equation that minimizes the sum of squared residuals. A residual is equal to the actual minus predicted value.
+\hypertarget{evaluating-linear-regression}{%
+\subsection{Evaluating Linear Regression}\label{evaluating-linear-regression}}
 
-To give an example, the red line is a better line of best fit than the green line because it is closer to the points, and thus, the residuals are smaller.
+\hypertarget{subset-selection}{%
+\subsection{Subset Selection}\label{subset-selection}}
 
-Linear Regression is one of the most fundamental algorithms used to model relationships between a dependent variable and one or more independent variables. In simpler terms, it involves finding the `line of best fit' that represents two or more variables.
+\hypertarget{linear-regression-assumptions}{%
+\subsection{Linear Regression Assumptions}\label{linear-regression-assumptions}}
 
-The line of best fit is found by minimizing the squared distances between the points and the line of best fit --- this is known as minimizing the sum of squared residuals. A residual is simply equal to the predicted value minus the actual value.
+\hypertarget{avoiding-linear-regression-pitfalls}{%
+\subsection{Avoiding Linear Regression Pitfalls}\label{avoiding-linear-regression-pitfalls}}
 
-\hypertarget{whats-the-difference-between-linear-regression-and-logistic-regression}{%
-\section{What's the difference between Linear Regression and Logistic Regression?}\label{whats-the-difference-between-linear-regression-and-logistic-regression}}
+\hypertarget{heteroscedasticity}{%
+\subsubsection{Heteroscedasticity}\label{heteroscedasticity}}
 
-Linear Regression is used to predict a continuous variable and is mainly used to solve regression problems. Linear regression finds the best fit line by which the output numerical value can be predicted.
+\hypertarget{normality}{%
+\subsubsection{Normality}\label{normality}}
 
-Logistic Regression is used to predict categorical values and is mainly used in classification problems. Logistic regression produces an S curve that classifies, the output is binary or categories.
+\hypertarget{outliers}{%
+\subsubsection{Outliers}\label{outliers}}
 
-\hypertarget{what-is-overfitting}{%
-\section{What is overfitting?}\label{what-is-overfitting}}
+\hypertarget{multicollinearity}{%
+\subsubsection{Multicollinearity}\label{multicollinearity}}
 
-Overfitting is an error where the model `fits' the data too well, resulting in a model with high variance and low bias. As a consequence, an overfit model will inaccurately predict new data points even though it has a high accuracy on the training data.
+\hypertarget{confounding-variabes}{%
+\subsubsection{Confounding Variabes}\label{confounding-variabes}}
 
-Overfitting is a modeling error when a function fits the data too closely, resulting in high levels of error when new data is introduced to the model.
+\hypertarget{generalized-linear-models}{%
+\subsection{Generalized Linear Models}\label{generalized-linear-models}}
 
-There are a number of ways that you can prevent overfitting of a model:
+\hypertarget{classification}{%
+\section{Classification}\label{classification}}
 
-\begin{itemize}
-\item
-  \textbf{Cross-validation}: Cross-validation is a technique used to assess how well a model performs on a new independent dataset. The simplest example of cross-validation is when you split your data into two groups: training data and testing data, where you use the training data to build the model and the testing data to test the model.
-\item
-  \textbf{Regularization}: Overfitting occurs when models have higher degree polynomials. Thus, regularization reduces overfitting by penalizing higher degree polynomials.
-\item
-  \textbf{Reduce the number of features}: You can also reduce overfitting by simply reducing the number of input features. You can do this by manually removing features, or you can use a technique, called Principal Component Analysis, which projects higher dimensional data (eg. 3 dimensions) to a smaller space (eg. 2 dimensions).
-\item
-  \textbf{Ensemble Learning Techniques}: Ensemble techniques take many weak learners and converts them into a strong learner through bagging and boosting. Through bagging and boosting, these techniques tend to overfit less than their alternative counterparts.
-\end{itemize}
+\hypertarget{general-framework}{%
+\subsection{General Framework}\label{general-framework}}
 
-Overfitting is an error where the model `fits' the data too well, resulting in a model with high variance and low bias. As a consequence, an overfit model will inaccurately predict new data points even though it has a high accuracy on the training data.
+\hypertarget{evaluating-classifiers}{%
+\subsection{Evaluating Classifiers}\label{evaluating-classifiers}}
 
-\hypertarget{what-is-the-bias-variance-tradeoff}{%
-\section{What is the bias-variance tradeoff?}\label{what-is-the-bias-variance-tradeoff}}
+\hypertarget{building-and-interpreting-a-confusion-matrix}{%
+\subsubsection{Building and Interpreting a Confusion Matrix}\label{building-and-interpreting-a-confusion-matrix}}
 
-The bias of an estimator is the difference between the expected value and true value. A model with a high bias tends to be oversimplified and results in underfitting. Variance represents the model's sensitivity to the data and the noise. A model with high variance results in overfitting.
+\hypertarget{precision-and-recall}{%
+\subsubsection{Precision and Recall}\label{precision-and-recall}}
 
-Therefore, the bias-variance tradeoff is a property of machine learning models in which lower variance results in higher bias and vice versa. Generally, an optimal balance of the two can be found in which error is minimized.
-
-\hypertarget{what-are-ridge-and-lasso-regression-and-what-are-the-differences-between-them}{%
-\section{What are ridge and lasso regression and what are the differences between them?}\label{what-are-ridge-and-lasso-regression-and-what-are-the-differences-between-them}}
-
-Both L1 and L2 regularization are methods used to reduce the overfitting of training data. Least Squares minimizes the sum of the squared residuals, which can result in low bias but high variance.
-
-L2 Regularization, also called ridge regression, minimizes the sum of the squared residuals plus lambda times the slope squared. This additional term is called the Ridge Regression Penalty. This increases the bias of the model, making the fit worse on the training data, but also decreases the variance.
-
-If you take the ridge regression penalty and replace it with the absolute value of the slope, then you get Lasso regression or L1 regularization.
-
-L2 is less robust but has a stable solution and always one solution. L1 is more robust but has an unstable solution and can possibly have multiple solutions.
-
-\hypertarget{whats-the-difference-between-l2-and-l1-regularization}{%
-\section{What's the difference between L2 and L1 regularization?}\label{whats-the-difference-between-l2-and-l1-regularization}}
-
-\begin{itemize}
-\item
-  \textbf{Penalty terms}: L1 regularization uses the sum of the absolute values of the weights, while L2 regularization uses the sum of the weights squared.
-\item
-  \textbf{Feature selection}: L1 performs feature selection by reducing the coefficients of some predictors to 0, while L2 does not.
-  Computational efficiency: L2 has an analytical solution, while L1 does not.
-\item
-  \textbf{Multicollinearity}: L2 addresses multicollinearity by constraining the coefficient norm.
-\item
-  L1 effectively removes features that are unimportant, and doing this too aggressively can lead to underfitting. L2 weighs each feature instead of removing them entirely, which can lead to better accuracy. Briefly, L1 removes features while L2 doesn't, L2 regulates their weights instead.
-\end{itemize}
-
-\hypertarget{whats-regularization-and-whats-the-difference-between-l1-and-l2-regularization}{%
-\section{What's Regularization? and what's the difference between L1 and L2 regularization?}\label{whats-regularization-and-whats-the-difference-between-l1-and-l2-regularization}}
-
-Regularization in machine learning is the process of regularizing the parameters that constrain, regularizes, or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, avoiding the risk of Overfitting. Regularization basically adds the penalty as model complexity increases which can help avoid overfitting.
-
-\hypertarget{ridge-regression}{%
-\subsection{Ridge Regression}\label{ridge-regression}}
-
-Ridge regression, also known as L2 Regularization, is a regression technique that introduces a small amount of bias to reduce overfitting. It does this by minimizing the sum of squared residuals plus a penalty, where the penalty is equal to lambda times the slope squared. Lambda refers to the severity of the penalty.
-
-Without a penalty, the line of best fit has a steeper slope, which means that it is more sensitive to small changes in X. By introducing a penalty, the line of best fit becomes less sensitive to small changes in X. This is the idea behind ridge regression.
-
-\hypertarget{lasso-regression}{%
-\subsection{Lasso Regression}\label{lasso-regression}}
-
-Lasso Regression, also known as L1 Regularization, is similar to Ridge regression. The only difference is that the penalty is calculated with the absolute value of the slope instead.
-
-\hypertarget{can-we-use-l1-regularization-for-feature-selection}{%
-\section{Can we use L1 regularization for feature selection?}\label{can-we-use-l1-regularization-for-feature-selection}}
-
-Yes, because the nature of L1 regularization will lead to sparse coefficients of features. Feature selection can be done by keeping only features with non-zero coefficients.
-
-\hypertarget{when-do-we-need-to-perform-feature-normalization-for-linear-models-when-its-okay-not-to-do-it}{%
-\section{When do we need to perform feature normalization for linear models? When it's okay not to do it?}\label{when-do-we-need-to-perform-feature-normalization-for-linear-models-when-its-okay-not-to-do-it}}
-
-Feature normalization is necessary for L1 and L2 regularizations. The idea of both methods is to penalize all the features relatively equally. This can't be done effectively if every feature is scaled differently.
-
-Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, --- it adds the regularization matrix to the feature matrix before inverting it.
+\hypertarget{visualizing-classifier-performance}{%
+\subsection{Visualizing Classifier Performance}\label{visualizing-classifier-performance}}
 
 \hypertarget{logistic-regression}{%
 \section{Logistic Regression}\label{logistic-regression}}
 
-Logistic Regression is a classification technique that also finds a `line of best fit'. However, unlike linear regression where the line of best fit is found using least squares, logistic regression finds the line (logistic curve) of best fit using maximum likelihood. This is done because the y value can only be one or zero.
+\hypertarget{naive-bayes}{%
+\subsection{Naive Bayes}\label{naive-bayes}}
 
-Logistic regression is similar to linear regression but is used to model the probability of a discrete number of outcomes, typically two. For example, you might want to predict whether a person is alive or dead given their age.
+\hypertarget{svms}{%
+\subsection{SVMs}\label{svms}}
 
-At a glance, logistic regression sounds much more complicated than linear regression, but really only has one extra step.
+\hypertarget{decision-trees}{%
+\subsection{Decision Trees}\label{decision-trees}}
 
-First, you calculate a score using an equation similar to the equation for the line of best fit for linear regression.
+\hypertarget{training}{%
+\subsubsection{Training}\label{training}}
 
-The extra step is feeding the score that you previously calculated in the sigmoid function below so that you get a probability in return. This probability can then be converted to a binary output, either 1 or 0.
+\hypertarget{entropy}{%
+\subsection{Entropy}\label{entropy}}
 
-To find the weights of the initial equation to calculate the score, methods like gradient descent or maximum likelihood are used. Since it's beyond the scope of this article, I won't go into much more detail, but now you know how it works!
+\hypertarget{random-forests}{%
+\subsection{Random Forests}\label{random-forests}}
 
-\hypertarget{what-is-logistic-regression-or-state-an-example-when-you-have-used-logistic-regression-recently.}{%
-\section{What is logistic regression? Or State an example when you have used logistic regression recently.}\label{what-is-logistic-regression-or-state-an-example-when-you-have-used-logistic-regression-recently.}}
+\hypertarget{boosting}{%
+\subsubsection{Boosting}\label{boosting}}
 
-Logistic Regression often referred as logit model is a technique to predict the binary outcome from a linear combination of predictor variables. For example, if you want to predict whether a particular political leader will win the election or not. In this case, the outcome of prediction is binary i.e.~0 or 1 (Win/Lose). The predictor variables here would be the amount of money spent for election campaigning of a particular candidate, the amount of time spent in campaigning, etc.
+\hypertarget{dimensionality-reduction}{%
+\section{Dimensionality Reduction}\label{dimensionality-reduction}}
+
+\hypertarget{principal-component-analysis}{%
+\subsection{Principal Component Analysis}\label{principal-component-analysis}}
+
+\hypertarget{clustering}{%
+\section{Clustering}\label{clustering}}
+
+\hypertarget{k-means-clustering}{%
+\subsection{K-Means Clustering}\label{k-means-clustering}}
+
+\hypertarget{k-means-alternatives}{%
+\subsubsection{K-Means Alternatives}\label{k-means-alternatives}}
+
+\hypertarget{gaussian-mixture-model-gmm}{%
+\subsubsection{Gaussian Mixture Model (GMM)}\label{gaussian-mixture-model-gmm}}
+
+\hypertarget{neural-networks}{%
+\section{Neural Networks}\label{neural-networks}}
+
+\hypertarget{perceptron}{%
+\subsection{Perceptron}\label{perceptron}}
+
+\hypertarget{backpropagation}{%
+\subsection{Backpropagation}\label{backpropagation}}
+
+\hypertarget{training-neural-networks}{%
+\subsection{Training Neural Networks}\label{training-neural-networks}}
+
+\hypertarget{general-framework-1}{%
+\subsubsection{General Framework}\label{general-framework-1}}
+
+\hypertarget{training-optimization-techniques}{%
+\subsubsection{Training Optimization Techniques}\label{training-optimization-techniques}}
+
+\hypertarget{transfer-learning}{%
+\subsubsection{Transfer Learning}\label{transfer-learning}}
+
+\hypertarget{addressing-overfitting}{%
+\subsection{Addressing Overfitting}\label{addressing-overfitting}}
+
+\hypertarget{types-of-neural-networks}{%
+\subsection{Types of Neural Networks}\label{types-of-neural-networks}}
+
+\hypertarget{cnns}{%
+\subsubsection{CNNs}\label{cnns}}
+
+\hypertarget{rnns}{%
+\subsubsection{RNNs}\label{rnns}}
+
+\hypertarget{lstms}{%
+\subsubsection{LSTMs}\label{lstms}}
+
+\hypertarget{reinforcement-learning}{%
+\section{Reinforcement Learning}\label{reinforcement-learning}}
+
+\hypertarget{end-to-end-ml-workflow}{%
+\section{End-to-End ML Workflow}\label{end-to-end-ml-workflow}}
+
+\hypertarget{step-1-clarify-the-problem-and-constraints}{%
+\subsection{Step 1: Clarify the Problem and Constraints}\label{step-1-clarify-the-problem-and-constraints}}
+
+\hypertarget{step-2-establish-metrics}{%
+\subsection{Step 2: Establish Metrics}\label{step-2-establish-metrics}}
+
+\hypertarget{step-3-understand-your-data-sources}{%
+\subsection{Step 3: Understand Your Data Sources}\label{step-3-understand-your-data-sources}}
+
+\hypertarget{step-4-explore-your-data}{%
+\subsection{Step 4: Explore Your Data}\label{step-4-explore-your-data}}
+
+\hypertarget{step-5-clean-your-data}{%
+\subsection{Step 5: Clean Your Data}\label{step-5-clean-your-data}}
+
+\hypertarget{step-6-feature-engineering}{%
+\subsection{Step 6: Feature Engineering}\label{step-6-feature-engineering}}
+
+\hypertarget{step-7-model-selection}{%
+\subsection{Step 7: Model Selection}\label{step-7-model-selection}}
+
+\hypertarget{step-8-model-training-evaluation}{%
+\subsection{Step 8: Model Training \& Evaluation}\label{step-8-model-training-evaluation}}
+
+\hypertarget{step-9-deployment}{%
+\subsection{Step 9: Deployment}\label{step-9-deployment}}
+
+\hypertarget{machine-learning-interview-questions}{%
+\section{Machine Learning Interview Questions}\label{machine-learning-interview-questions}}
+
+\hypertarget{easy-2}{%
+\subsection{Easy}\label{easy-2}}
+
+\hypertarget{medium-2}{%
+\subsection{Medium}\label{medium-2}}
+
+\hypertarget{hard-2}{%
+\subsection{Hard}\label{hard-2}}
 
 \hypertarget{metrics}{%
 \chapter{Metrics}\label{metrics}}
@@ -671,8 +846,1741 @@ To evaluate a regression model, you can calculate its R-squared, which tells us 
 
 The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
 
-\hypertarget{clustering}{%
-\chapter{Clustering}\label{clustering}}
+\hypertarget{metrics-1}{%
+\chapter{Metrics}\label{metrics-1}}
+
+\hypertarget{accuracy-2}{%
+\section{Accuracy:}\label{accuracy-2}}
+
+\textbf{\emph{(TP+TN/(TP+FP+FN+TN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Accuracy is the proportion of true results among the total number of cases examined.
+\item
+  \textbf{WHEN}: Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+\item
+  \textbf{AWARE}: What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable
+\end{itemize}
+
+\hypertarget{precision-2}{%
+\section{Precision:}\label{precision-2}}
+
+\textbf{\emph{(TP)/(TP+FP)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: It answers the question: what proportion of predicted Positives is truly Positive?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, precision = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+\item
+  \textbf{AWARE}: Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+\end{itemize}
+
+\hypertarget{recall-2}{%
+\section{Recall:}\label{recall-2}}
+
+\textbf{\emph{(TP)/(TP+FN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: answers a different question: what proportion of actual Positives is correctly classified?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, recall = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+\item
+  \textbf{AWARE}: Recall is 1 if we predict 1 for all examples.
+\end{itemize}
+
+\hypertarget{f1-score-2}{%
+\section{F1 Score:}\label{f1-score-2}}
+
+\textbf{\emph{2} (precision\emph{recall)/(precision + recall)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Here we utilize the tradeoff of precision vs.~recall. The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+  \begin{itemize}
+  \item
+    The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+  \item
+    We are predicting if an asteroid will hit the earth or not.
+  \item
+    So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+  \item
+    And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+  \end{itemize}
+\item
+  \textbf{WHEN}: We want to have a model with both good precision and recall.
+\item
+  F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+\item
+  \textbf{EXAMPLE}: If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+\item
+  \textbf{AWARE}: The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome. AUC is area under ROC curve. It represents degree of separability. It is used to value how much model is capable of distinguishing between classes. Higher value the better (0,1)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{which-metrics-to-use-when-classification-1}{%
+\section{Which metrics to use when (classification)?}\label{which-metrics-to-use-when-classification-1}}
+
+Accuracy, Precision, and Recall:
+
+\hypertarget{accuracy-3}{%
+\subsection{Accuracy}\label{accuracy-3}}
+
+Accuracy is the quintessential classification metric. It is pretty easy to understand. And easily suited for binary as well as a multiclass classification problem.
+
+\textbf{Accuracy} = (TP+TN)/(TP+FP+FN+TN)
+
+Accuracy is the proportion of true results among the total number of cases examined.
+
+\textbf{When to use?}
+
+Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+\textbf{Caveats}
+
+Let us say that our target class is very sparse. Do we want accuracy as a metric of our model performance? What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable.
+
+\hypertarget{precision-3}{%
+\subsection{Precision}\label{precision-3}}
+
+Let's start with precision, which answers the following question: what proportion of predicted Positives is truly Positive?
+
+\textbf{Precision} = (TP)/(TP+FP)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus precision=0
+
+\textbf{When to use?}
+
+Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+\textbf{Caveats}
+
+Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+\hypertarget{recall-3}{%
+\subsection{Recall}\label{recall-3}}
+
+Another very useful measure is recall, which answers a different question: what proportion of actual Positives is correctly classified?
+
+\textbf{Recall} = (TP)/(TP+FN)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus recall is also equal to 0.
+
+\textbf{When to use?}
+
+Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+\textbf{Caveats}
+
+Recall is 1 if we predict 1 for all examples.
+And thus comes the idea of utilizing tradeoff of precision vs.~recall --- F1 Score.
+
+\hypertarget{f1-score-3}{%
+\subsection{F1 Score}\label{f1-score-3}}
+
+This is my favorite evaluation metric and I tend to use this a lot in my classification projects.
+The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+Let us start with a binary prediction problem. We are predicting if an asteroid will hit the earth or not.
+So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+
+\textbf{When to use?}
+
+We want to have a model with both good precision and recall.
+
+\hypertarget{precision-recall-tradeoff-1}{%
+\subsection{Precision-Recall Tradeoff}\label{precision-recall-tradeoff-1}}
+
+Simply stated the F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+
+If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+\textbf{How to Use?}
+
+You can calculate the F1 score for binary prediction problems using:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import f1\_score}
+
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# f1\_score(y\_true, y\_pred)  }
+\end{Highlighting}
+\end{Shaded}
+
+This is one of my functions which I use to get the best threshold for maximizing F1 score for binary predictions. The below function iterates through possible threshold values to find the one that gives the best F1 score.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# y\_pred is an array of predictions}
+\CommentTok{\# def bestThresshold(y\_true,y\_pred):}
+\CommentTok{\#    best\_thresh = None}
+\CommentTok{\#    best\_score = 0}
+\CommentTok{\#    for thresh in np.arange(0.1, 0.501, 0.01):}
+\CommentTok{\#        score = f1\_score(y\_true, np.array(y\_pred)\textgreater{}thresh)}
+\CommentTok{\#        if score \textgreater{} best\_score:}
+\CommentTok{\#            best\_thresh = thresh}
+\CommentTok{\#            best\_score = score}
+\CommentTok{\#    return best\_score , best\_thresh}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.
+
+To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+Here we give \(\beta\) times as much importance to recall as precision.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import fbeta\_score}
+ 
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# fbeta\_score(y\_true, y\_pred,beta=0.5)}
+\end{Highlighting}
+\end{Shaded}
+
+F1 Score can also be used for Multiclass problems.
+
+\hypertarget{log-lossbinary-crossentropy-1}{%
+\subsection{Log Loss/Binary Crossentropy}\label{log-lossbinary-crossentropy-1}}
+
+Log loss is a pretty good evaluation metric for binary classifiers and it is sometimes the optimization objective as well in case of Logistic regression and Neural Networks.
+Binary Log loss for an example is given by the below formula where p is the probability of predicting 1.
+
+As you can see the log loss decreases as we are fairly certain in our prediction of 1 and the true label is 1.
+
+\textbf{When to Use?}
+
+When the output of a classifier is prediction probabilities. Log Loss takes into account the uncertainty of your prediction based on how much it varies from the actual label. This gives us a more nuanced view of the performance of our model. In general, minimizing Log Loss gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# where y\_pred are probabilities and y\_true are binary class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+It is susceptible in case of imbalanced datasets. You might have to introduce class weights to penalize minority errors more or you may use this after balancing your dataset.
+
+\hypertarget{categorical-cross-entropy-1}{%
+\subsection{Categorical Cross Entropy}\label{categorical-cross-entropy-1}}
+
+The log loss also generalizes to the multiclass problem. The classifier in a multiclass setting must assign a probability to each class for all examples. If there are N samples belonging to M classes, then the Categorical Crossentropy is the summation of -ylogp values:
+
+\begin{itemize}
+\item
+  y\_ij is 1 if the sample i belongs to class j else 0
+\item
+  p\_ij is the probability our classifier predicts of sample i belonging to class j.
+\end{itemize}
+
+\textbf{When to Use?}
+
+When the output of a classifier is multiclass prediction probabilities. We generally use Categorical Crossentropy in case of Neural Nets. In general, minimizing Categorical cross-entropy gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# Where y\_pred is a matrix of probabilities with shape = (n\_samples, n\_classes) and y\_true is an array of class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}:
+
+It is susceptible in case of imbalanced datasets.
+
+\hypertarget{auc-1}{%
+\subsection{AUC}\label{auc-1}}
+
+AUC is the area under the ROC curve.
+
+AUC ROC indicates how well the probabilities from the positive classes are separated from the negative classes
+
+\hypertarget{roc-curve-1}{%
+\subsection{ROC curve}\label{roc-curve-1}}
+
+We have got the probabilities from our classifier. We can use various threshold values to plot our sensitivity(TPR) and (1-specificity)(FPR) on the cure and we will have a ROC curve; where True positive rate or TPR is just the proportion of trues we are capturing using our algorithm.
+
+Sensitivity = TPR(True Positive Rate)
+
+Recall = TP/(TP+FN)
+
+and False positive rate or FPR is just the proportion of false we are capturing using our algorithm.
+
+1- Specificity = FPR(False Positive Rate)= FP/(TN+FP)
+
+Here we can use the ROC curves to decide on a Threshold value.
+
+The choice of threshold value will also depend on how the classifier is intended to be used.
+
+If it is a cancer classification application you don't want your threshold to be as big as 0.5. Even if a patient has a 0.3 probability of having cancer you would classify him to be 1.
+
+Otherwise, in an application for reducing the limits on the credit card, you don't want your threshold to be as less as 0.5. You are here a little worried about the negative effect of decreasing limits on customer satisfaction.
+
+\textbf{When to Use?}
+
+AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values. So, for example, if you as a marketer want to find a list of users who will respond to a marketing campaign. AUC is a good metric to use since the predictions ranked by probability is the order in which you will create a list of users to send the marketing campaign.
+
+Another benefit of using AUC is that it is classification-threshold-invariant like log loss. It measures the quality of the model's predictions irrespective of what classification threshold is chosen, unlike F1 score or accuracy which depend on the choice of threshold.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# import numpy as np}
+\CommentTok{\# from sklearn.metrics import roc\_auc\_score}
+\CommentTok{\# y\_true = np.array([0, 0, 1, 1])}
+\CommentTok{\# y\_scores = np.array([0.1, 0.4, 0.35, 0.8])}
+\CommentTok{\# print(roc\_auc\_score(y\_true, y\_scores))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+Sometimes we will need well-calibrated probability outputs from our models and AUC doesn't help with that.
+
+\hypertarget{what-is-the-difference-between-precision-and-recall-1}{%
+\section{What is the difference between precision and recall?}\label{what-is-the-difference-between-precision-and-recall-1}}
+
+Recall attempts to answer ``What proportion of actual positives was identified correctly?''
+
+Precision attempts to answer ``What proportion of positive identifications was actually correct?''
+
+\hypertarget{precision-recall-trade-off-1}{%
+\section{Precision-recall trade-off}\label{precision-recall-trade-off-1}}
+
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
+
+\hypertarget{what-is-the-roc-curve-when-to-use-it-1}{%
+\section{What is the ROC curve? When to use it?}\label{what-is-the-roc-curve-when-to-use-it-1}}
+
+ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
+
+\hypertarget{what-is-auc-au-roc-when-to-use-it-1}{%
+\section{What is AUC (AU ROC)? When to use it?}\label{what-is-auc-au-roc-when-to-use-it-1}}
+
+AUC stands for Area Under the ROC Curve. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes. The value is between 0 and 1, the higher the better.
+
+\hypertarget{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-1}{%
+\section{We have two models, one with 85\% accuracy, one 82\%. Which one do you pick?}\label{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-1}}
+
+If we only care about the accuracy of the model then we would choose the one with 85\%. But if an interviewer were to ask this, it would probably be a good idea to get more context, i.e.~what the model is trying to predict. This will give us a better idea whether the evaluation metric should indeed be accuracy or another metric like recall or f1 score.
+
+\hypertarget{is-accuracy-always-a-good-metric-1}{%
+\section{Is accuracy always a good metric?}\label{is-accuracy-always-a-good-metric-1}}
+
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95\% of A class and 5\% of B class, a constant prediction of A class would have an accuracy of 95\%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
+
+\hypertarget{what-is-a-confusion-matrix-1}{%
+\section{What is a confusion matrix?}\label{what-is-a-confusion-matrix-1}}
+
+A confusion matrix, also known as an error matrix, is a summarized table used to assess the performance of a classification model. The number of correct and incorrect predictions are summarized with count values and broken down by each class.
+
+\begin{itemize}
+\item
+  \textbf{True positive(TP)} --- Correct positive prediction
+\item
+  \textbf{False positive(FP)} --- Incorrect positive prediction
+\item
+  \textbf{True negative(TN)} --- Correct negative prediction
+\item
+  \textbf{False negative(FN)} --- Incorrect negative prediction
+\end{itemize}
+
+\hypertarget{how-to-check-if-the-regression-model-fits-the-data-well-1}{%
+\section{How to check if the regression model fits the data well?}\label{how-to-check-if-the-regression-model-fits-the-data-well-1}}
+
+There are a couple of metrics that you can use:
+
+\begin{itemize}
+\item
+  \textbf{R-squared/Adjusted R-squared}: Relative measure of fit. This was explained in a previous answer
+\item
+  \textbf{F1 Score}: Evaluates the null hypothesis that all regression coefficients are equal to zero vs the alternative hypothesis that at least one doesn't equal zero
+\item
+  \textbf{RMSE}: Absolute measure of fit.
+\end{itemize}
+
+\hypertarget{model-evaluation-1}{%
+\section{Model Evaluation}\label{model-evaluation-1}}
+
+To evaluate a regression model, you can calculate its R-squared, which tells us how much of the variability in the data that the model accounts for. For example, if a model has an R-squared of 80\%, then 80\% of the variation in the data can be explained by the model.
+
+The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
+
+\hypertarget{metrics-2}{%
+\chapter{Metrics}\label{metrics-2}}
+
+\hypertarget{accuracy-4}{%
+\section{Accuracy:}\label{accuracy-4}}
+
+\textbf{\emph{(TP+TN/(TP+FP+FN+TN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Accuracy is the proportion of true results among the total number of cases examined.
+\item
+  \textbf{WHEN}: Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+\item
+  \textbf{AWARE}: What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable
+\end{itemize}
+
+\hypertarget{precision-4}{%
+\section{Precision:}\label{precision-4}}
+
+\textbf{\emph{(TP)/(TP+FP)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: It answers the question: what proportion of predicted Positives is truly Positive?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, precision = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+\item
+  \textbf{AWARE}: Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+\end{itemize}
+
+\hypertarget{recall-4}{%
+\section{Recall:}\label{recall-4}}
+
+\textbf{\emph{(TP)/(TP+FN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: answers a different question: what proportion of actual Positives is correctly classified?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, recall = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+\item
+  \textbf{AWARE}: Recall is 1 if we predict 1 for all examples.
+\end{itemize}
+
+\hypertarget{f1-score-4}{%
+\section{F1 Score:}\label{f1-score-4}}
+
+\textbf{\emph{2} (precision\emph{recall)/(precision + recall)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Here we utilize the tradeoff of precision vs.~recall. The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+  \begin{itemize}
+  \item
+    The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+  \item
+    We are predicting if an asteroid will hit the earth or not.
+  \item
+    So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+  \item
+    And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+  \end{itemize}
+\item
+  \textbf{WHEN}: We want to have a model with both good precision and recall.
+\item
+  F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+\item
+  \textbf{EXAMPLE}: If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+\item
+  \textbf{AWARE}: The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome. AUC is area under ROC curve. It represents degree of separability. It is used to value how much model is capable of distinguishing between classes. Higher value the better (0,1)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{which-metrics-to-use-when-classification-2}{%
+\section{Which metrics to use when (classification)?}\label{which-metrics-to-use-when-classification-2}}
+
+Accuracy, Precision, and Recall:
+
+\hypertarget{accuracy-5}{%
+\subsection{Accuracy}\label{accuracy-5}}
+
+Accuracy is the quintessential classification metric. It is pretty easy to understand. And easily suited for binary as well as a multiclass classification problem.
+
+\textbf{Accuracy} = (TP+TN)/(TP+FP+FN+TN)
+
+Accuracy is the proportion of true results among the total number of cases examined.
+
+\textbf{When to use?}
+
+Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+\textbf{Caveats}
+
+Let us say that our target class is very sparse. Do we want accuracy as a metric of our model performance? What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable.
+
+\hypertarget{precision-5}{%
+\subsection{Precision}\label{precision-5}}
+
+Let's start with precision, which answers the following question: what proportion of predicted Positives is truly Positive?
+
+\textbf{Precision} = (TP)/(TP+FP)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus precision=0
+
+\textbf{When to use?}
+
+Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+\textbf{Caveats}
+
+Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+\hypertarget{recall-5}{%
+\subsection{Recall}\label{recall-5}}
+
+Another very useful measure is recall, which answers a different question: what proportion of actual Positives is correctly classified?
+
+\textbf{Recall} = (TP)/(TP+FN)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus recall is also equal to 0.
+
+\textbf{When to use?}
+
+Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+\textbf{Caveats}
+
+Recall is 1 if we predict 1 for all examples.
+And thus comes the idea of utilizing tradeoff of precision vs.~recall --- F1 Score.
+
+\hypertarget{f1-score-5}{%
+\subsection{F1 Score}\label{f1-score-5}}
+
+This is my favorite evaluation metric and I tend to use this a lot in my classification projects.
+The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+Let us start with a binary prediction problem. We are predicting if an asteroid will hit the earth or not.
+So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+
+\textbf{When to use?}
+
+We want to have a model with both good precision and recall.
+
+\hypertarget{precision-recall-tradeoff-2}{%
+\subsection{Precision-Recall Tradeoff}\label{precision-recall-tradeoff-2}}
+
+Simply stated the F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+
+If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+\textbf{How to Use?}
+
+You can calculate the F1 score for binary prediction problems using:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import f1\_score}
+
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# f1\_score(y\_true, y\_pred)  }
+\end{Highlighting}
+\end{Shaded}
+
+This is one of my functions which I use to get the best threshold for maximizing F1 score for binary predictions. The below function iterates through possible threshold values to find the one that gives the best F1 score.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# y\_pred is an array of predictions}
+\CommentTok{\# def bestThresshold(y\_true,y\_pred):}
+\CommentTok{\#    best\_thresh = None}
+\CommentTok{\#    best\_score = 0}
+\CommentTok{\#    for thresh in np.arange(0.1, 0.501, 0.01):}
+\CommentTok{\#        score = f1\_score(y\_true, np.array(y\_pred)\textgreater{}thresh)}
+\CommentTok{\#        if score \textgreater{} best\_score:}
+\CommentTok{\#            best\_thresh = thresh}
+\CommentTok{\#            best\_score = score}
+\CommentTok{\#    return best\_score , best\_thresh}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.
+
+To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+Here we give \(\beta\) times as much importance to recall as precision.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import fbeta\_score}
+ 
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# fbeta\_score(y\_true, y\_pred,beta=0.5)}
+\end{Highlighting}
+\end{Shaded}
+
+F1 Score can also be used for Multiclass problems.
+
+\hypertarget{log-lossbinary-crossentropy-2}{%
+\subsection{Log Loss/Binary Crossentropy}\label{log-lossbinary-crossentropy-2}}
+
+Log loss is a pretty good evaluation metric for binary classifiers and it is sometimes the optimization objective as well in case of Logistic regression and Neural Networks.
+Binary Log loss for an example is given by the below formula where p is the probability of predicting 1.
+
+As you can see the log loss decreases as we are fairly certain in our prediction of 1 and the true label is 1.
+
+\textbf{When to Use?}
+
+When the output of a classifier is prediction probabilities. Log Loss takes into account the uncertainty of your prediction based on how much it varies from the actual label. This gives us a more nuanced view of the performance of our model. In general, minimizing Log Loss gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# where y\_pred are probabilities and y\_true are binary class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+It is susceptible in case of imbalanced datasets. You might have to introduce class weights to penalize minority errors more or you may use this after balancing your dataset.
+
+\hypertarget{categorical-cross-entropy-2}{%
+\subsection{Categorical Cross Entropy}\label{categorical-cross-entropy-2}}
+
+The log loss also generalizes to the multiclass problem. The classifier in a multiclass setting must assign a probability to each class for all examples. If there are N samples belonging to M classes, then the Categorical Crossentropy is the summation of -ylogp values:
+
+\begin{itemize}
+\item
+  y\_ij is 1 if the sample i belongs to class j else 0
+\item
+  p\_ij is the probability our classifier predicts of sample i belonging to class j.
+\end{itemize}
+
+\textbf{When to Use?}
+
+When the output of a classifier is multiclass prediction probabilities. We generally use Categorical Crossentropy in case of Neural Nets. In general, minimizing Categorical cross-entropy gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# Where y\_pred is a matrix of probabilities with shape = (n\_samples, n\_classes) and y\_true is an array of class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}:
+
+It is susceptible in case of imbalanced datasets.
+
+\hypertarget{auc-2}{%
+\subsection{AUC}\label{auc-2}}
+
+AUC is the area under the ROC curve.
+
+AUC ROC indicates how well the probabilities from the positive classes are separated from the negative classes
+
+\hypertarget{roc-curve-2}{%
+\subsection{ROC curve}\label{roc-curve-2}}
+
+We have got the probabilities from our classifier. We can use various threshold values to plot our sensitivity(TPR) and (1-specificity)(FPR) on the cure and we will have a ROC curve; where True positive rate or TPR is just the proportion of trues we are capturing using our algorithm.
+
+Sensitivity = TPR(True Positive Rate)
+
+Recall = TP/(TP+FN)
+
+and False positive rate or FPR is just the proportion of false we are capturing using our algorithm.
+
+1- Specificity = FPR(False Positive Rate)= FP/(TN+FP)
+
+Here we can use the ROC curves to decide on a Threshold value.
+
+The choice of threshold value will also depend on how the classifier is intended to be used.
+
+If it is a cancer classification application you don't want your threshold to be as big as 0.5. Even if a patient has a 0.3 probability of having cancer you would classify him to be 1.
+
+Otherwise, in an application for reducing the limits on the credit card, you don't want your threshold to be as less as 0.5. You are here a little worried about the negative effect of decreasing limits on customer satisfaction.
+
+\textbf{When to Use?}
+
+AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values. So, for example, if you as a marketer want to find a list of users who will respond to a marketing campaign. AUC is a good metric to use since the predictions ranked by probability is the order in which you will create a list of users to send the marketing campaign.
+
+Another benefit of using AUC is that it is classification-threshold-invariant like log loss. It measures the quality of the model's predictions irrespective of what classification threshold is chosen, unlike F1 score or accuracy which depend on the choice of threshold.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# import numpy as np}
+\CommentTok{\# from sklearn.metrics import roc\_auc\_score}
+\CommentTok{\# y\_true = np.array([0, 0, 1, 1])}
+\CommentTok{\# y\_scores = np.array([0.1, 0.4, 0.35, 0.8])}
+\CommentTok{\# print(roc\_auc\_score(y\_true, y\_scores))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+Sometimes we will need well-calibrated probability outputs from our models and AUC doesn't help with that.
+
+\hypertarget{what-is-the-difference-between-precision-and-recall-2}{%
+\section{What is the difference between precision and recall?}\label{what-is-the-difference-between-precision-and-recall-2}}
+
+Recall attempts to answer ``What proportion of actual positives was identified correctly?''
+
+Precision attempts to answer ``What proportion of positive identifications was actually correct?''
+
+\hypertarget{precision-recall-trade-off-2}{%
+\section{Precision-recall trade-off}\label{precision-recall-trade-off-2}}
+
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
+
+\hypertarget{what-is-the-roc-curve-when-to-use-it-2}{%
+\section{What is the ROC curve? When to use it?}\label{what-is-the-roc-curve-when-to-use-it-2}}
+
+ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
+
+\hypertarget{what-is-auc-au-roc-when-to-use-it-2}{%
+\section{What is AUC (AU ROC)? When to use it?}\label{what-is-auc-au-roc-when-to-use-it-2}}
+
+AUC stands for Area Under the ROC Curve. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes. The value is between 0 and 1, the higher the better.
+
+\hypertarget{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-2}{%
+\section{We have two models, one with 85\% accuracy, one 82\%. Which one do you pick?}\label{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-2}}
+
+If we only care about the accuracy of the model then we would choose the one with 85\%. But if an interviewer were to ask this, it would probably be a good idea to get more context, i.e.~what the model is trying to predict. This will give us a better idea whether the evaluation metric should indeed be accuracy or another metric like recall or f1 score.
+
+\hypertarget{is-accuracy-always-a-good-metric-2}{%
+\section{Is accuracy always a good metric?}\label{is-accuracy-always-a-good-metric-2}}
+
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95\% of A class and 5\% of B class, a constant prediction of A class would have an accuracy of 95\%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
+
+\hypertarget{what-is-a-confusion-matrix-2}{%
+\section{What is a confusion matrix?}\label{what-is-a-confusion-matrix-2}}
+
+A confusion matrix, also known as an error matrix, is a summarized table used to assess the performance of a classification model. The number of correct and incorrect predictions are summarized with count values and broken down by each class.
+
+\begin{itemize}
+\item
+  \textbf{True positive(TP)} --- Correct positive prediction
+\item
+  \textbf{False positive(FP)} --- Incorrect positive prediction
+\item
+  \textbf{True negative(TN)} --- Correct negative prediction
+\item
+  \textbf{False negative(FN)} --- Incorrect negative prediction
+\end{itemize}
+
+\hypertarget{how-to-check-if-the-regression-model-fits-the-data-well-2}{%
+\section{How to check if the regression model fits the data well?}\label{how-to-check-if-the-regression-model-fits-the-data-well-2}}
+
+There are a couple of metrics that you can use:
+
+\begin{itemize}
+\item
+  \textbf{R-squared/Adjusted R-squared}: Relative measure of fit. This was explained in a previous answer
+\item
+  \textbf{F1 Score}: Evaluates the null hypothesis that all regression coefficients are equal to zero vs the alternative hypothesis that at least one doesn't equal zero
+\item
+  \textbf{RMSE}: Absolute measure of fit.
+\end{itemize}
+
+\hypertarget{model-evaluation-2}{%
+\section{Model Evaluation}\label{model-evaluation-2}}
+
+To evaluate a regression model, you can calculate its R-squared, which tells us how much of the variability in the data that the model accounts for. For example, if a model has an R-squared of 80\%, then 80\% of the variation in the data can be explained by the model.
+
+The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
+
+\hypertarget{metrics-3}{%
+\chapter{Metrics}\label{metrics-3}}
+
+\hypertarget{accuracy-6}{%
+\section{Accuracy:}\label{accuracy-6}}
+
+\textbf{\emph{(TP+TN/(TP+FP+FN+TN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Accuracy is the proportion of true results among the total number of cases examined.
+\item
+  \textbf{WHEN}: Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+\item
+  \textbf{AWARE}: What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable
+\end{itemize}
+
+\hypertarget{precision-6}{%
+\section{Precision:}\label{precision-6}}
+
+\textbf{\emph{(TP)/(TP+FP)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: It answers the question: what proportion of predicted Positives is truly Positive?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, precision = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+\item
+  \textbf{AWARE}: Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+\end{itemize}
+
+\hypertarget{recall-6}{%
+\section{Recall:}\label{recall-6}}
+
+\textbf{\emph{(TP)/(TP+FN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: answers a different question: what proportion of actual Positives is correctly classified?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, recall = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+\item
+  \textbf{AWARE}: Recall is 1 if we predict 1 for all examples.
+\end{itemize}
+
+\hypertarget{f1-score-6}{%
+\section{F1 Score:}\label{f1-score-6}}
+
+\textbf{\emph{2} (precision\emph{recall)/(precision + recall)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Here we utilize the tradeoff of precision vs.~recall. The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+  \begin{itemize}
+  \item
+    The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+  \item
+    We are predicting if an asteroid will hit the earth or not.
+  \item
+    So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+  \item
+    And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+  \end{itemize}
+\item
+  \textbf{WHEN}: We want to have a model with both good precision and recall.
+\item
+  F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+\item
+  \textbf{EXAMPLE}: If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+\item
+  \textbf{AWARE}: The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome. AUC is area under ROC curve. It represents degree of separability. It is used to value how much model is capable of distinguishing between classes. Higher value the better (0,1)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{which-metrics-to-use-when-classification-3}{%
+\section{Which metrics to use when (classification)?}\label{which-metrics-to-use-when-classification-3}}
+
+Accuracy, Precision, and Recall:
+
+\hypertarget{accuracy-7}{%
+\subsection{Accuracy}\label{accuracy-7}}
+
+Accuracy is the quintessential classification metric. It is pretty easy to understand. And easily suited for binary as well as a multiclass classification problem.
+
+\textbf{Accuracy} = (TP+TN)/(TP+FP+FN+TN)
+
+Accuracy is the proportion of true results among the total number of cases examined.
+
+\textbf{When to use?}
+
+Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+\textbf{Caveats}
+
+Let us say that our target class is very sparse. Do we want accuracy as a metric of our model performance? What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable.
+
+\hypertarget{precision-7}{%
+\subsection{Precision}\label{precision-7}}
+
+Let's start with precision, which answers the following question: what proportion of predicted Positives is truly Positive?
+
+\textbf{Precision} = (TP)/(TP+FP)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus precision=0
+
+\textbf{When to use?}
+
+Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+\textbf{Caveats}
+
+Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+\hypertarget{recall-7}{%
+\subsection{Recall}\label{recall-7}}
+
+Another very useful measure is recall, which answers a different question: what proportion of actual Positives is correctly classified?
+
+\textbf{Recall} = (TP)/(TP+FN)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus recall is also equal to 0.
+
+\textbf{When to use?}
+
+Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+\textbf{Caveats}
+
+Recall is 1 if we predict 1 for all examples.
+And thus comes the idea of utilizing tradeoff of precision vs.~recall --- F1 Score.
+
+\hypertarget{f1-score-7}{%
+\subsection{F1 Score}\label{f1-score-7}}
+
+This is my favorite evaluation metric and I tend to use this a lot in my classification projects.
+The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+Let us start with a binary prediction problem. We are predicting if an asteroid will hit the earth or not.
+So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+
+\textbf{When to use?}
+
+We want to have a model with both good precision and recall.
+
+\hypertarget{precision-recall-tradeoff-3}{%
+\subsection{Precision-Recall Tradeoff}\label{precision-recall-tradeoff-3}}
+
+Simply stated the F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+
+If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+\textbf{How to Use?}
+
+You can calculate the F1 score for binary prediction problems using:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import f1\_score}
+
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# f1\_score(y\_true, y\_pred)  }
+\end{Highlighting}
+\end{Shaded}
+
+This is one of my functions which I use to get the best threshold for maximizing F1 score for binary predictions. The below function iterates through possible threshold values to find the one that gives the best F1 score.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# y\_pred is an array of predictions}
+\CommentTok{\# def bestThresshold(y\_true,y\_pred):}
+\CommentTok{\#    best\_thresh = None}
+\CommentTok{\#    best\_score = 0}
+\CommentTok{\#    for thresh in np.arange(0.1, 0.501, 0.01):}
+\CommentTok{\#        score = f1\_score(y\_true, np.array(y\_pred)\textgreater{}thresh)}
+\CommentTok{\#        if score \textgreater{} best\_score:}
+\CommentTok{\#            best\_thresh = thresh}
+\CommentTok{\#            best\_score = score}
+\CommentTok{\#    return best\_score , best\_thresh}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.
+
+To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+Here we give \(\beta\) times as much importance to recall as precision.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import fbeta\_score}
+ 
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# fbeta\_score(y\_true, y\_pred,beta=0.5)}
+\end{Highlighting}
+\end{Shaded}
+
+F1 Score can also be used for Multiclass problems.
+
+\hypertarget{log-lossbinary-crossentropy-3}{%
+\subsection{Log Loss/Binary Crossentropy}\label{log-lossbinary-crossentropy-3}}
+
+Log loss is a pretty good evaluation metric for binary classifiers and it is sometimes the optimization objective as well in case of Logistic regression and Neural Networks.
+Binary Log loss for an example is given by the below formula where p is the probability of predicting 1.
+
+As you can see the log loss decreases as we are fairly certain in our prediction of 1 and the true label is 1.
+
+\textbf{When to Use?}
+
+When the output of a classifier is prediction probabilities. Log Loss takes into account the uncertainty of your prediction based on how much it varies from the actual label. This gives us a more nuanced view of the performance of our model. In general, minimizing Log Loss gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# where y\_pred are probabilities and y\_true are binary class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+It is susceptible in case of imbalanced datasets. You might have to introduce class weights to penalize minority errors more or you may use this after balancing your dataset.
+
+\hypertarget{categorical-cross-entropy-3}{%
+\subsection{Categorical Cross Entropy}\label{categorical-cross-entropy-3}}
+
+The log loss also generalizes to the multiclass problem. The classifier in a multiclass setting must assign a probability to each class for all examples. If there are N samples belonging to M classes, then the Categorical Crossentropy is the summation of -ylogp values:
+
+\begin{itemize}
+\item
+  y\_ij is 1 if the sample i belongs to class j else 0
+\item
+  p\_ij is the probability our classifier predicts of sample i belonging to class j.
+\end{itemize}
+
+\textbf{When to Use?}
+
+When the output of a classifier is multiclass prediction probabilities. We generally use Categorical Crossentropy in case of Neural Nets. In general, minimizing Categorical cross-entropy gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# Where y\_pred is a matrix of probabilities with shape = (n\_samples, n\_classes) and y\_true is an array of class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}:
+
+It is susceptible in case of imbalanced datasets.
+
+\hypertarget{auc-3}{%
+\subsection{AUC}\label{auc-3}}
+
+AUC is the area under the ROC curve.
+
+AUC ROC indicates how well the probabilities from the positive classes are separated from the negative classes
+
+\hypertarget{roc-curve-3}{%
+\subsection{ROC curve}\label{roc-curve-3}}
+
+We have got the probabilities from our classifier. We can use various threshold values to plot our sensitivity(TPR) and (1-specificity)(FPR) on the cure and we will have a ROC curve; where True positive rate or TPR is just the proportion of trues we are capturing using our algorithm.
+
+Sensitivity = TPR(True Positive Rate)
+
+Recall = TP/(TP+FN)
+
+and False positive rate or FPR is just the proportion of false we are capturing using our algorithm.
+
+1- Specificity = FPR(False Positive Rate)= FP/(TN+FP)
+
+Here we can use the ROC curves to decide on a Threshold value.
+
+The choice of threshold value will also depend on how the classifier is intended to be used.
+
+If it is a cancer classification application you don't want your threshold to be as big as 0.5. Even if a patient has a 0.3 probability of having cancer you would classify him to be 1.
+
+Otherwise, in an application for reducing the limits on the credit card, you don't want your threshold to be as less as 0.5. You are here a little worried about the negative effect of decreasing limits on customer satisfaction.
+
+\textbf{When to Use?}
+
+AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values. So, for example, if you as a marketer want to find a list of users who will respond to a marketing campaign. AUC is a good metric to use since the predictions ranked by probability is the order in which you will create a list of users to send the marketing campaign.
+
+Another benefit of using AUC is that it is classification-threshold-invariant like log loss. It measures the quality of the model's predictions irrespective of what classification threshold is chosen, unlike F1 score or accuracy which depend on the choice of threshold.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# import numpy as np}
+\CommentTok{\# from sklearn.metrics import roc\_auc\_score}
+\CommentTok{\# y\_true = np.array([0, 0, 1, 1])}
+\CommentTok{\# y\_scores = np.array([0.1, 0.4, 0.35, 0.8])}
+\CommentTok{\# print(roc\_auc\_score(y\_true, y\_scores))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+Sometimes we will need well-calibrated probability outputs from our models and AUC doesn't help with that.
+
+\hypertarget{what-is-the-difference-between-precision-and-recall-3}{%
+\section{What is the difference between precision and recall?}\label{what-is-the-difference-between-precision-and-recall-3}}
+
+Recall attempts to answer ``What proportion of actual positives was identified correctly?''
+
+Precision attempts to answer ``What proportion of positive identifications was actually correct?''
+
+\hypertarget{precision-recall-trade-off-3}{%
+\section{Precision-recall trade-off}\label{precision-recall-trade-off-3}}
+
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
+
+\hypertarget{what-is-the-roc-curve-when-to-use-it-3}{%
+\section{What is the ROC curve? When to use it?}\label{what-is-the-roc-curve-when-to-use-it-3}}
+
+ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
+
+\hypertarget{what-is-auc-au-roc-when-to-use-it-3}{%
+\section{What is AUC (AU ROC)? When to use it?}\label{what-is-auc-au-roc-when-to-use-it-3}}
+
+AUC stands for Area Under the ROC Curve. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes. The value is between 0 and 1, the higher the better.
+
+\hypertarget{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-3}{%
+\section{We have two models, one with 85\% accuracy, one 82\%. Which one do you pick?}\label{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-3}}
+
+If we only care about the accuracy of the model then we would choose the one with 85\%. But if an interviewer were to ask this, it would probably be a good idea to get more context, i.e.~what the model is trying to predict. This will give us a better idea whether the evaluation metric should indeed be accuracy or another metric like recall or f1 score.
+
+\hypertarget{is-accuracy-always-a-good-metric-3}{%
+\section{Is accuracy always a good metric?}\label{is-accuracy-always-a-good-metric-3}}
+
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95\% of A class and 5\% of B class, a constant prediction of A class would have an accuracy of 95\%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
+
+\hypertarget{what-is-a-confusion-matrix-3}{%
+\section{What is a confusion matrix?}\label{what-is-a-confusion-matrix-3}}
+
+A confusion matrix, also known as an error matrix, is a summarized table used to assess the performance of a classification model. The number of correct and incorrect predictions are summarized with count values and broken down by each class.
+
+\begin{itemize}
+\item
+  \textbf{True positive(TP)} --- Correct positive prediction
+\item
+  \textbf{False positive(FP)} --- Incorrect positive prediction
+\item
+  \textbf{True negative(TN)} --- Correct negative prediction
+\item
+  \textbf{False negative(FN)} --- Incorrect negative prediction
+\end{itemize}
+
+\hypertarget{how-to-check-if-the-regression-model-fits-the-data-well-3}{%
+\section{How to check if the regression model fits the data well?}\label{how-to-check-if-the-regression-model-fits-the-data-well-3}}
+
+There are a couple of metrics that you can use:
+
+\begin{itemize}
+\item
+  \textbf{R-squared/Adjusted R-squared}: Relative measure of fit. This was explained in a previous answer
+\item
+  \textbf{F1 Score}: Evaluates the null hypothesis that all regression coefficients are equal to zero vs the alternative hypothesis that at least one doesn't equal zero
+\item
+  \textbf{RMSE}: Absolute measure of fit.
+\end{itemize}
+
+\hypertarget{model-evaluation-3}{%
+\section{Model Evaluation}\label{model-evaluation-3}}
+
+To evaluate a regression model, you can calculate its R-squared, which tells us how much of the variability in the data that the model accounts for. For example, if a model has an R-squared of 80\%, then 80\% of the variation in the data can be explained by the model.
+
+The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
+
+\hypertarget{intro}{%
+\chapter{ML Models}\label{intro}}
+
+\hypertarget{linear-regression-1}{%
+\section{Linear Regression}\label{linear-regression-1}}
+
+Linear Regression involves finding a `line of best fit' that represents a dataset using the least squares method. The least squares method involves finding a linear equation that minimizes the sum of squared residuals. A residual is equal to the actual minus predicted value.
+
+To give an example, the red line is a better line of best fit than the green line because it is closer to the points, and thus, the residuals are smaller.
+
+Linear Regression is one of the most fundamental algorithms used to model relationships between a dependent variable and one or more independent variables. In simpler terms, it involves finding the `line of best fit' that represents two or more variables.
+
+The line of best fit is found by minimizing the squared distances between the points and the line of best fit --- this is known as minimizing the sum of squared residuals. A residual is simply equal to the predicted value minus the actual value.
+
+\hypertarget{whats-the-difference-between-linear-regression-and-logistic-regression}{%
+\section{What's the difference between Linear Regression and Logistic Regression?}\label{whats-the-difference-between-linear-regression-and-logistic-regression}}
+
+Linear Regression is used to predict a continuous variable and is mainly used to solve regression problems. Linear regression finds the best fit line by which the output numerical value can be predicted.
+
+Logistic Regression is used to predict categorical values and is mainly used in classification problems. Logistic regression produces an S curve that classifies, the output is binary or categories.
+
+\hypertarget{what-is-overfitting}{%
+\section{What is overfitting?}\label{what-is-overfitting}}
+
+Overfitting is an error where the model `fits' the data too well, resulting in a model with high variance and low bias. As a consequence, an overfit model will inaccurately predict new data points even though it has a high accuracy on the training data.
+
+Overfitting is a modeling error when a function fits the data too closely, resulting in high levels of error when new data is introduced to the model.
+
+There are a number of ways that you can prevent overfitting of a model:
+
+\begin{itemize}
+\item
+  \textbf{Cross-validation}: Cross-validation is a technique used to assess how well a model performs on a new independent dataset. The simplest example of cross-validation is when you split your data into two groups: training data and testing data, where you use the training data to build the model and the testing data to test the model.
+\item
+  \textbf{Regularization}: Overfitting occurs when models have higher degree polynomials. Thus, regularization reduces overfitting by penalizing higher degree polynomials.
+\item
+  \textbf{Reduce the number of features}: You can also reduce overfitting by simply reducing the number of input features. You can do this by manually removing features, or you can use a technique, called Principal Component Analysis, which projects higher dimensional data (eg. 3 dimensions) to a smaller space (eg. 2 dimensions).
+\item
+  \textbf{Ensemble Learning Techniques}: Ensemble techniques take many weak learners and converts them into a strong learner through bagging and boosting. Through bagging and boosting, these techniques tend to overfit less than their alternative counterparts.
+\end{itemize}
+
+Overfitting is an error where the model `fits' the data too well, resulting in a model with high variance and low bias. As a consequence, an overfit model will inaccurately predict new data points even though it has a high accuracy on the training data.
+
+\hypertarget{what-is-the-bias-variance-tradeoff}{%
+\section{What is the bias-variance tradeoff?}\label{what-is-the-bias-variance-tradeoff}}
+
+The bias of an estimator is the difference between the expected value and true value. A model with a high bias tends to be oversimplified and results in underfitting. Variance represents the model's sensitivity to the data and the noise. A model with high variance results in overfitting.
+
+Therefore, the bias-variance tradeoff is a property of machine learning models in which lower variance results in higher bias and vice versa. Generally, an optimal balance of the two can be found in which error is minimized.
+
+\hypertarget{what-are-ridge-and-lasso-regression-and-what-are-the-differences-between-them}{%
+\section{What are ridge and lasso regression and what are the differences between them?}\label{what-are-ridge-and-lasso-regression-and-what-are-the-differences-between-them}}
+
+Both L1 and L2 regularization are methods used to reduce the overfitting of training data. Least Squares minimizes the sum of the squared residuals, which can result in low bias but high variance.
+
+L2 Regularization, also called ridge regression, minimizes the sum of the squared residuals plus lambda times the slope squared. This additional term is called the Ridge Regression Penalty. This increases the bias of the model, making the fit worse on the training data, but also decreases the variance.
+
+If you take the ridge regression penalty and replace it with the absolute value of the slope, then you get Lasso regression or L1 regularization.
+
+L2 is less robust but has a stable solution and always one solution. L1 is more robust but has an unstable solution and can possibly have multiple solutions.
+
+\hypertarget{whats-the-difference-between-l2-and-l1-regularization}{%
+\section{What's the difference between L2 and L1 regularization?}\label{whats-the-difference-between-l2-and-l1-regularization}}
+
+\begin{itemize}
+\item
+  \textbf{Penalty terms}: L1 regularization uses the sum of the absolute values of the weights, while L2 regularization uses the sum of the weights squared.
+\item
+  \textbf{Feature selection}: L1 performs feature selection by reducing the coefficients of some predictors to 0, while L2 does not.
+  Computational efficiency: L2 has an analytical solution, while L1 does not.
+\item
+  \textbf{Multicollinearity}: L2 addresses multicollinearity by constraining the coefficient norm.
+\item
+  L1 effectively removes features that are unimportant, and doing this too aggressively can lead to underfitting. L2 weighs each feature instead of removing them entirely, which can lead to better accuracy. Briefly, L1 removes features while L2 doesn't, L2 regulates their weights instead.
+\end{itemize}
+
+\hypertarget{whats-regularization-and-whats-the-difference-between-l1-and-l2-regularization}{%
+\section{What's Regularization? and what's the difference between L1 and L2 regularization?}\label{whats-regularization-and-whats-the-difference-between-l1-and-l2-regularization}}
+
+Regularization in machine learning is the process of regularizing the parameters that constrain, regularizes, or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, avoiding the risk of Overfitting. Regularization basically adds the penalty as model complexity increases which can help avoid overfitting.
+
+\hypertarget{ridge-regression}{%
+\subsection{Ridge Regression}\label{ridge-regression}}
+
+Ridge regression, also known as L2 Regularization, is a regression technique that introduces a small amount of bias to reduce overfitting. It does this by minimizing the sum of squared residuals plus a penalty, where the penalty is equal to lambda times the slope squared. Lambda refers to the severity of the penalty.
+
+Without a penalty, the line of best fit has a steeper slope, which means that it is more sensitive to small changes in X. By introducing a penalty, the line of best fit becomes less sensitive to small changes in X. This is the idea behind ridge regression.
+
+\hypertarget{lasso-regression}{%
+\subsection{Lasso Regression}\label{lasso-regression}}
+
+Lasso Regression, also known as L1 Regularization, is similar to Ridge regression. The only difference is that the penalty is calculated with the absolute value of the slope instead.
+
+\hypertarget{can-we-use-l1-regularization-for-feature-selection}{%
+\section{Can we use L1 regularization for feature selection?}\label{can-we-use-l1-regularization-for-feature-selection}}
+
+Yes, because the nature of L1 regularization will lead to sparse coefficients of features. Feature selection can be done by keeping only features with non-zero coefficients.
+
+\hypertarget{when-do-we-need-to-perform-feature-normalization-for-linear-models-when-its-okay-not-to-do-it}{%
+\section{When do we need to perform feature normalization for linear models? When it's okay not to do it?}\label{when-do-we-need-to-perform-feature-normalization-for-linear-models-when-its-okay-not-to-do-it}}
+
+Feature normalization is necessary for L1 and L2 regularizations. The idea of both methods is to penalize all the features relatively equally. This can't be done effectively if every feature is scaled differently.
+
+Linear regression without regularization techniques can be used without feature normalization. Also, regularization can help to make the analytical solution more stable, --- it adds the regularization matrix to the feature matrix before inverting it.
+
+\hypertarget{logistic-regression-1}{%
+\section{Logistic Regression}\label{logistic-regression-1}}
+
+Logistic Regression is a classification technique that also finds a `line of best fit'. However, unlike linear regression where the line of best fit is found using least squares, logistic regression finds the line (logistic curve) of best fit using maximum likelihood. This is done because the y value can only be one or zero.
+
+Logistic regression is similar to linear regression but is used to model the probability of a discrete number of outcomes, typically two. For example, you might want to predict whether a person is alive or dead given their age.
+
+At a glance, logistic regression sounds much more complicated than linear regression, but really only has one extra step.
+
+First, you calculate a score using an equation similar to the equation for the line of best fit for linear regression.
+
+The extra step is feeding the score that you previously calculated in the sigmoid function below so that you get a probability in return. This probability can then be converted to a binary output, either 1 or 0.
+
+To find the weights of the initial equation to calculate the score, methods like gradient descent or maximum likelihood are used. Since it's beyond the scope of this article, I won't go into much more detail, but now you know how it works!
+
+\hypertarget{what-is-logistic-regression-or-state-an-example-when-you-have-used-logistic-regression-recently.}{%
+\section{What is logistic regression? Or State an example when you have used logistic regression recently.}\label{what-is-logistic-regression-or-state-an-example-when-you-have-used-logistic-regression-recently.}}
+
+Logistic Regression often referred as logit model is a technique to predict the binary outcome from a linear combination of predictor variables. For example, if you want to predict whether a particular political leader will win the election or not. In this case, the outcome of prediction is binary i.e.~0 or 1 (Win/Lose). The predictor variables here would be the amount of money spent for election campaigning of a particular candidate, the amount of time spent in campaigning, etc.
+
+\hypertarget{metrics-4}{%
+\chapter{Metrics}\label{metrics-4}}
+
+\hypertarget{accuracy-8}{%
+\section{Accuracy:}\label{accuracy-8}}
+
+\textbf{\emph{(TP+TN/(TP+FP+FN+TN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Accuracy is the proportion of true results among the total number of cases examined.
+\item
+  \textbf{WHEN}: Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+\item
+  \textbf{AWARE}: What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable
+\end{itemize}
+
+\hypertarget{precision-8}{%
+\section{Precision:}\label{precision-8}}
+
+\textbf{\emph{(TP)/(TP+FP)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: It answers the question: what proportion of predicted Positives is truly Positive?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, precision = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+\item
+  \textbf{AWARE}: Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+\end{itemize}
+
+\hypertarget{recall-8}{%
+\section{Recall:}\label{recall-8}}
+
+\textbf{\emph{(TP)/(TP+FN)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: answers a different question: what proportion of actual Positives is correctly classified?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asteroid problem, we never predicted a true positive, recall = 0
+  \end{itemize}
+\item
+  \textbf{WHEN}: Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+\item
+  \textbf{AWARE}: Recall is 1 if we predict 1 for all examples.
+\end{itemize}
+
+\hypertarget{f1-score-8}{%
+\section{F1 Score:}\label{f1-score-8}}
+
+\textbf{\emph{2} (precision\emph{recall)/(precision + recall)}}
+
+\begin{itemize}
+\item
+  \textbf{WHAT}: Here we utilize the tradeoff of precision vs.~recall. The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+  \begin{itemize}
+  \item
+    The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+  \item
+    We are predicting if an asteroid will hit the earth or not.
+  \item
+    So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+  \item
+    And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+  \end{itemize}
+\item
+  \textbf{WHEN}: We want to have a model with both good precision and recall.
+\item
+  F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+\item
+  \textbf{EXAMPLE}: If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+\item
+  \textbf{AWARE}: The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome. AUC is area under ROC curve. It represents degree of separability. It is used to value how much model is capable of distinguishing between classes. Higher value the better (0,1)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{which-metrics-to-use-when-classification-4}{%
+\section{Which metrics to use when (classification)?}\label{which-metrics-to-use-when-classification-4}}
+
+Accuracy, Precision, and Recall:
+
+\hypertarget{accuracy-9}{%
+\subsection{Accuracy}\label{accuracy-9}}
+
+Accuracy is the quintessential classification metric. It is pretty easy to understand. And easily suited for binary as well as a multiclass classification problem.
+
+\textbf{Accuracy} = (TP+TN)/(TP+FP+FN+TN)
+
+Accuracy is the proportion of true results among the total number of cases examined.
+
+\textbf{When to use?}
+
+Accuracy is a valid choice of evaluation for classification problems which are well balanced and not skewed or No class imbalance.
+
+\textbf{Caveats}
+
+Let us say that our target class is very sparse. Do we want accuracy as a metric of our model performance? What if we are predicting if an asteroid will hit the earth? Just say No all the time. And you will be 99\% accurate. My model can be reasonably accurate, but not at all valuable.
+
+\hypertarget{precision-9}{%
+\subsection{Precision}\label{precision-9}}
+
+Let's start with precision, which answers the following question: what proportion of predicted Positives is truly Positive?
+
+\textbf{Precision} = (TP)/(TP+FP)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus precision=0
+
+\textbf{When to use?}
+
+Precision is a valid choice of evaluation metric when we want to be very sure of our prediction. For example: If we are building a system to predict if we should decrease the credit limit on a particular account, we want to be very sure about our prediction or it may result in customer dissatisfaction.
+
+\textbf{Caveats}
+
+Being very precise means our model will leave a lot of credit defaulters untouched and hence lose money.
+
+\hypertarget{recall-9}{%
+\subsection{Recall}\label{recall-9}}
+
+Another very useful measure is recall, which answers a different question: what proportion of actual Positives is correctly classified?
+
+\textbf{Recall} = (TP)/(TP+FN)
+
+In the asteroid prediction problem, we never predicted a true positive.
+
+And thus recall is also equal to 0.
+
+\textbf{When to use?}
+
+Recall is a valid choice of evaluation metric when we want to capture as many positives as possible. For example: If we are building a system to predict if a person has cancer or not, we want to capture the disease even if we are not very sure.
+
+\textbf{Caveats}
+
+Recall is 1 if we predict 1 for all examples.
+And thus comes the idea of utilizing tradeoff of precision vs.~recall --- F1 Score.
+
+\hypertarget{f1-score-9}{%
+\subsection{F1 Score}\label{f1-score-9}}
+
+This is my favorite evaluation metric and I tend to use this a lot in my classification projects.
+The F1 score is a number between 0 and 1 and is the harmonic mean of precision and recall.
+
+Let us start with a binary prediction problem. We are predicting if an asteroid will hit the earth or not.
+So if we say ``No'' for the whole training set. Our precision here is 0. What is the recall of our positive class? It is zero. What is the accuracy? It is more than 99\%.
+And hence the F1 score is also 0. And thus we get to know that the classifier that has an accuracy of 99\% is basically worthless for our case. And hence it solves our problem.
+
+\textbf{When to use?}
+
+We want to have a model with both good precision and recall.
+
+\hypertarget{precision-recall-tradeoff-4}{%
+\subsection{Precision-Recall Tradeoff}\label{precision-recall-tradeoff-4}}
+
+Simply stated the F1 score sort of maintains a balance between the precision and recall for your classifier. If your precision is low, the F1 is low and if the recall is low again your F1 score is low.
+
+If you are a police inspector and you want to catch criminals, you want to be sure that the person you catch is a criminal (Precision) and you also want to capture as many criminals (Recall) as possible. The F1 score manages this tradeoff.
+
+\textbf{How to Use?}
+
+You can calculate the F1 score for binary prediction problems using:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import f1\_score}
+
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# f1\_score(y\_true, y\_pred)  }
+\end{Highlighting}
+\end{Shaded}
+
+This is one of my functions which I use to get the best threshold for maximizing F1 score for binary predictions. The below function iterates through possible threshold values to find the one that gives the best F1 score.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# y\_pred is an array of predictions}
+\CommentTok{\# def bestThresshold(y\_true,y\_pred):}
+\CommentTok{\#    best\_thresh = None}
+\CommentTok{\#    best\_score = 0}
+\CommentTok{\#    for thresh in np.arange(0.1, 0.501, 0.01):}
+\CommentTok{\#        score = f1\_score(y\_true, np.array(y\_pred)\textgreater{}thresh)}
+\CommentTok{\#        if score \textgreater{} best\_score:}
+\CommentTok{\#            best\_thresh = thresh}
+\CommentTok{\#            best\_score = score}
+\CommentTok{\#    return best\_score , best\_thresh}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+The main problem with the F1 score is that it gives equal weight to precision and recall. We might sometimes need to include domain knowledge in our evaluation where we want to have more recall or more precision.
+
+To solve this, we can do this by creating a weighted F1 metric as below where beta manages the tradeoff between precision and recall.
+
+Here we give \(\beta\) times as much importance to recall as precision.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import fbeta\_score}
+ 
+\CommentTok{\# y\_true = [0, 1, 1, 0, 1, 1]}
+\CommentTok{\# y\_pred = [0, 0, 1, 0, 0, 1]}
+\CommentTok{\# fbeta\_score(y\_true, y\_pred,beta=0.5)}
+\end{Highlighting}
+\end{Shaded}
+
+F1 Score can also be used for Multiclass problems.
+
+\hypertarget{log-lossbinary-crossentropy-4}{%
+\subsection{Log Loss/Binary Crossentropy}\label{log-lossbinary-crossentropy-4}}
+
+Log loss is a pretty good evaluation metric for binary classifiers and it is sometimes the optimization objective as well in case of Logistic regression and Neural Networks.
+Binary Log loss for an example is given by the below formula where p is the probability of predicting 1.
+
+As you can see the log loss decreases as we are fairly certain in our prediction of 1 and the true label is 1.
+
+\textbf{When to Use?}
+
+When the output of a classifier is prediction probabilities. Log Loss takes into account the uncertainty of your prediction based on how much it varies from the actual label. This gives us a more nuanced view of the performance of our model. In general, minimizing Log Loss gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# where y\_pred are probabilities and y\_true are binary class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+It is susceptible in case of imbalanced datasets. You might have to introduce class weights to penalize minority errors more or you may use this after balancing your dataset.
+
+\hypertarget{categorical-cross-entropy-4}{%
+\subsection{Categorical Cross Entropy}\label{categorical-cross-entropy-4}}
+
+The log loss also generalizes to the multiclass problem. The classifier in a multiclass setting must assign a probability to each class for all examples. If there are N samples belonging to M classes, then the Categorical Crossentropy is the summation of -ylogp values:
+
+\begin{itemize}
+\item
+  y\_ij is 1 if the sample i belongs to class j else 0
+\item
+  p\_ij is the probability our classifier predicts of sample i belonging to class j.
+\end{itemize}
+
+\textbf{When to Use?}
+
+When the output of a classifier is multiclass prediction probabilities. We generally use Categorical Crossentropy in case of Neural Nets. In general, minimizing Categorical cross-entropy gives greater accuracy for the classifier.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# from sklearn.metrics import log\_loss  }
+\DocumentationTok{\#\# Where y\_pred is a matrix of probabilities with shape = (n\_samples, n\_classes) and y\_true is an array of class labels}
+\CommentTok{\# log\_loss(y\_true, y\_pred, eps=1e{-}15)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}:
+
+It is susceptible in case of imbalanced datasets.
+
+\hypertarget{auc-4}{%
+\subsection{AUC}\label{auc-4}}
+
+AUC is the area under the ROC curve.
+
+AUC ROC indicates how well the probabilities from the positive classes are separated from the negative classes
+
+\hypertarget{roc-curve-4}{%
+\subsection{ROC curve}\label{roc-curve-4}}
+
+We have got the probabilities from our classifier. We can use various threshold values to plot our sensitivity(TPR) and (1-specificity)(FPR) on the cure and we will have a ROC curve; where True positive rate or TPR is just the proportion of trues we are capturing using our algorithm.
+
+Sensitivity = TPR(True Positive Rate)
+
+Recall = TP/(TP+FN)
+
+and False positive rate or FPR is just the proportion of false we are capturing using our algorithm.
+
+1- Specificity = FPR(False Positive Rate)= FP/(TN+FP)
+
+Here we can use the ROC curves to decide on a Threshold value.
+
+The choice of threshold value will also depend on how the classifier is intended to be used.
+
+If it is a cancer classification application you don't want your threshold to be as big as 0.5. Even if a patient has a 0.3 probability of having cancer you would classify him to be 1.
+
+Otherwise, in an application for reducing the limits on the credit card, you don't want your threshold to be as less as 0.5. You are here a little worried about the negative effect of decreasing limits on customer satisfaction.
+
+\textbf{When to Use?}
+
+AUC is scale-invariant. It measures how well predictions are ranked, rather than their absolute values. So, for example, if you as a marketer want to find a list of users who will respond to a marketing campaign. AUC is a good metric to use since the predictions ranked by probability is the order in which you will create a list of users to send the marketing campaign.
+
+Another benefit of using AUC is that it is classification-threshold-invariant like log loss. It measures the quality of the model's predictions irrespective of what classification threshold is chosen, unlike F1 score or accuracy which depend on the choice of threshold.
+
+\textbf{How to Use?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# import numpy as np}
+\CommentTok{\# from sklearn.metrics import roc\_auc\_score}
+\CommentTok{\# y\_true = np.array([0, 0, 1, 1])}
+\CommentTok{\# y\_scores = np.array([0.1, 0.4, 0.35, 0.8])}
+\CommentTok{\# print(roc\_auc\_score(y\_true, y\_scores))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Caveats}
+
+Sometimes we will need well-calibrated probability outputs from our models and AUC doesn't help with that.
+
+\hypertarget{what-is-the-difference-between-precision-and-recall-4}{%
+\section{What is the difference between precision and recall?}\label{what-is-the-difference-between-precision-and-recall-4}}
+
+Recall attempts to answer ``What proportion of actual positives was identified correctly?''
+
+Precision attempts to answer ``What proportion of positive identifications was actually correct?''
+
+\hypertarget{precision-recall-trade-off-4}{%
+\section{Precision-recall trade-off}\label{precision-recall-trade-off-4}}
+
+Tradeoff means increasing one parameter would lead to decreasing of other. Precision-recall tradeoff occur due to increasing one of the parameter(precision or recall) while keeping the model same.
+
+In an ideal scenario where there is a perfectly separable data, both precision and recall can get maximum value of 1.0. But in most of the practical situations, there is noise in the dataset and the dataset is not perfectly separable. There might be some points of positive class closer to the negative class and vice versa. In such cases, shifting the decision boundary can either increase the precision or recall but not both. Increasing one parameter leads to decreasing of the other.
+
+\hypertarget{what-is-the-roc-curve-when-to-use-it-4}{%
+\section{What is the ROC curve? When to use it?}\label{what-is-the-roc-curve-when-to-use-it-4}}
+
+ROC stands for Receiver Operating Characteristics. The diagrammatic representation that shows the contrast between true positive rate vs false positive rate. It is used when we need to predict the probability of the binary outcome.
+
+\hypertarget{what-is-auc-au-roc-when-to-use-it-4}{%
+\section{What is AUC (AU ROC)? When to use it?}\label{what-is-auc-au-roc-when-to-use-it-4}}
+
+AUC stands for Area Under the ROC Curve. ROC is a probability curve and AUC represents degree or measure of separability. It's used when we need to value how much model is capable of distinguishing between classes. The value is between 0 and 1, the higher the better.
+
+\hypertarget{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-4}{%
+\section{We have two models, one with 85\% accuracy, one 82\%. Which one do you pick?}\label{we-have-two-models-one-with-85-accuracy-one-82.-which-one-do-you-pick-4}}
+
+If we only care about the accuracy of the model then we would choose the one with 85\%. But if an interviewer were to ask this, it would probably be a good idea to get more context, i.e.~what the model is trying to predict. This will give us a better idea whether the evaluation metric should indeed be accuracy or another metric like recall or f1 score.
+
+\hypertarget{is-accuracy-always-a-good-metric-4}{%
+\section{Is accuracy always a good metric?}\label{is-accuracy-always-a-good-metric-4}}
+
+Accuracy is not a good performance metric when there is imbalance in the dataset. For example, in binary classification with 95\% of A class and 5\% of B class, a constant prediction of A class would have an accuracy of 95\%. In case of imbalance dataset, we need to choose Precision, recall, or F1 Score depending on the problem we are trying to solve.
+
+\hypertarget{what-is-a-confusion-matrix-4}{%
+\section{What is a confusion matrix?}\label{what-is-a-confusion-matrix-4}}
+
+A confusion matrix, also known as an error matrix, is a summarized table used to assess the performance of a classification model. The number of correct and incorrect predictions are summarized with count values and broken down by each class.
+
+\begin{itemize}
+\item
+  \textbf{True positive(TP)} --- Correct positive prediction
+\item
+  \textbf{False positive(FP)} --- Incorrect positive prediction
+\item
+  \textbf{True negative(TN)} --- Correct negative prediction
+\item
+  \textbf{False negative(FN)} --- Incorrect negative prediction
+\end{itemize}
+
+\hypertarget{how-to-check-if-the-regression-model-fits-the-data-well-4}{%
+\section{How to check if the regression model fits the data well?}\label{how-to-check-if-the-regression-model-fits-the-data-well-4}}
+
+There are a couple of metrics that you can use:
+
+\begin{itemize}
+\item
+  \textbf{R-squared/Adjusted R-squared}: Relative measure of fit. This was explained in a previous answer
+\item
+  \textbf{F1 Score}: Evaluates the null hypothesis that all regression coefficients are equal to zero vs the alternative hypothesis that at least one doesn't equal zero
+\item
+  \textbf{RMSE}: Absolute measure of fit.
+\end{itemize}
+
+\hypertarget{model-evaluation-4}{%
+\section{Model Evaluation}\label{model-evaluation-4}}
+
+To evaluate a regression model, you can calculate its R-squared, which tells us how much of the variability in the data that the model accounts for. For example, if a model has an R-squared of 80\%, then 80\% of the variation in the data can be explained by the model.
+
+The adjusted R-squared is a modified version of r-squared that adjusts for the number of predictors in the model; it increases if the new term improves the model more than would be expected by chance and vice versa.
+
+\hypertarget{clustering-1}{%
+\chapter{Clustering}\label{clustering-1}}
 
 We describe our methods in this chapter.
 
@@ -1038,8 +2946,8 @@ Creating a model with an unbalanced dataset will yield bad results in terms of f
 
 The SMOTE technique creates new observations of the underrepresented class, in this case, the fraudulent observations. These synthetic observations are almost identical to the original fraudulent observations. This technique is expeditious, but the types of synthetic observations it produces are not as useful as the unique observations created by other oversampling techniques.
 
-\hypertarget{neural-networks}{%
-\chapter{Neural Networks}\label{neural-networks}}
+\hypertarget{neural-networks-1}{%
+\chapter{Neural Networks}\label{neural-networks-1}}
 
 \hypertarget{briefly-explain-how-a-basic-neural-network-works}{%
 \section{Briefly explain how a basic neural network works}\label{briefly-explain-how-a-basic-neural-network-works}}
@@ -1126,8 +3034,8 @@ There are several commonly used cost functions, including the quadratic cost, cr
 
 The main objective of the neural network is to find the optimal set of weights and biases by minimizing the cost function. Cost function or loss function is a measure used to measure the performance of the neural network on test data set. It measures the ability to estimate the relationship between X and y. An example of cost functions is the mean square error.
 
-\hypertarget{backpropagation}{%
-\section{Backpropagation}\label{backpropagation}}
+\hypertarget{backpropagation-1}{%
+\section{Backpropagation}\label{backpropagation-1}}
 
 Backpropagation is an algorithm that closely ties with the cost function. Specifically, it is an algorithm that is used to compute the gradient of the cost function. It has adopted a lot of popularity and use due to its speed \& efficiency compared to other approaches.
 
@@ -1439,8 +3347,8 @@ The act of sending the data from the input layer to the output layer then all th
 
 Upon learning, the Neurons will have different weights and those weights will dictate future outputs. For example in our earlier car vs.~bus classification scenario a Neuron could be looking at the number of windows to decide if the object is a car or bus, obviously, this Neuron will have higher weight than a Neuron looking at the color of the object to determine if it's a car or a bus. This is an oversimplification of the Neurons function but I want you to get the idea of Neuron weights according to importance.
 
-\hypertarget{gradient-descent}{%
-\section{Gradient Descent}\label{gradient-descent}}
+\hypertarget{gradient-descent-1}{%
+\section{Gradient Descent}\label{gradient-descent-1}}
 
 Gradient Descent is a method to minimize the Cost Function in order to update the Neurons weights. This method tells your Neural Network how to calculate the Cost Function in a fast efficient manner to minimize the difference between the actual and expected outputs.
 

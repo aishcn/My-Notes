@@ -1,0 +1,141 @@
+# Machine Learning
+
+## Linear Algebra
+
+## Gradient Descent
+
+## Model Evaluation and Selection
+
+### Bias-Variance Trade-off
+
+### Model Complexity and Overfitting
+
+### Regularization
+
+### Interpretability & Explainability
+
+## Model Training
+
+### Cross-Validation
+
+### Boostrapping and Bagging
+
+### Hyperparameter Tuning
+
+### Training Times and Learning Curves
+
+## Linear Regression
+
+### Evaluating Linear Regression
+
+### Subset Selection
+
+### Linear Regression Assumptions
+
+### Avoiding Linear Regression Pitfalls
+
+#### Heteroscedasticity
+
+#### Normality
+
+#### Outliers
+
+#### Multicollinearity
+
+#### Confounding Variabes
+
+### Generalized Linear Models
+
+## Classification
+
+### General Framework
+
+### Evaluating Classifiers
+
+#### Building and Interpreting a Confusion Matrix
+
+#### Precision and Recall
+
+### Visualizing Classifier Performance
+
+## Logistic Regression
+
+### Naive Bayes
+
+### SVMs
+
+### Decision Trees
+
+#### Training
+
+### Entropy
+
+### Random Forests
+
+#### Boosting
+
+## Dimensionality Reduction
+
+### Principal Component Analysis
+
+## Clustering
+
+### K-Means Clustering
+
+#### K-Means Alternatives
+
+#### Gaussian Mixture Model (GMM)
+
+## Neural Networks
+
+### Perceptron
+
+### Backpropagation
+
+### Training Neural Networks
+
+#### General Framework
+
+#### Training Optimization Techniques
+
+#### Transfer Learning
+
+### Addressing Overfitting
+
+### Types of Neural Networks
+
+#### CNNs
+
+#### RNNs
+
+#### LSTMs
+
+## Reinforcement Learning
+
+## End-to-End ML Workflow
+
+### Step 1: Clarify the Problem and Constraints
+
+### Step 2: Establish Metrics
+
+### Step 3: Understand Your Data Sources
+
+### Step 4: Explore Your Data
+
+### Step 5: Clean Your Data
+
+### Step 6: Feature Engineering
+
+### Step 7: Model Selection
+
+### Step 8: Model Training & Evaluation
+
+### Step 9: Deployment
+
+## Machine Learning Interview Questions
+
+### Easy
+
+### Medium
+
+### Hard
