@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Machine Learning | Machine Learning Prep Guide</title>
+<title>Chapter 3 Machine Learning | Anjali’s Notes</title>
 <meta name="author" content="Anjali Chauhan">
-<meta name="description" content="4.1 Linear Algebra   4.2 Gradient Descent   4.3 Model Evaluation and Selection  4.3.1 Bias-Variance Trade-off   4.3.2 Model Complexity and Overfitting   4.3.3 Regularization   4.3.4...">
+<meta name="description" content="Concepts covered in CPSC 330, CPSC 340, ECON 323 and beyond.">
 <meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Machine Learning | Machine Learning Prep Guide">
+<meta property="og:title" content="Chapter 3 Machine Learning | Anjali’s Notes">
 <meta property="og:type" content="book">
-<meta property="og:description" content="4.1 Linear Algebra   4.2 Gradient Descent   4.3 Model Evaluation and Selection  4.3.1 Bias-Variance Trade-off   4.3.2 Model Complexity and Overfitting   4.3.3 Regularization   4.3.4...">
+<meta property="og:description" content="Concepts covered in CPSC 330, CPSC 340, ECON 323 and beyond.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Machine Learning | Machine Learning Prep Guide">
-<meta name="twitter:description" content="4.1 Linear Algebra   4.2 Gradient Descent   4.3 Model Evaluation and Selection  4.3.1 Bias-Variance Trade-off   4.3.2 Model Complexity and Overfitting   4.3.3 Regularization   4.3.4...">
+<meta name="twitter:title" content="Chapter 3 Machine Learning | Anjali’s Notes">
+<meta name="twitter:description" content="Concepts covered in CPSC 330, CPSC 340, ECON 323 and beyond.">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">Machine Learning Prep Guide</a>
+        <a href="index.html" title="">Anjali’s Notes</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -42,20 +42,10 @@
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Machine Learning Prep Guide</a></li>
-<li><a class="" href="probability.html"><span class="header-section-number">2</span> Probability</a></li>
-<li><a class="" href="statistics.html"><span class="header-section-number">3</span> Statistics</a></li>
-<li><a class="active" href="machine-learning.html"><span class="header-section-number">4</span> Machine Learning</a></li>
-<li><a class="" href="metrics.html"><span class="header-section-number">5</span> Metrics</a></li>
-<li><a class="" href="metrics-1.html"><span class="header-section-number">6</span> Metrics</a></li>
-<li><a class="" href="metrics-2.html"><span class="header-section-number">7</span> Metrics</a></li>
-<li><a class="" href="metrics-3.html"><span class="header-section-number">8</span> Metrics</a></li>
-<li><a class="" href="intro.html"><span class="header-section-number">9</span> ML Models</a></li>
-<li><a class="" href="metrics-4.html"><span class="header-section-number">10</span> Metrics</a></li>
-<li><a class="" href="clustering-1.html"><span class="header-section-number">11</span> Clustering</a></li>
-<li><a class="" href="data-preprocessing.html"><span class="header-section-number">12</span> Data Preprocessing</a></li>
-<li><a class="" href="neural-networks-1.html"><span class="header-section-number">13</span> Neural Networks</a></li>
-<li><a class="" href="sql.html"><span class="header-section-number">14</span> SQL</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Anjali’s Notes</a></li>
+<li><a class="" href="statistics.html"><span class="header-section-number">2</span> Statistics</a></li>
+<li><a class="active" href="machine-learning.html"><span class="header-section-number">3</span> Machine Learning</a></li>
+<li><a class="" href="neural-networks.html"><span class="header-section-number">4</span> Neural Networks</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -64,449 +54,28 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="machine-learning" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="machine-learning" class="section level1" number="3">
 <h1>
-<span class="header-section-number">4</span> Machine Learning<a class="anchor" aria-label="anchor" href="#machine-learning"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3</span> Machine Learning<a class="anchor" aria-label="anchor" href="#machine-learning"><i class="fas fa-link"></i></a>
 </h1>
-<div id="linear-algebra" class="section level2" number="4.1">
-<h2>
-<span class="header-section-number">4.1</span> Linear Algebra<a class="anchor" aria-label="anchor" href="#linear-algebra"><i class="fas fa-link"></i></a>
-</h2>
-</div>
-<div id="gradient-descent" class="section level2" number="4.2">
-<h2>
-<span class="header-section-number">4.2</span> Gradient Descent<a class="anchor" aria-label="anchor" href="#gradient-descent"><i class="fas fa-link"></i></a>
-</h2>
-</div>
-<div id="model-evaluation-and-selection" class="section level2" number="4.3">
-<h2>
-<span class="header-section-number">4.3</span> Model Evaluation and Selection<a class="anchor" aria-label="anchor" href="#model-evaluation-and-selection"><i class="fas fa-link"></i></a>
-</h2>
-<div id="bias-variance-trade-off" class="section level3" number="4.3.1">
-<h3>
-<span class="header-section-number">4.3.1</span> Bias-Variance Trade-off<a class="anchor" aria-label="anchor" href="#bias-variance-trade-off"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="model-complexity-and-overfitting" class="section level3" number="4.3.2">
-<h3>
-<span class="header-section-number">4.3.2</span> Model Complexity and Overfitting<a class="anchor" aria-label="anchor" href="#model-complexity-and-overfitting"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="regularization" class="section level3" number="4.3.3">
-<h3>
-<span class="header-section-number">4.3.3</span> Regularization<a class="anchor" aria-label="anchor" href="#regularization"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="interpretability-explainability" class="section level3" number="4.3.4">
-<h3>
-<span class="header-section-number">4.3.4</span> Interpretability &amp; Explainability<a class="anchor" aria-label="anchor" href="#interpretability-explainability"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="model-training" class="section level2" number="4.4">
-<h2>
-<span class="header-section-number">4.4</span> Model Training<a class="anchor" aria-label="anchor" href="#model-training"><i class="fas fa-link"></i></a>
-</h2>
-<div id="cross-validation" class="section level3" number="4.4.1">
-<h3>
-<span class="header-section-number">4.4.1</span> Cross-Validation<a class="anchor" aria-label="anchor" href="#cross-validation"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="boostrapping-and-bagging" class="section level3" number="4.4.2">
-<h3>
-<span class="header-section-number">4.4.2</span> Boostrapping and Bagging<a class="anchor" aria-label="anchor" href="#boostrapping-and-bagging"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="hyperparameter-tuning" class="section level3" number="4.4.3">
-<h3>
-<span class="header-section-number">4.4.3</span> Hyperparameter Tuning<a class="anchor" aria-label="anchor" href="#hyperparameter-tuning"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="training-times-and-learning-curves" class="section level3" number="4.4.4">
-<h3>
-<span class="header-section-number">4.4.4</span> Training Times and Learning Curves<a class="anchor" aria-label="anchor" href="#training-times-and-learning-curves"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="linear-regression" class="section level2" number="4.5">
-<h2>
-<span class="header-section-number">4.5</span> Linear Regression<a class="anchor" aria-label="anchor" href="#linear-regression"><i class="fas fa-link"></i></a>
-</h2>
-<div id="evaluating-linear-regression" class="section level3" number="4.5.1">
-<h3>
-<span class="header-section-number">4.5.1</span> Evaluating Linear Regression<a class="anchor" aria-label="anchor" href="#evaluating-linear-regression"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="subset-selection" class="section level3" number="4.5.2">
-<h3>
-<span class="header-section-number">4.5.2</span> Subset Selection<a class="anchor" aria-label="anchor" href="#subset-selection"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="linear-regression-assumptions" class="section level3" number="4.5.3">
-<h3>
-<span class="header-section-number">4.5.3</span> Linear Regression Assumptions<a class="anchor" aria-label="anchor" href="#linear-regression-assumptions"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="avoiding-linear-regression-pitfalls" class="section level3" number="4.5.4">
-<h3>
-<span class="header-section-number">4.5.4</span> Avoiding Linear Regression Pitfalls<a class="anchor" aria-label="anchor" href="#avoiding-linear-regression-pitfalls"><i class="fas fa-link"></i></a>
-</h3>
-<div id="heteroscedasticity" class="section level4" number="4.5.4.1">
-<h4>
-<span class="header-section-number">4.5.4.1</span> Heteroscedasticity<a class="anchor" aria-label="anchor" href="#heteroscedasticity"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="normality" class="section level4" number="4.5.4.2">
-<h4>
-<span class="header-section-number">4.5.4.2</span> Normality<a class="anchor" aria-label="anchor" href="#normality"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="outliers" class="section level4" number="4.5.4.3">
-<h4>
-<span class="header-section-number">4.5.4.3</span> Outliers<a class="anchor" aria-label="anchor" href="#outliers"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="multicollinearity" class="section level4" number="4.5.4.4">
-<h4>
-<span class="header-section-number">4.5.4.4</span> Multicollinearity<a class="anchor" aria-label="anchor" href="#multicollinearity"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="confounding-variabes" class="section level4" number="4.5.4.5">
-<h4>
-<span class="header-section-number">4.5.4.5</span> Confounding Variabes<a class="anchor" aria-label="anchor" href="#confounding-variabes"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-<div id="generalized-linear-models" class="section level3" number="4.5.5">
-<h3>
-<span class="header-section-number">4.5.5</span> Generalized Linear Models<a class="anchor" aria-label="anchor" href="#generalized-linear-models"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="classification" class="section level2" number="4.6">
-<h2>
-<span class="header-section-number">4.6</span> Classification<a class="anchor" aria-label="anchor" href="#classification"><i class="fas fa-link"></i></a>
-</h2>
-<div id="general-framework" class="section level3" number="4.6.1">
-<h3>
-<span class="header-section-number">4.6.1</span> General Framework<a class="anchor" aria-label="anchor" href="#general-framework"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="evaluating-classifiers" class="section level3" number="4.6.2">
-<h3>
-<span class="header-section-number">4.6.2</span> Evaluating Classifiers<a class="anchor" aria-label="anchor" href="#evaluating-classifiers"><i class="fas fa-link"></i></a>
-</h3>
-<div id="building-and-interpreting-a-confusion-matrix" class="section level4" number="4.6.2.1">
-<h4>
-<span class="header-section-number">4.6.2.1</span> Building and Interpreting a Confusion Matrix<a class="anchor" aria-label="anchor" href="#building-and-interpreting-a-confusion-matrix"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="precision-and-recall" class="section level4" number="4.6.2.2">
-<h4>
-<span class="header-section-number">4.6.2.2</span> Precision and Recall<a class="anchor" aria-label="anchor" href="#precision-and-recall"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-<div id="visualizing-classifier-performance" class="section level3" number="4.6.3">
-<h3>
-<span class="header-section-number">4.6.3</span> Visualizing Classifier Performance<a class="anchor" aria-label="anchor" href="#visualizing-classifier-performance"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="logistic-regression" class="section level2" number="4.7">
-<h2>
-<span class="header-section-number">4.7</span> Logistic Regression<a class="anchor" aria-label="anchor" href="#logistic-regression"><i class="fas fa-link"></i></a>
-</h2>
-<div id="naive-bayes" class="section level3" number="4.7.1">
-<h3>
-<span class="header-section-number">4.7.1</span> Naive Bayes<a class="anchor" aria-label="anchor" href="#naive-bayes"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="svms" class="section level3" number="4.7.2">
-<h3>
-<span class="header-section-number">4.7.2</span> SVMs<a class="anchor" aria-label="anchor" href="#svms"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="decision-trees" class="section level3" number="4.7.3">
-<h3>
-<span class="header-section-number">4.7.3</span> Decision Trees<a class="anchor" aria-label="anchor" href="#decision-trees"><i class="fas fa-link"></i></a>
-</h3>
-<div id="training" class="section level4" number="4.7.3.1">
-<h4>
-<span class="header-section-number">4.7.3.1</span> Training<a class="anchor" aria-label="anchor" href="#training"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-<div id="entropy" class="section level3" number="4.7.4">
-<h3>
-<span class="header-section-number">4.7.4</span> Entropy<a class="anchor" aria-label="anchor" href="#entropy"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="random-forests" class="section level3" number="4.7.5">
-<h3>
-<span class="header-section-number">4.7.5</span> Random Forests<a class="anchor" aria-label="anchor" href="#random-forests"><i class="fas fa-link"></i></a>
-</h3>
-<div id="boosting" class="section level4" number="4.7.5.1">
-<h4>
-<span class="header-section-number">4.7.5.1</span> Boosting<a class="anchor" aria-label="anchor" href="#boosting"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-</div>
-<div id="dimensionality-reduction" class="section level2" number="4.8">
-<h2>
-<span class="header-section-number">4.8</span> Dimensionality Reduction<a class="anchor" aria-label="anchor" href="#dimensionality-reduction"><i class="fas fa-link"></i></a>
-</h2>
-<div id="principal-component-analysis" class="section level3" number="4.8.1">
-<h3>
-<span class="header-section-number">4.8.1</span> Principal Component Analysis<a class="anchor" aria-label="anchor" href="#principal-component-analysis"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="clustering" class="section level2" number="4.9">
-<h2>
-<span class="header-section-number">4.9</span> Clustering<a class="anchor" aria-label="anchor" href="#clustering"><i class="fas fa-link"></i></a>
-</h2>
-<div id="k-means-clustering" class="section level3" number="4.9.1">
-<h3>
-<span class="header-section-number">4.9.1</span> K-Means Clustering<a class="anchor" aria-label="anchor" href="#k-means-clustering"><i class="fas fa-link"></i></a>
-</h3>
-<div id="k-means-alternatives" class="section level4" number="4.9.1.1">
-<h4>
-<span class="header-section-number">4.9.1.1</span> K-Means Alternatives<a class="anchor" aria-label="anchor" href="#k-means-alternatives"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="gaussian-mixture-model-gmm" class="section level4" number="4.9.1.2">
-<h4>
-<span class="header-section-number">4.9.1.2</span> Gaussian Mixture Model (GMM)<a class="anchor" aria-label="anchor" href="#gaussian-mixture-model-gmm"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-</div>
-<div id="neural-networks" class="section level2" number="4.10">
-<h2>
-<span class="header-section-number">4.10</span> Neural Networks<a class="anchor" aria-label="anchor" href="#neural-networks"><i class="fas fa-link"></i></a>
-</h2>
-<div id="perceptron" class="section level3" number="4.10.1">
-<h3>
-<span class="header-section-number">4.10.1</span> Perceptron<a class="anchor" aria-label="anchor" href="#perceptron"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="backpropagation" class="section level3" number="4.10.2">
-<h3>
-<span class="header-section-number">4.10.2</span> Backpropagation<a class="anchor" aria-label="anchor" href="#backpropagation"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="training-neural-networks" class="section level3" number="4.10.3">
-<h3>
-<span class="header-section-number">4.10.3</span> Training Neural Networks<a class="anchor" aria-label="anchor" href="#training-neural-networks"><i class="fas fa-link"></i></a>
-</h3>
-<div id="general-framework-1" class="section level4" number="4.10.3.1">
-<h4>
-<span class="header-section-number">4.10.3.1</span> General Framework<a class="anchor" aria-label="anchor" href="#general-framework-1"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="training-optimization-techniques" class="section level4" number="4.10.3.2">
-<h4>
-<span class="header-section-number">4.10.3.2</span> Training Optimization Techniques<a class="anchor" aria-label="anchor" href="#training-optimization-techniques"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="transfer-learning" class="section level4" number="4.10.3.3">
-<h4>
-<span class="header-section-number">4.10.3.3</span> Transfer Learning<a class="anchor" aria-label="anchor" href="#transfer-learning"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-<div id="addressing-overfitting" class="section level3" number="4.10.4">
-<h3>
-<span class="header-section-number">4.10.4</span> Addressing Overfitting<a class="anchor" aria-label="anchor" href="#addressing-overfitting"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="types-of-neural-networks" class="section level3" number="4.10.5">
-<h3>
-<span class="header-section-number">4.10.5</span> Types of Neural Networks<a class="anchor" aria-label="anchor" href="#types-of-neural-networks"><i class="fas fa-link"></i></a>
-</h3>
-<div id="cnns" class="section level4" number="4.10.5.1">
-<h4>
-<span class="header-section-number">4.10.5.1</span> CNNs<a class="anchor" aria-label="anchor" href="#cnns"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="rnns" class="section level4" number="4.10.5.2">
-<h4>
-<span class="header-section-number">4.10.5.2</span> RNNs<a class="anchor" aria-label="anchor" href="#rnns"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="lstms" class="section level4" number="4.10.5.3">
-<h4>
-<span class="header-section-number">4.10.5.3</span> LSTMs<a class="anchor" aria-label="anchor" href="#lstms"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-</div>
-</div>
-<div id="reinforcement-learning" class="section level2" number="4.11">
-<h2>
-<span class="header-section-number">4.11</span> Reinforcement Learning<a class="anchor" aria-label="anchor" href="#reinforcement-learning"><i class="fas fa-link"></i></a>
-</h2>
-</div>
-<div id="end-to-end-ml-workflow" class="section level2" number="4.12">
-<h2>
-<span class="header-section-number">4.12</span> End-to-End ML Workflow<a class="anchor" aria-label="anchor" href="#end-to-end-ml-workflow"><i class="fas fa-link"></i></a>
-</h2>
-<div id="step-1-clarify-the-problem-and-constraints" class="section level3" number="4.12.1">
-<h3>
-<span class="header-section-number">4.12.1</span> Step 1: Clarify the Problem and Constraints<a class="anchor" aria-label="anchor" href="#step-1-clarify-the-problem-and-constraints"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-2-establish-metrics" class="section level3" number="4.12.2">
-<h3>
-<span class="header-section-number">4.12.2</span> Step 2: Establish Metrics<a class="anchor" aria-label="anchor" href="#step-2-establish-metrics"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-3-understand-your-data-sources" class="section level3" number="4.12.3">
-<h3>
-<span class="header-section-number">4.12.3</span> Step 3: Understand Your Data Sources<a class="anchor" aria-label="anchor" href="#step-3-understand-your-data-sources"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-4-explore-your-data" class="section level3" number="4.12.4">
-<h3>
-<span class="header-section-number">4.12.4</span> Step 4: Explore Your Data<a class="anchor" aria-label="anchor" href="#step-4-explore-your-data"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-5-clean-your-data" class="section level3" number="4.12.5">
-<h3>
-<span class="header-section-number">4.12.5</span> Step 5: Clean Your Data<a class="anchor" aria-label="anchor" href="#step-5-clean-your-data"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-6-feature-engineering" class="section level3" number="4.12.6">
-<h3>
-<span class="header-section-number">4.12.6</span> Step 6: Feature Engineering<a class="anchor" aria-label="anchor" href="#step-6-feature-engineering"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-7-model-selection" class="section level3" number="4.12.7">
-<h3>
-<span class="header-section-number">4.12.7</span> Step 7: Model Selection<a class="anchor" aria-label="anchor" href="#step-7-model-selection"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-8-model-training-evaluation" class="section level3" number="4.12.8">
-<h3>
-<span class="header-section-number">4.12.8</span> Step 8: Model Training &amp; Evaluation<a class="anchor" aria-label="anchor" href="#step-8-model-training-evaluation"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="step-9-deployment" class="section level3" number="4.12.9">
-<h3>
-<span class="header-section-number">4.12.9</span> Step 9: Deployment<a class="anchor" aria-label="anchor" href="#step-9-deployment"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-</div>
-<div id="machine-learning-interview-questions" class="section level2" number="4.13">
-<h2>
-<span class="header-section-number">4.13</span> Machine Learning Interview Questions<a class="anchor" aria-label="anchor" href="#machine-learning-interview-questions"><i class="fas fa-link"></i></a>
-</h2>
-<div id="easy-2" class="section level3" number="4.13.1">
-<h3>
-<span class="header-section-number">4.13.1</span> Easy<a class="anchor" aria-label="anchor" href="#easy-2"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="medium-2" class="section level3" number="4.13.2">
-<h3>
-<span class="header-section-number">4.13.2</span> Medium<a class="anchor" aria-label="anchor" href="#medium-2"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="hard-2" class="section level3" number="4.13.3">
-<h3>
-<span class="header-section-number">4.13.3</span> Hard<a class="anchor" aria-label="anchor" href="#hard-2"><i class="fas fa-link"></i></a>
-</h3>
+<!-- $p$ is unknown but expected to be around 1/3. Standard error will be approximated -->
+<!-- $$ -->
+<!-- SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027 -->
+<!-- $$ -->
+<!-- You can also use math in footnotes like this^[where we mention $p = \frac{a}{b}$]. -->
+<!-- We will approximate standard error to 0.027[^longnote] -->
+<!-- [^longnote]: $p$ is unknown but expected to be around 1/3. Standard error will be approximated -->
+<!--     $$ -->
+<!--     SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027 -->
+<!--     $$ -->
 
 </div>
-</div>
-</div>
   <div class="chapter-nav">
-<div class="prev"><a href="statistics.html"><span class="header-section-number">3</span> Statistics</a></div>
-<div class="next"><a href="metrics.html"><span class="header-section-number">5</span> Metrics</a></div>
+<div class="prev"><a href="statistics.html"><span class="header-section-number">2</span> Statistics</a></div>
+<div class="next"><a href="neural-networks.html"><span class="header-section-number">4</span> Neural Networks</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#machine-learning"><span class="header-section-number">4</span> Machine Learning</a></li>
-<li><a class="nav-link" href="#linear-algebra"><span class="header-section-number">4.1</span> Linear Algebra</a></li>
-<li><a class="nav-link" href="#gradient-descent"><span class="header-section-number">4.2</span> Gradient Descent</a></li>
-<li>
-<a class="nav-link" href="#model-evaluation-and-selection"><span class="header-section-number">4.3</span> Model Evaluation and Selection</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#bias-variance-trade-off"><span class="header-section-number">4.3.1</span> Bias-Variance Trade-off</a></li>
-<li><a class="nav-link" href="#model-complexity-and-overfitting"><span class="header-section-number">4.3.2</span> Model Complexity and Overfitting</a></li>
-<li><a class="nav-link" href="#regularization"><span class="header-section-number">4.3.3</span> Regularization</a></li>
-<li><a class="nav-link" href="#interpretability-explainability"><span class="header-section-number">4.3.4</span> Interpretability &amp; Explainability</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#model-training"><span class="header-section-number">4.4</span> Model Training</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#cross-validation"><span class="header-section-number">4.4.1</span> Cross-Validation</a></li>
-<li><a class="nav-link" href="#boostrapping-and-bagging"><span class="header-section-number">4.4.2</span> Boostrapping and Bagging</a></li>
-<li><a class="nav-link" href="#hyperparameter-tuning"><span class="header-section-number">4.4.3</span> Hyperparameter Tuning</a></li>
-<li><a class="nav-link" href="#training-times-and-learning-curves"><span class="header-section-number">4.4.4</span> Training Times and Learning Curves</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#linear-regression"><span class="header-section-number">4.5</span> Linear Regression</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#evaluating-linear-regression"><span class="header-section-number">4.5.1</span> Evaluating Linear Regression</a></li>
-<li><a class="nav-link" href="#subset-selection"><span class="header-section-number">4.5.2</span> Subset Selection</a></li>
-<li><a class="nav-link" href="#linear-regression-assumptions"><span class="header-section-number">4.5.3</span> Linear Regression Assumptions</a></li>
-<li><a class="nav-link" href="#avoiding-linear-regression-pitfalls"><span class="header-section-number">4.5.4</span> Avoiding Linear Regression Pitfalls</a></li>
-<li><a class="nav-link" href="#generalized-linear-models"><span class="header-section-number">4.5.5</span> Generalized Linear Models</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#classification"><span class="header-section-number">4.6</span> Classification</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#general-framework"><span class="header-section-number">4.6.1</span> General Framework</a></li>
-<li><a class="nav-link" href="#evaluating-classifiers"><span class="header-section-number">4.6.2</span> Evaluating Classifiers</a></li>
-<li><a class="nav-link" href="#visualizing-classifier-performance"><span class="header-section-number">4.6.3</span> Visualizing Classifier Performance</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#logistic-regression"><span class="header-section-number">4.7</span> Logistic Regression</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#naive-bayes"><span class="header-section-number">4.7.1</span> Naive Bayes</a></li>
-<li><a class="nav-link" href="#svms"><span class="header-section-number">4.7.2</span> SVMs</a></li>
-<li><a class="nav-link" href="#decision-trees"><span class="header-section-number">4.7.3</span> Decision Trees</a></li>
-<li><a class="nav-link" href="#entropy"><span class="header-section-number">4.7.4</span> Entropy</a></li>
-<li><a class="nav-link" href="#random-forests"><span class="header-section-number">4.7.5</span> Random Forests</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#dimensionality-reduction"><span class="header-section-number">4.8</span> Dimensionality Reduction</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#principal-component-analysis"><span class="header-section-number">4.8.1</span> Principal Component Analysis</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#clustering"><span class="header-section-number">4.9</span> Clustering</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#k-means-clustering"><span class="header-section-number">4.9.1</span> K-Means Clustering</a></li></ul>
-</li>
-<li>
-<a class="nav-link" href="#neural-networks"><span class="header-section-number">4.10</span> Neural Networks</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#perceptron"><span class="header-section-number">4.10.1</span> Perceptron</a></li>
-<li><a class="nav-link" href="#backpropagation"><span class="header-section-number">4.10.2</span> Backpropagation</a></li>
-<li><a class="nav-link" href="#training-neural-networks"><span class="header-section-number">4.10.3</span> Training Neural Networks</a></li>
-<li><a class="nav-link" href="#addressing-overfitting"><span class="header-section-number">4.10.4</span> Addressing Overfitting</a></li>
-<li><a class="nav-link" href="#types-of-neural-networks"><span class="header-section-number">4.10.5</span> Types of Neural Networks</a></li>
-</ul>
-</li>
-<li><a class="nav-link" href="#reinforcement-learning"><span class="header-section-number">4.11</span> Reinforcement Learning</a></li>
-<li>
-<a class="nav-link" href="#end-to-end-ml-workflow"><span class="header-section-number">4.12</span> End-to-End ML Workflow</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#step-1-clarify-the-problem-and-constraints"><span class="header-section-number">4.12.1</span> Step 1: Clarify the Problem and Constraints</a></li>
-<li><a class="nav-link" href="#step-2-establish-metrics"><span class="header-section-number">4.12.2</span> Step 2: Establish Metrics</a></li>
-<li><a class="nav-link" href="#step-3-understand-your-data-sources"><span class="header-section-number">4.12.3</span> Step 3: Understand Your Data Sources</a></li>
-<li><a class="nav-link" href="#step-4-explore-your-data"><span class="header-section-number">4.12.4</span> Step 4: Explore Your Data</a></li>
-<li><a class="nav-link" href="#step-5-clean-your-data"><span class="header-section-number">4.12.5</span> Step 5: Clean Your Data</a></li>
-<li><a class="nav-link" href="#step-6-feature-engineering"><span class="header-section-number">4.12.6</span> Step 6: Feature Engineering</a></li>
-<li><a class="nav-link" href="#step-7-model-selection"><span class="header-section-number">4.12.7</span> Step 7: Model Selection</a></li>
-<li><a class="nav-link" href="#step-8-model-training-evaluation"><span class="header-section-number">4.12.8</span> Step 8: Model Training &amp; Evaluation</a></li>
-<li><a class="nav-link" href="#step-9-deployment"><span class="header-section-number">4.12.9</span> Step 9: Deployment</a></li>
-</ul>
-</li>
-<li>
-<a class="nav-link" href="#machine-learning-interview-questions"><span class="header-section-number">4.13</span> Machine Learning Interview Questions</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#easy-2"><span class="header-section-number">4.13.1</span> Easy</a></li>
-<li><a class="nav-link" href="#medium-2"><span class="header-section-number">4.13.2</span> Medium</a></li>
-<li><a class="nav-link" href="#hard-2"><span class="header-section-number">4.13.3</span> Hard</a></li>
-</ul>
-</li>
-</ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#machine-learning"><span class="header-section-number">3</span> Machine Learning</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -522,7 +91,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Machine Learning Prep Guide</strong>" was written by Anjali Chauhan. It was last built on 2022-04-27.</p>
+    <p>"<strong>Anjali’s Notes</strong>" was written by Anjali Chauhan. It was last built on 2022-05-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -530,34 +99,6 @@
   </div>
 
 </div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
-</script>
+</footer>
 </body>
 </html>
